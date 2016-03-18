@@ -1,1 +1,7 @@
 <h1> Lists Homepage <h1>
+
+<ul>
+  <% @list.each do |list| %>
+  <li><%= list.name %> <%= list.created_at %> </li>
+  <% end %>
+</ul
