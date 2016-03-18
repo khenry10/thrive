@@ -4,4 +4,5 @@
   <% @list.tasks.each do |task| %>
   <li><%= task.name %></li>
   <% end %>
+  <li><%= link_to "Add New Task", new_task_path %></li>
 </ul>
