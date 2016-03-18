@@ -1,0 +1,7 @@
+<h2><%= @list.name %></h2>
+
+<ul>
+  <% @list.tasks.each do |task| %>
+  <li><%= task.name %></li>
+  <% end %>
+</ul>
