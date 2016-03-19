@@ -1,6 +1,6 @@
 <h2> New Task <h2>
 
-  <%= form_for @tasks do |f| %>
+  <%= form_for [@list, @task] do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %>
   <%= f.label :category %>
@@ -23,5 +23,3 @@
   <%= f.text_field :quantity %>
   <%= f.submit %>
   <% end %>
-
-  t.integer  "list_id"

@@ -1,21 +1,23 @@
 class TasksController < ApplicationController
 
   def index
-    task = Task.all
+    @task = Task.all
   end
 
   def show
-    task = Task.find(params[:id])
+    @task = Task.find(params[:id])
   end
 
   def new
-    task = Task.new
+    @list = List.find(params[:list_id])
+    @task = Task.new
   end
 
   def create
-    task = Task.create!(task_param)
+    @list = List.find(params[:list_id])
+    @task = @list.tasks.create!(task_param)
 
-    redirct_to @list
+    redirect_to list_path(@list)
   end
 
   private
