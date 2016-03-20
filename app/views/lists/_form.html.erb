@@ -1,15 +1,23 @@
-<%= form_for @list do |f| %>
-<%= f.label :name %>
-<%= f.text_field :name %>
-<%= f.label :list_type %>
-<%= f.text_field :list_type %>
-<%= f.label :category %>
-<%= f.text_field :category %>
-<%= f.label :list_time %>
-<%= f.text_field :list_time %>
-<%= f.label :deadline %>
-<%= f.text_field :deadline %>
-<%= f.label :recurring %>
-<%= f.text_field :recurring %>
-<%= f.submit %>
-<% end %>
+<ul>
+  <%= form_for @list do |f| %>
+  <li><%= f.label :name %>
+  <%= f.text_field :name %></li>
+  <li><%= f.label :list_type %>
+  <%= f.radio_button :list_type, 'Check List' %> Check List
+  <%= f.radio_button :list_type, 'Shopping List' %> Shopping List</li>
+  <li><%= f.label :category %>
+  <%= f.text_field :category %></li>
+  <li><%= f.label :list_time %>
+  <%= f.number_field :list_time %> Hours
+  <%= f.number_field :list_time %> Minutes </li></li>
+  <li><%= f.label :deadline %>
+  <%= f.date_field :deadline %></li>
+  <li><%= f.label :recurring %>
+  <%= f.radio_button :recurring, 'Daily' %> Daily
+  <%= f.radio_button :recurring, 'Weekly' %> Weekly
+  <%= f.radio_button :recurring, 'Monthly' %> Monthly
+  <%= f.radio_button :recurring, 'Quarterly' %> Quarterly
+  <%= f.radio_button :recurring, 'Weekly' %> Yearly </li>
+  <li><%= f.submit %></li>
+  <% end %>
+</ul>

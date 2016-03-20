@@ -7823,3 +7823,1092 @@ Processing by ListsController#new as HTML
   Rendered lists/_form.html.erb (2.5ms)
   Rendered lists/new.html.erb within layouts/application (5.2ms)
 Completed 200 OK in 17ms (Views: 16.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/lists/new" for ::1 at 2016-03-20 14:24:39 -0400
+Processing by ListsController#new as HTML
+  Rendered lists/_form.html.erb (4.9ms)
+  Rendered lists/new.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 19ms (Views: 18.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-20 14:24:39 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-03-20 14:24:39 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-20 14:24:39 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-20 14:24:39 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-20 14:24:39 -0400
+
+
+Started GET "/lists/new" for ::1 at 2016-03-20 14:25:01 -0400
+Processing by ListsController#new as HTML
+  Rendered lists/_form.html.erb (2.8ms)
+  Rendered lists/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 24ms (Views: 23.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-20 14:25:01 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-03-20 14:25:01 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-20 14:25:01 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-20 14:25:01 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-20 14:25:01 -0400
+
+
+Started GET "/lists/new" for ::1 at 2016-03-20 14:26:06 -0400
+Processing by ListsController#new as HTML
+  Rendered lists/_form.html.erb (3.1ms)
+  Rendered lists/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 17ms (Views: 16.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-03-20 14:26:06 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-20 14:26:06 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-20 14:26:06 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-20 14:26:06 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-20 14:26:06 -0400
+
+
+Started GET "/lists/new" for ::1 at 2016-03-20 14:27:24 -0400
+Processing by ListsController#new as HTML
+  Rendered lists/_form.html.erb (3.3ms)
+  Rendered lists/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 31ms (Views: 30.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-20 14:27:24 -0400
+
+
+Started GET "/assets/application.self-70bb41be60ac90f49916773009628676dce38749b11cbfc4654b0586b4c98c38.css?body=1" for ::1 at 2016-03-20 14:27:24 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-20 14:27:24 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-20 14:27:24 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-20 14:27:24 -0400
+
+
+Started GET "/" for ::1 at 2016-03-20 14:27:26 -0400
+Processing by ListsController#index as HTML
+  [1m[35mList Load (0.5ms)[0m  SELECT "lists".* FROM "lists"
+  Rendered lists/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 25ms (Views: 23.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/lists/3" for ::1 at 2016-03-20 14:27:28 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mList Load (0.2ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 3]]
+  Rendered lists/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 15ms (Views: 13.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/lists/3/tasks/new" for ::1 at 2016-03-20 14:27:29 -0400
+Processing by TasksController#new as HTML
+  Parameters: {"list_id"=>"3"}
+  [1m[36mList Load (0.3ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  Rendered tasks/_form.html.erb (3.3ms)
+  Rendered tasks/new.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 19ms (Views: 17.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/lists/3" for ::1 at 2016-03-20 14:29:02 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mList Load (0.2ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 3]]
+  Rendered lists/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 15ms (Views: 13.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.self-70bb41be60ac90f49916773009628676dce38749b11cbfc4654b0586b4c98c38.css?body=1" for ::1 at 2016-03-20 14:29:02 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-20 14:29:02 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-20 14:29:02 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-20 14:29:02 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-20 14:29:02 -0400
+
+
+Started GET "/lists/3/tasks/20/edit" for ::1 at 2016-03-20 14:29:03 -0400
+Processing by TasksController#edit as HTML
+  Parameters: {"list_id"=>"3", "id"=>"20"}
+  [1m[35mList Load (0.4ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mTask Load (0.4ms)[0m  [1mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT 1[0m  [["id", 20]]
+  Rendered tasks/_form.html.erb (4.8ms)
+  Rendered tasks/edit.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 25ms (Views: 21.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/lists/3" for ::1 at 2016-03-20 14:29:27 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mList Load (0.2ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 3]]
+  Rendered lists/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 14ms (Views: 12.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-20 14:29:27 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-20 14:29:27 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-20 14:29:27 -0400
+
+
+Started GET "/assets/application.self-70bb41be60ac90f49916773009628676dce38749b11cbfc4654b0586b4c98c38.css?body=1" for ::1 at 2016-03-20 14:29:27 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-20 14:29:27 -0400
+
+
+Started GET "/lists/3/tasks/20/edit" for ::1 at 2016-03-20 14:29:28 -0400
+Processing by TasksController#edit as HTML
+  Parameters: {"list_id"=>"3", "id"=>"20"}
+  [1m[35mList Load (0.3ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mTask Load (0.3ms)[0m  [1mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT 1[0m  [["id", 20]]
+  Rendered tasks/_form.html.erb (15.9ms)
+  Rendered tasks/edit.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 34ms (Views: 30.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/lists/3/tasks/20/edit" for ::1 at 2016-03-20 14:31:20 -0400
+Processing by TasksController#edit as HTML
+  Parameters: {"list_id"=>"3", "id"=>"20"}
+  [1m[35mList Load (0.2ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT 1[0m  [["id", 20]]
+  Rendered tasks/_form.html.erb (7.8ms)
+  Rendered tasks/edit.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 33ms (Views: 30.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-20 14:31:20 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-20 14:31:20 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-20 14:31:20 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-20 14:31:20 -0400
+
+
+Started GET "/assets/application.self-70bb41be60ac90f49916773009628676dce38749b11cbfc4654b0586b4c98c38.css?body=1" for ::1 at 2016-03-20 14:31:20 -0400
+
+
+Started GET "/lists/3/tasks/20/edit" for ::1 at 2016-03-20 14:31:41 -0400
+Processing by TasksController#edit as HTML
+  Parameters: {"list_id"=>"3", "id"=>"20"}
+  [1m[35mList Load (0.2ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mTask Load (0.3ms)[0m  [1mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT 1[0m  [["id", 20]]
+  Rendered tasks/_form.html.erb (12.2ms)
+  Rendered tasks/edit.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 38ms (Views: 35.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.self-70bb41be60ac90f49916773009628676dce38749b11cbfc4654b0586b4c98c38.css?body=1" for ::1 at 2016-03-20 14:31:41 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-20 14:31:42 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-20 14:31:42 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-20 14:31:42 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-20 14:31:42 -0400
+
+
+Started GET "/lists/3/tasks/20/edit" for ::1 at 2016-03-20 14:34:21 -0400
+Processing by TasksController#edit as HTML
+  Parameters: {"list_id"=>"3", "id"=>"20"}
+  [1m[35mList Load (0.2ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mTask Load (0.3ms)[0m  [1mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT 1[0m  [["id", 20]]
+  Rendered tasks/_form.html.erb (19.6ms)
+  Rendered tasks/edit.html.erb within layouts/application (20.7ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.5ms)
+
+ActionView::Template::Error (undefined method `radio_button_tag' for #<ActionView::Helpers::FormBuilder:0x007fb575474cd0>):
+    4: <li><%= f.label :category %>
+    5: <%= f.text_field :category %></li>
+    6: <li><%= f.label :priority %>
+    7: <%= f.radio_button_tag :priority %></li>
+    8: <li><%= f.label :time_estimate %>
+    9: <%= f.text_field :time_estimate %></li>
+   10: <li><%= f.label :time_actual %>
+  app/views/tasks/_form.html.erb:7:in `block in _app_views_tasks__form_html_erb__3505728836209944674_70208727826680'
+  app/views/tasks/_form.html.erb:1:in `_app_views_tasks__form_html_erb__3505728836209944674_70208727826680'
+  app/views/tasks/edit.html.erb:3:in `_app_views_tasks_edit_html_erb__4562804070437551836_70208714030080'
+
+
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (31.0ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (90.1ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (44.0ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (112.6ms)
+
+
+Started GET "/lists/3/tasks/20/edit" for ::1 at 2016-03-20 14:34:31 -0400
+Processing by TasksController#edit as HTML
+  Parameters: {"list_id"=>"3", "id"=>"20"}
+  [1m[35mList Load (0.2ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT 1[0m  [["id", 20]]
+  Rendered tasks/_form.html.erb (16.9ms)
+  Rendered tasks/edit.html.erb within layouts/application (17.9ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.4ms)
+
+ActionView::Template::Error (undefined method `radio_button_field' for #<ActionView::Helpers::FormBuilder:0x007fb57cc0d5a8>):
+    4: <li><%= f.label :category %>
+    5: <%= f.text_field :category %></li>
+    6: <li><%= f.label :priority %>
+    7: <%= f.radio_button_field :priority %></li>
+    8: <li><%= f.label :time_estimate %>
+    9: <%= f.text_field :time_estimate %></li>
+   10: <li><%= f.label :time_actual %>
+  app/views/tasks/_form.html.erb:7:in `block in _app_views_tasks__form_html_erb__3505728836209944674_70208732514300'
+  app/views/tasks/_form.html.erb:1:in `_app_views_tasks__form_html_erb__3505728836209944674_70208732514300'
+  app/views/tasks/edit.html.erb:3:in `_app_views_tasks_edit_html_erb__4562804070437551836_70208714030080'
+
+
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.7ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (63.5ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (44.8ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (110.1ms)
+
+
+Started GET "/lists/3/tasks/20/edit" for ::1 at 2016-03-20 14:34:57 -0400
+Processing by TasksController#edit as HTML
+  Parameters: {"list_id"=>"3", "id"=>"20"}
+  [1m[35mList Load (0.4ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT 1[0m  [["id", 20]]
+  Rendered tasks/_form.html.erb (5.6ms)
+  Rendered tasks/edit.html.erb within layouts/application (6.6ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.6ms)
+
+ActionView::Template::Error (uninitialized constant ActionView::CompiledTemplates::High):
+    4: <li><%= f.label :category %>
+    5: <%= f.text_field :category %></li>
+    6: <li><%= f.label :priority %>
+    7: <%= f.radio_button_field High %></li>
+    8: <li><%= f.label :time_estimate %>
+    9: <%= f.text_field :time_estimate %></li>
+   10: <li><%= f.label :time_actual %>
+  app/views/tasks/_form.html.erb:7:in `block in _app_views_tasks__form_html_erb__3505728836209944674_70208733796520'
+  app/views/tasks/_form.html.erb:1:in `_app_views_tasks__form_html_erb__3505728836209944674_70208733796520'
+  app/views/tasks/edit.html.erb:3:in `_app_views_tasks_edit_html_erb__4562804070437551836_70208714030080'
+
+
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.8ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (66.6ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (43.8ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (94.8ms)
+
+
+Started GET "/lists/3/tasks/20/edit" for ::1 at 2016-03-20 14:35:09 -0400
+Processing by TasksController#edit as HTML
+  Parameters: {"list_id"=>"3", "id"=>"20"}
+  [1m[35mList Load (0.3ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT 1[0m  [["id", 20]]
+  Rendered tasks/_form.html.erb (33.9ms)
+  Rendered tasks/edit.html.erb within layouts/application (35.0ms)
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 0.5ms)
+
+ActionView::Template::Error (uninitialized constant ActionView::CompiledTemplates::High):
+    4: <li><%= f.label :category %>
+    5: <%= f.text_field :category %></li>
+    6: <li><%= f.label :priority %>
+    7: <%= f.radio_button_field(High)%></li>
+    8: <li><%= f.label :time_estimate %>
+    9: <%= f.text_field :time_estimate %></li>
+   10: <li><%= f.label :time_actual %>
+  app/views/tasks/_form.html.erb:7:in `block in _app_views_tasks__form_html_erb__3505728836209944674_70208658264680'
+  app/views/tasks/_form.html.erb:1:in `_app_views_tasks__form_html_erb__3505728836209944674_70208658264680'
+  app/views/tasks/edit.html.erb:3:in `_app_views_tasks_edit_html_erb__4562804070437551836_70208714030080'
+
+
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.0ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (62.1ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (43.7ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (98.0ms)
+
+
+Started GET "/lists/3/tasks/20/edit" for ::1 at 2016-03-20 14:35:17 -0400
+Processing by TasksController#edit as HTML
+  Parameters: {"list_id"=>"3", "id"=>"20"}
+  [1m[35mList Load (0.2ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT 1[0m  [["id", 20]]
+  Rendered tasks/_form.html.erb (15.3ms)
+  Rendered tasks/edit.html.erb within layouts/application (16.5ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.4ms)
+
+ActionView::Template::Error (undefined method `radio_button_field' for #<ActionView::Helpers::FormBuilder:0x007fb57b774240>):
+    4: <li><%= f.label :category %>
+    5: <%= f.text_field :category %></li>
+    6: <li><%= f.label :priority %>
+    7: <%= f.radio_button_field("High")%></li>
+    8: <li><%= f.label :time_estimate %>
+    9: <%= f.text_field :time_estimate %></li>
+   10: <li><%= f.label :time_actual %>
+  app/views/tasks/_form.html.erb:7:in `block in _app_views_tasks__form_html_erb__3505728836209944674_70208733903120'
+  app/views/tasks/_form.html.erb:1:in `_app_views_tasks__form_html_erb__3505728836209944674_70208733903120'
+  app/views/tasks/edit.html.erb:3:in `_app_views_tasks_edit_html_erb__4562804070437551836_70208714030080'
+
+
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.5ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (69.1ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (43.7ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (96.2ms)
+
+
+Started GET "/lists/3/tasks/20/edit" for ::1 at 2016-03-20 14:35:26 -0400
+Processing by TasksController#edit as HTML
+  Parameters: {"list_id"=>"3", "id"=>"20"}
+  [1m[35mList Load (0.3ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT 1[0m  [["id", 20]]
+  Rendered tasks/_form.html.erb (1.2ms)
+  Rendered tasks/edit.html.erb within layouts/application (2.5ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.5ms)
+
+SyntaxError (/Users/keithprifte/wdi/projects/thrive/app/views/tasks/_form.html.erb:7: syntax error, unexpected ':'
+....append=( f.radio_button_field: ("High"));@output_buffer.saf...
+...                               ^):
+  app/views/tasks/_form.html.erb:7: syntax error, unexpected ':'
+  app/views/tasks/edit.html.erb:3:in `_app_views_tasks_edit_html_erb__4562804070437551836_70208714030080'
+
+
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.9ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (66.6ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (39.8ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (88.0ms)
+
+
+Started GET "/lists/3/tasks/20/edit" for ::1 at 2016-03-20 14:36:25 -0400
+Processing by TasksController#edit as HTML
+  Parameters: {"list_id"=>"3", "id"=>"20"}
+  [1m[35mList Load (0.3ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT 1[0m  [["id", 20]]
+  Rendered tasks/_form.html.erb (17.4ms)
+  Rendered tasks/edit.html.erb within layouts/application (18.4ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.5ms)
+
+ActionView::Template::Error (undefined method `radio_button_tag' for #<ActionView::Helpers::FormBuilder:0x007fb57b606728>):
+    4: <li><%= f.label :category %>
+    5: <%= f.text_field :category %></li>
+    6: <li><%= f.label "high" %>
+    7: <%= f.radio_button_tag :priority %></li>
+    8: <li><%= f.label :time_estimate %>
+    9: <%= f.text_field :time_estimate %></li>
+   10: <li><%= f.label :time_actual %>
+  app/views/tasks/_form.html.erb:7:in `block in _app_views_tasks__form_html_erb__3505728836209944674_70208717437460'
+  app/views/tasks/_form.html.erb:1:in `_app_views_tasks__form_html_erb__3505728836209944674_70208717437460'
+  app/views/tasks/edit.html.erb:3:in `_app_views_tasks_edit_html_erb__4562804070437551836_70208714030080'
+
+
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.5ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (64.8ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.9ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (46.6ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (101.4ms)
+
+
+Started GET "/lists/3/tasks/20/edit" for ::1 at 2016-03-20 14:36:41 -0400
+Processing by TasksController#edit as HTML
+  Parameters: {"list_id"=>"3", "id"=>"20"}
+  [1m[35mList Load (1.3ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mTask Load (1.9ms)[0m  [1mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT 1[0m  [["id", 20]]
+  Rendered tasks/_form.html.erb (25.4ms)
+  Rendered tasks/edit.html.erb within layouts/application (27.9ms)
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 3.2ms)
+
+ActionView::Template::Error (undefined method `radio_button_field' for #<ActionView::Helpers::FormBuilder:0x007fb573b02658>):
+    4: <li><%= f.label :category %>
+    5: <%= f.text_field :category %></li>
+    6: <li><%= f.label "high" %>
+    7: <%= f.radio_button_field :priority %></li>
+    8: <li><%= f.label :time_estimate %>
+    9: <%= f.text_field :time_estimate %></li>
+   10: <li><%= f.label :time_actual %>
+  app/views/tasks/_form.html.erb:7:in `block in _app_views_tasks__form_html_erb__3505728836209944674_70208696861440'
+  app/views/tasks/_form.html.erb:1:in `_app_views_tasks__form_html_erb__3505728836209944674_70208696861440'
+  app/views/tasks/edit.html.erb:3:in `_app_views_tasks_edit_html_erb__4562804070437551836_70208714030080'
+
+
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.8ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (64.3ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (41.9ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (99.1ms)
+
+
+Started GET "/lists/3/tasks/20/edit" for ::1 at 2016-03-20 14:40:17 -0400
+Processing by TasksController#edit as HTML
+  Parameters: {"list_id"=>"3", "id"=>"20"}
+  [1m[35mList Load (0.2ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mTask Load (0.3ms)[0m  [1mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT 1[0m  [["id", 20]]
+  Rendered tasks/_form.html.erb (20.4ms)
+  Rendered tasks/edit.html.erb within layouts/application (21.7ms)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 0.5ms)
+
+ActionView::Template::Error (undefined method `radio_button_field' for #<ActionView::Helpers::FormBuilder:0x007fb57a9c2520>):
+    4: <li><%= f.label :category %>
+    5: <%= f.text_field :category %></li>
+    6: <li><%= f.label :priority %>
+    7: <%= f.radio_button_field 'male', 'female' %></li>
+    8: <li><%= f.label :time_estimate %>
+    9: <%= f.text_field :time_estimate %></li>
+   10: <li><%= f.label :time_actual %>
+  app/views/tasks/_form.html.erb:7:in `block in _app_views_tasks__form_html_erb__3505728836209944674_70208715046380'
+  app/views/tasks/_form.html.erb:1:in `_app_views_tasks__form_html_erb__3505728836209944674_70208715046380'
+  app/views/tasks/edit.html.erb:3:in `_app_views_tasks_edit_html_erb__4562804070437551836_70208714030080'
+
+
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (32.3ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.6ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (93.2ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (46.2ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (101.6ms)
+
+
+Started GET "/lists/3/tasks/20/edit" for ::1 at 2016-03-20 14:40:32 -0400
+Processing by TasksController#edit as HTML
+  Parameters: {"list_id"=>"3", "id"=>"20"}
+  [1m[35mList Load (0.2ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT 1[0m  [["id", 20]]
+  Rendered tasks/_form.html.erb (22.0ms)
+  Rendered tasks/edit.html.erb within layouts/application (23.3ms)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.5ms)
+
+ActionView::Template::Error (undefined method `radio_button_tag' for #<ActionView::Helpers::FormBuilder:0x007fb5754bf140>):
+    4: <li><%= f.label :category %>
+    5: <%= f.text_field :category %></li>
+    6: <li><%= f.label :priority %>
+    7: <%= f.radio_button_tag 'male', 'female' %></li>
+    8: <li><%= f.label :time_estimate %>
+    9: <%= f.text_field :time_estimate %></li>
+   10: <li><%= f.label :time_actual %>
+  app/views/tasks/_form.html.erb:7:in `block in _app_views_tasks__form_html_erb__3505728836209944674_70208666341980'
+  app/views/tasks/_form.html.erb:1:in `_app_views_tasks__form_html_erb__3505728836209944674_70208666341980'
+  app/views/tasks/edit.html.erb:3:in `_app_views_tasks_edit_html_erb__4562804070437551836_70208714030080'
+
+
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.7ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (73.1ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.9ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (42.7ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (92.1ms)
+
+
+Started GET "/lists/3/tasks/20/edit" for ::1 at 2016-03-20 14:47:41 -0400
+Processing by TasksController#edit as HTML
+  Parameters: {"list_id"=>"3", "id"=>"20"}
+  [1m[35mList Load (0.2ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT 1[0m  [["id", 20]]
+  Rendered tasks/_form.html.erb (9.5ms)
+  Rendered tasks/edit.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 29ms (Views: 27.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-20 14:47:41 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-20 14:47:41 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-20 14:47:41 -0400
+
+
+Started GET "/assets/application.self-70bb41be60ac90f49916773009628676dce38749b11cbfc4654b0586b4c98c38.css?body=1" for ::1 at 2016-03-20 14:47:41 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-20 14:47:41 -0400
+
+
+Started GET "/lists/3/tasks/20/edit" for ::1 at 2016-03-20 14:47:58 -0400
+Processing by TasksController#edit as HTML
+  Parameters: {"list_id"=>"3", "id"=>"20"}
+  [1m[35mList Load (0.5ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mTask Load (0.4ms)[0m  [1mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT 1[0m  [["id", 20]]
+  Rendered tasks/_form.html.erb (5.4ms)
+  Rendered tasks/edit.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 24ms (Views: 20.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-20 14:47:59 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-20 14:47:59 -0400
+
+
+Started GET "/assets/application.self-70bb41be60ac90f49916773009628676dce38749b11cbfc4654b0586b4c98c38.css?body=1" for ::1 at 2016-03-20 14:47:59 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-20 14:47:59 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-20 14:47:59 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-20 14:47:59 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-20 14:47:59 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-20 14:47:59 -0400
+
+
+Started GET "/lists/3/tasks/20/edit" for ::1 at 2016-03-20 14:48:47 -0400
+Processing by TasksController#edit as HTML
+  Parameters: {"list_id"=>"3", "id"=>"20"}
+  [1m[35mList Load (0.2ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mTask Load (0.3ms)[0m  [1mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT 1[0m  [["id", 20]]
+  Rendered tasks/_form.html.erb (6.8ms)
+  Rendered tasks/edit.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 29ms (Views: 26.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.self-70bb41be60ac90f49916773009628676dce38749b11cbfc4654b0586b4c98c38.css?body=1" for ::1 at 2016-03-20 14:48:48 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-20 14:48:48 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-20 14:48:48 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-20 14:48:48 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-20 14:48:48 -0400
+
+
+Started PATCH "/lists/3/tasks/20" for ::1 at 2016-03-20 14:49:01 -0400
+Processing by TasksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lekCOTe+ECEZNcSoWNj/ZKuKOgq0rsetO1KdOHrj+Xd0SInnfq5sLNZDxvwAxISi7xWdOn/SRenM2F2ddSsvYg==", "task"=>{"name"=>"sweep 4", "category"=>"Home", "priority"=>"High", "time_estimate"=>"1", "time_actual"=>"", "deadline"=>"2016-03-25", "cost"=>"", "description"=>"sweep kitchen, dining room, and bathroom", "image"=>"", "quantity"=>""}, "commit"=>"Update Task", "list_id"=>"3", "id"=>"20"}
+  [1m[35mList Load (0.3ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mTask Load (0.4ms)[0m  [1mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT 1[0m  [["id", 20]]
+Unpermitted parameter: cost
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (2.2ms)[0m  [1mUPDATE "tasks" SET "priority" = $1, "updated_at" = $2 WHERE "tasks"."id" = $3[0m  [["priority", "High"], ["updated_at", "2016-03-20 18:49:01.766211"], ["id", 20]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/lists/3
+Completed 302 Found in 11ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/lists/3" for ::1 at 2016-03-20 14:49:01 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mList Load (0.3ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mTask Load (0.3ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 3]]
+  Rendered lists/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 16ms (Views: 14.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/lists/3/tasks/19/edit" for ::1 at 2016-03-20 14:49:04 -0400
+Processing by TasksController#edit as HTML
+  Parameters: {"list_id"=>"3", "id"=>"19"}
+  [1m[36mList Load (0.2ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mTask Load (0.2ms)[0m  SELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT 1  [["id", 19]]
+  Rendered tasks/_form.html.erb (5.3ms)
+  Rendered tasks/edit.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 21ms (Views: 19.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/lists/3/tasks/18/edit" for ::1 at 2016-03-20 14:49:07 -0400
+Processing by TasksController#edit as HTML
+  Parameters: {"list_id"=>"3", "id"=>"18"}
+  [1m[36mList Load (0.2ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mTask Load (0.3ms)[0m  SELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT 1  [["id", 18]]
+  Rendered tasks/_form.html.erb (3.9ms)
+  Rendered tasks/edit.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 18ms (Views: 16.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/lists/3/tasks/20/edit" for ::1 at 2016-03-20 14:49:10 -0400
+Processing by TasksController#edit as HTML
+  Parameters: {"list_id"=>"3", "id"=>"20"}
+  [1m[36mList Load (0.2ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mTask Load (0.3ms)[0m  SELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT 1  [["id", 20]]
+  Rendered tasks/_form.html.erb (3.6ms)
+  Rendered tasks/edit.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 19ms (Views: 17.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/lists/3/tasks/18/edit" for ::1 at 2016-03-20 14:49:25 -0400
+Processing by TasksController#edit as HTML
+  Parameters: {"list_id"=>"3", "id"=>"18"}
+  [1m[36mList Load (0.2ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mTask Load (0.2ms)[0m  SELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT 1  [["id", 18]]
+  Rendered tasks/_form.html.erb (5.0ms)
+  Rendered tasks/edit.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 22ms (Views: 20.7ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/lists/3/tasks/18" for ::1 at 2016-03-20 14:49:28 -0400
+Processing by TasksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yPdo4v3gc7B68ksMKJMjNDwdio2Sgm66BH5fdo9gP74pVuM8tPAPvbWESVhwj1jyeIItvVn+7P7z9J/TgKjpqw==", "task"=>{"name"=>"sweep 4", "category"=>"Home", "priority"=>"Medium", "time_estimate"=>"1", "time_actual"=>"", "deadline"=>"2016-03-25", "cost"=>"", "description"=>"sweep kitchen, dining room, and bathroom", "image"=>"", "quantity"=>""}, "commit"=>"Update Task", "list_id"=>"3", "id"=>"18"}
+  [1m[36mList Load (0.6ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mTask Load (0.4ms)[0m  SELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT 1  [["id", 18]]
+Unpermitted parameter: cost
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "tasks" SET "priority" = $1, "updated_at" = $2 WHERE "tasks"."id" = $3  [["priority", "Medium"], ["updated_at", "2016-03-20 18:49:28.838517"], ["id", 18]]
+  [1m[36m (1.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/lists/3
+Completed 302 Found in 8ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/lists/3" for ::1 at 2016-03-20 14:49:28 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mList Load (0.2ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 3]]
+  Rendered lists/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 22ms (Views: 20.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/lists/3/tasks/19/edit" for ::1 at 2016-03-20 14:49:29 -0400
+Processing by TasksController#edit as HTML
+  Parameters: {"list_id"=>"3", "id"=>"19"}
+  [1m[35mList Load (0.2ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT 1[0m  [["id", 19]]
+  Rendered tasks/_form.html.erb (7.9ms)
+  Rendered tasks/edit.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 22ms (Views: 20.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/lists/3/tasks/20/edit" for ::1 at 2016-03-20 14:49:33 -0400
+Processing by TasksController#edit as HTML
+  Parameters: {"list_id"=>"3", "id"=>"20"}
+  [1m[35mList Load (0.2ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT 1[0m  [["id", 20]]
+  Rendered tasks/_form.html.erb (3.6ms)
+  Rendered tasks/edit.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 18ms (Views: 16.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/lists/3/tasks/18/edit" for ::1 at 2016-03-20 14:49:36 -0400
+Processing by TasksController#edit as HTML
+  Parameters: {"list_id"=>"3", "id"=>"18"}
+  [1m[35mList Load (0.2ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT 1[0m  [["id", 18]]
+  Rendered tasks/_form.html.erb (4.1ms)
+  Rendered tasks/edit.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 42ms (Views: 40.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/lists/3/tasks/new" for ::1 at 2016-03-20 14:49:48 -0400
+Processing by TasksController#new as HTML
+  Parameters: {"list_id"=>"3"}
+  [1m[35mList Load (0.3ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1  [["id", 3]]
+  Rendered tasks/_form.html.erb (10.8ms)
+  Rendered tasks/new.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 32ms (Views: 30.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-03-20 14:50:36 -0400
+Processing by ListsController#index as HTML
+  [1m[36mList Load (0.4ms)[0m  [1mSELECT "lists".* FROM "lists"[0m
+  Rendered lists/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 17ms (Views: 15.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/lists/new" for ::1 at 2016-03-20 14:50:38 -0400
+Processing by ListsController#new as HTML
+  Rendered lists/_form.html.erb (4.7ms)
+  Rendered lists/new.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 19ms (Views: 18.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/lists/new" for ::1 at 2016-03-20 14:52:13 -0400
+Processing by ListsController#new as HTML
+  Rendered lists/_form.html.erb (3.7ms)
+  Rendered lists/new.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 20ms (Views: 19.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-20 14:52:13 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-20 14:52:13 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-20 14:52:13 -0400
+
+
+Started GET "/assets/application.self-70bb41be60ac90f49916773009628676dce38749b11cbfc4654b0586b4c98c38.css?body=1" for ::1 at 2016-03-20 14:52:13 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-20 14:52:13 -0400
+
+
+Started GET "/lists/new" for ::1 at 2016-03-20 14:52:31 -0400
+Processing by ListsController#new as HTML
+  Rendered lists/_form.html.erb (3.4ms)
+  Rendered lists/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 18ms (Views: 17.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-70bb41be60ac90f49916773009628676dce38749b11cbfc4654b0586b4c98c38.css?body=1" for ::1 at 2016-03-20 14:52:31 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-20 14:52:31 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-20 14:52:31 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-20 14:52:31 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-20 14:52:31 -0400
+
+
+Started GET "/lists/new" for ::1 at 2016-03-20 14:55:31 -0400
+Processing by ListsController#new as HTML
+  Rendered lists/_form.html.erb (25.0ms)
+  Rendered lists/new.html.erb within layouts/application (27.6ms)
+Completed 200 OK in 81ms (Views: 72.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-70bb41be60ac90f49916773009628676dce38749b11cbfc4654b0586b4c98c38.css?body=1" for ::1 at 2016-03-20 14:55:32 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-20 14:55:32 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-20 14:55:32 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-20 14:55:32 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-20 14:55:32 -0400
+
+
+Started GET "/lists/new" for ::1 at 2016-03-20 14:55:50 -0400
+Processing by ListsController#new as HTML
+  Rendered lists/_form.html.erb (8.1ms)
+  Rendered lists/new.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 35ms (Views: 33.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-70bb41be60ac90f49916773009628676dce38749b11cbfc4654b0586b4c98c38.css?body=1" for ::1 at 2016-03-20 14:55:50 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-20 14:55:50 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-20 14:55:50 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-20 14:55:50 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-20 14:55:50 -0400
+
+
+Started GET "/" for ::1 at 2016-03-20 14:56:01 -0400
+Processing by ListsController#index as HTML
+  [1m[35mList Load (1.0ms)[0m  SELECT "lists".* FROM "lists"
+  Rendered lists/index.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 32ms (Views: 30.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/lists/2" for ::1 at 2016-03-20 14:56:02 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mList Load (0.5ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mTask Load (0.4ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 2]]
+  Rendered lists/show.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 23ms (Views: 20.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/lists/2/edit" for ::1 at 2016-03-20 14:56:03 -0400
+Processing by ListsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mList Load (0.3ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered lists/_form.html.erb (7.2ms)
+  Rendered lists/edit.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 26ms (Views: 24.1ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/lists/2" for ::1 at 2016-03-20 14:56:06 -0400
+Processing by ListsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZeVYKkxDJdGLJo+X8iCyeDG+lI9HdE6JEsx4BpqoG/2ERNP0BVNZ3ERQjcOqPMm+dSEzv4wIzM3lRrijlWDN6A==", "list"=>{"name"=>"Grocery List", "list_type"=>"Shopping List", "category"=>"Home", "list_time"=>"1", "deadline"=>"", "recurring"=>"Weekly"}, "commit"=>"Update List", "id"=>"2"}
+  [1m[35mList Load (0.3ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1  [["id", 2]]
+Unpermitted parameter: recurring
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/lists/2
+Completed 302 Found in 9ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/lists/2" for ::1 at 2016-03-20 14:56:06 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mList Load (0.3ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mTask Load (0.3ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 2]]
+  Rendered lists/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 17ms (Views: 15.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/lists" for ::1 at 2016-03-20 14:56:20 -0400
+Processing by ListsController#index as HTML
+  [1m[36mList Load (0.5ms)[0m  [1mSELECT "lists".* FROM "lists"[0m
+  Rendered lists/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 17ms (Views: 15.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/lists/2" for ::1 at 2016-03-20 14:56:22 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mList Load (0.3ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mTask Load (0.3ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 2]]
+  Rendered lists/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 30ms (Views: 28.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/lists/new" for ::1 at 2016-03-20 14:56:25 -0400
+Processing by ListsController#new as HTML
+  Rendered lists/_form.html.erb (3.8ms)
+  Rendered lists/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 20ms (Views: 19.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/lists/new" for ::1 at 2016-03-20 14:56:46 -0400
+Processing by ListsController#new as HTML
+  Rendered lists/_form.html.erb (3.7ms)
+  Rendered lists/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 24ms (Views: 23.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/lists/new" for ::1 at 2016-03-20 14:57:24 -0400
+Processing by ListsController#new as HTML
+  Rendered lists/_form.html.erb (9.2ms)
+  Rendered lists/new.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 30ms (Views: 28.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-20 14:57:24 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-20 14:57:25 -0400
+
+
+Started GET "/assets/application.self-70bb41be60ac90f49916773009628676dce38749b11cbfc4654b0586b4c98c38.css?body=1" for ::1 at 2016-03-20 14:57:25 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-20 14:57:25 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-20 14:57:25 -0400
+
+
+Started GET "/lists/new" for ::1 at 2016-03-20 14:57:52 -0400
+Processing by ListsController#new as HTML
+  Rendered lists/_form.html.erb (5.4ms)
+  Rendered lists/new.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 27ms (Views: 25.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-20 14:57:52 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-20 14:57:52 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-20 14:57:52 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-20 14:57:52 -0400
+
+
+Started GET "/assets/application.self-70bb41be60ac90f49916773009628676dce38749b11cbfc4654b0586b4c98c38.css?body=1" for ::1 at 2016-03-20 14:57:52 -0400
+
+
+Started GET "/lists/new" for ::1 at 2016-03-20 14:58:21 -0400
+Processing by ListsController#new as HTML
+  Rendered lists/_form.html.erb (5.7ms)
+  Rendered lists/new.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 27ms (Views: 26.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-70bb41be60ac90f49916773009628676dce38749b11cbfc4654b0586b4c98c38.css?body=1" for ::1 at 2016-03-20 14:58:21 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-20 14:58:21 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-20 14:58:21 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-20 14:58:21 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-20 14:58:21 -0400
+
+
+Started POST "/lists" for ::1 at 2016-03-20 14:58:35 -0400
+Processing by ListsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Hy5cj6NQ/kyGokZrOO6OFZjjVRjl4JaJ1drut5Ncg4j+j9dR6kCCQUnURD9g8vXT3HzyKC6cFM0iUC4SnJRVnQ==", "list"=>{"name"=>"", "category"=>"", "list_time"=>"30", "deadline"=>""}, "commit"=>"Create List"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.6ms)[0m  [1mINSERT INTO "lists" ("name", "category", "list_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", ""], ["category", ""], ["list_time", 30], ["created_at", "2016-03-20 18:58:35.771321"], ["updated_at", "2016-03-20 18:58:35.771321"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/lists/11
+Completed 302 Found in 9ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/lists/11" for ::1 at 2016-03-20 14:58:35 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mList Load (0.3ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mTask Load (0.4ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 11]]
+  Rendered lists/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 25ms (Views: 23.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/lists/11/edit" for ::1 at 2016-03-20 14:58:43 -0400
+Processing by ListsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mList Load (0.5ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  Rendered lists/_form.html.erb (5.2ms)
+  Rendered lists/edit.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 26ms (Views: 23.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/lists" for ::1 at 2016-03-20 14:58:53 -0400
+Processing by ListsController#index as HTML
+  [1m[35mList Load (0.5ms)[0m  SELECT "lists".* FROM "lists"
+  Rendered lists/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 20ms (Views: 18.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/lists/1" for ::1 at 2016-03-20 14:58:55 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mList Load (0.3ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 1]]
+  Rendered lists/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 16ms (Views: 14.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/lists/1/tasks/11/edit" for ::1 at 2016-03-20 14:58:56 -0400
+Processing by TasksController#edit as HTML
+  Parameters: {"list_id"=>"1", "id"=>"11"}
+  [1m[36mList Load (1.1ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mTask Load (0.3ms)[0m  SELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT 1  [["id", 11]]
+  Rendered tasks/_form.html.erb (5.8ms)
+  Rendered tasks/edit.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 24ms (Views: 20.3ms | ActiveRecord: 1.4ms)
