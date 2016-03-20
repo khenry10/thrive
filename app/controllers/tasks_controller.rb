@@ -25,6 +25,14 @@ class TasksController < ApplicationController
     @task = Task.find(params[:id])
   end
 
+  def update
+    @list = List.find(params[:list_id])
+    @task = Task.find(params[:id]).update(task_param)
+
+    redirect_to list_path(@list)
+  end
+
+
   private
   def task_param
     params.require(:task).permit(:name, :category, :priority, :description, :time_estimate, :time_actual, :costs, :deadline, :image, :quantity, :list_id)
