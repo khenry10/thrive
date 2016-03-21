@@ -1,8 +1,7 @@
-<h1> Lists Homepage <h1>
 
-<ul>
-  <% @list.each do |list| %>
-  <li><%= link_to list.name, list %></li>
-  <% end %>
-  <li><%= link_to "New List", new_list_path %></li>
-</ul
+  <ul>
+    <% @list.each do |list| %>
+    <li><%= link_to list.name, list %></li>
+    <% end %>
+    <li><%= link_to "New List", new_list_path %></li>
+  </ul>
