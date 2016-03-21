@@ -16,7 +16,6 @@ class TasksController < ApplicationController
   def create
     @list = List.find(params[:list_id])
     @task = @list.tasks.create!(task_param)
-
     redirect_to list_path(@list)
   end
 
@@ -39,10 +38,14 @@ class TasksController < ApplicationController
     redirect_to list_path(@list)
   end
 
+  def complete
+    @task = Task.find(params[:id]).update(column: "true")
+  end
+
 
   private
   def task_param
-    params.require(:task).permit(:name, :category, :priority, :description, :time_estimate, :time_actual, :costs, :deadline, :image, :quantity, :list_id)
+    params.require(:task).permit(:name, :category, :priority, :description, :time_estimate, :time_actual, :costs, :deadline, :image, :quantity, :list_id, :complete)
   end
 
 
