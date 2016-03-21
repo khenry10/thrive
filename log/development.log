@@ -10940,3 +10940,229 @@ Processing by ListsController#index as HTML
   [1m[35mList Load (0.3ms)[0m  SELECT "lists".* FROM "lists"
   Rendered lists/index.html.erb within layouts/application (1.6ms)
 Completed 200 OK in 14ms (Views: 13.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-03-21 09:55:50 -0400
+Processing by ListsController#index as HTML
+  [1m[36mList Load (1.0ms)[0m  [1mSELECT "lists".* FROM "lists"[0m
+  Rendered lists/index.html.erb within layouts/application (13.5ms)
+Completed 500 Internal Server Error in 92ms (ActiveRecord: 1.0ms)
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"lists"} missing required keys: [:id]):
+     8: </head>
+     9: <body>
+    10:   <div class="nav" />
+    11:     <%=link_to "Thrive", list_path %>
+    12:   </div
+    13: 
+    14: <%= yield %>
+  app/views/layouts/application.html.erb:11:in `_app_views_layouts_application_html_erb__1593143138241066478_70208654023280'
+
+
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (14.9ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.5ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.9ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (101.1ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.6ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (53.2ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.9ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (113.2ms)
+
+
+Started GET "/" for ::1 at 2016-03-21 09:56:19 -0400
+Processing by ListsController#index as HTML
+  [1m[35mList Load (0.9ms)[0m  SELECT "lists".* FROM "lists"
+  Rendered lists/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 28ms (Views: 26.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.self-70bb41be60ac90f49916773009628676dce38749b11cbfc4654b0586b4c98c38.css?body=1" for ::1 at 2016-03-21 09:56:19 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-21 09:56:19 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-21 09:56:19 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-21 09:56:19 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-21 09:56:19 -0400
+
+
+Started GET "/lists/3" for ::1 at 2016-03-21 09:56:34 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mList Load (0.6ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mTask Load (0.4ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 3]]
+  Rendered lists/show.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 28ms (Views: 24.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/lists" for ::1 at 2016-03-21 09:56:36 -0400
+Processing by ListsController#index as HTML
+  [1m[36mList Load (0.7ms)[0m  [1mSELECT "lists".* FROM "lists"[0m
+  Rendered lists/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 32ms (Views: 30.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/lists/12" for ::1 at 2016-03-21 09:56:37 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mList Load (0.2ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1  [["id", 12]]
+  [1m[36mTask Load (0.3ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 12]]
+  Rendered lists/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 20ms (Views: 18.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/lists" for ::1 at 2016-03-21 09:56:38 -0400
+Processing by ListsController#index as HTML
+  [1m[35mList Load (0.3ms)[0m  SELECT "lists".* FROM "lists"
+  Rendered lists/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 18ms (Views: 17.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/lists" for ::1 at 2016-03-21 09:58:37 -0400
+Processing by ListsController#index as HTML
+  [1m[36mList Load (1.5ms)[0m  [1mSELECT "lists".* FROM "lists"[0m
+  Rendered lists/index.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 166ms (Views: 156.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/application.self-d7a7180ac5505b561ebe166a9fdca555dafb1b99bf7cbd68916e141a20d0bd11.css?body=1" for ::1 at 2016-03-21 09:58:37 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-21 09:58:37 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-21 09:58:37 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-21 09:58:37 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-21 09:58:37 -0400
+
+
+Started GET "/lists" for ::1 at 2016-03-21 09:58:49 -0400
+Processing by ListsController#index as HTML
+  [1m[35mList Load (0.8ms)[0m  SELECT "lists".* FROM "lists"
+  Rendered lists/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 60ms (Views: 58.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.self-5dc148452b392f9214045cb9802ff71d94435b72b2ce65b3899736f7149dc178.css?body=1" for ::1 at 2016-03-21 09:58:49 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-21 09:58:49 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-21 09:58:49 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-21 09:58:49 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-21 09:58:49 -0400
+
+
+Started GET "/lists" for ::1 at 2016-03-21 10:00:46 -0400
+Processing by ListsController#index as HTML
+  [1m[36mList Load (0.9ms)[0m  [1mSELECT "lists".* FROM "lists"[0m
+  Rendered lists/index.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 429ms (Views: 420.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-21 10:00:47 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-21 10:00:47 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-21 10:00:47 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-21 10:00:47 -0400
+
+
+Started GET "/assets/application.self-3b4637c75d5fe4ec2eac956fafc40479ca6b5c3d8b22e9e0a6864609c0f0427f.css?body=1" for ::1 at 2016-03-21 10:00:47 -0400
+
+
+Started GET "/lists" for ::1 at 2016-03-21 10:01:02 -0400
+Processing by ListsController#index as HTML
+  [1m[35mList Load (1.7ms)[0m  SELECT "lists".* FROM "lists"
+  Rendered lists/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 46ms (Views: 44.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/application.self-1db3254684c2b0d183526610659c7e6667d5c54ed0ca5dd79e533a51b97acdaf.css?body=1" for ::1 at 2016-03-21 10:01:02 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-21 10:01:02 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-21 10:01:02 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-21 10:01:02 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-21 10:01:02 -0400
+
+
+Started GET "/lists" for ::1 at 2016-03-21 10:01:12 -0400
+Processing by ListsController#index as HTML
+  [1m[36mList Load (1.7ms)[0m  [1mSELECT "lists".* FROM "lists"[0m
+  Rendered lists/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 49ms (Views: 46.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-21 10:01:12 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-21 10:01:12 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-21 10:01:12 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-21 10:01:12 -0400
+
+
+Started GET "/assets/application.self-e79e604c839bafc541cae94daab2f8117b129a2a04b8afdc93d81bbdfbd999d4.css?body=1" for ::1 at 2016-03-21 10:01:12 -0400
+
+
+Started GET "/lists" for ::1 at 2016-03-21 10:01:40 -0400
+Processing by ListsController#index as HTML
+  [1m[35mList Load (0.9ms)[0m  SELECT "lists".* FROM "lists"
+  Rendered lists/index.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 180ms (Views: 173.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-21 10:01:40 -0400
+
+
+Started GET "/assets/application.self-bc909584d29e2c09d6471b890c962f93c44d9e04143d21f76af4a1975ca605c4.css?body=1" for ::1 at 2016-03-21 10:01:40 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-21 10:01:40 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-21 10:01:40 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-21 10:01:40 -0400
+
+
+Started GET "/lists/12" for ::1 at 2016-03-21 10:01:54 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mList Load (0.6ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1[0m  [["id", 12]]
+  [1m[35mTask Load (0.5ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 12]]
+  Rendered lists/show.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 40ms (Views: 35.3ms | ActiveRecord: 1.1ms)
