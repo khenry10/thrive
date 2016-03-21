@@ -1,8 +1,12 @@
-<h2><%= @list.name %> - <%= link_to "Edit", edit_list_path %></h2>
+<h2><%= @list.name %> - <%= link_to "Edit", edit_list_path %> <%= link_to "Delete", list_path(@list), method: :delete %></h2>
 
 <ul>
-  <% @list.tasks.each do |task| %>
-  <li><%= link_to task.name, edit_list_task_path(@list, task) %></li>
+  <%  @list.tasks.each do |task| %>
+  <li><%= link_to task.name, edit_list_task_path(@list, task) %>
+    <%= " - " %>
+  <%= link_to "Delete", list_task_path(@list, task), method: :delete %></li>
   <% end %>
-  <li><%= link_to "Add New Task", new_list_task_path(@list) %></li>
+
 </ul>
+
+<%= link_to "Add New Task", new_list_task_path(@list) %>
