@@ -1,9 +1,18 @@
 
-<h2><%= Task.sum(:time_estimate) %></h2>
+<h2><%= (Task.sum(:time_estimate))/60 %><%= " hours of tasks" %></h2>
 
   <ul>
     <% @list.each do |list| %>
-    <li><%= link_to list.name, list %> <%= (Task.where(list_id: list.id).sum(:time_estimate))/60%><%= " hours" %></li>
+    <li><%= link_to list.name, list %>
+
+      <% if list.list_type == "Check List" %>
+      <%= (Task.where(list_id: list.id).sum(:time_estimate))/60%><%= " hours" %></li>
+      <% end %>
+
+      <% if list.list_type == "Shopping List" %>
+      <%= "$" %><%= Task.where(list_id: list.id).sum(:cost) %></li>
+      <% end %>
+
     <% end %>
   </ul>
 

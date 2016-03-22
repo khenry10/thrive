@@ -22,7 +22,7 @@ class TasksController < ApplicationController
   def edit
     @list = List.find(params[:list_id])
     @task = Task.find(params[:id])
-    
+
   end
 
   def update
@@ -46,7 +46,7 @@ class TasksController < ApplicationController
 
   private
   def task_param
-    params.require(:task).permit(:name, :category, :priority, :description, :time_estimate, :time_actual, :costs, :deadline, :image, :quantity, :list_id, :complete)
+    params.require(:task).permit(:name, :category, :priority, :description, :time_estimate, :time_actual, :cost, :deadline, :image, :quantity, :list_id, :complete)
   end
 
 

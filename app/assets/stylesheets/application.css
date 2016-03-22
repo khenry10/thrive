@@ -5,19 +5,34 @@ body {
 }
 
 .nav {
-  display: flex;
   position: relative;
-  width: 105%;
+  width: 100%;
   top: -10px;
   left: -10px;
   background-color: #54ACD2;
   height: 50px;
   margin-bottom: 0px;
   font-weight: bolder;
-  font-size: 30px;
+  font-size: 12px;
   padding-left: 15px;
-  padding-top: 10px;
+  padding-top: 0px;
   color: white;
+}
+
+h1 nav {
+  outline: 1px white solid;
+}
+
+.left-nav {
+  position: absolute;
+  left: 10px;
+}
+
+.nav-item {
+  padding: 10px;
+  display: inline-block;
+  font-size: 20px;
+  outline: 1px white solid;
 }
 
 .container {
@@ -25,7 +40,8 @@ body {
   display: flex;
   top: -10px;
   width: 90%;
-  height: 700px;
+  min-height: 650px;
+  height: 100%;
   margin-left: 5%;
   background-color: #EFEFEF;
 }
@@ -44,7 +60,7 @@ a {
   text-decoration: none;
 }
 
-li {
+.content li {
   list-style: none;
   align-content: center;
   align-self: center;
@@ -54,4 +70,9 @@ li {
   border: 3px #EFEFEF solid;
   border-radius: 25px;
   background-color: #EB6B56;
+}
+
+input[type=text] {
+  width: 200px;
+  height: 30px;
 }

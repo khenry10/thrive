@@ -1,14 +1,28 @@
 <h2><%= @list.name %> - <%= link_to "Edit", edit_list_path %> <%= link_to "Delete", list_path(@list), method: :delete %></h2>
 
-<h3><%= Task.where(list_id: @list.id).sum(:time_estimate) %><%= " hours" %></h3>
+
+<% if @list.list_type == "Check List" %>
+<h3><%= (Task.where(list_id: @list.id).sum(:time_estimate))/60 %><%= " hours" %></h3>
+<% end %>
+
+<% if @list.list_type == "Shopping List" %>
+<h3><%= "$" %><%= Task.where(list_id: @list.id).sum(:cost) %></h3>
+<% end %>
 
 <ul>
   <%  @list.tasks.each do |task| %>
   <li><%= check_box_tag :complete, 1, task.complete %>
     <%= link_to task.name, edit_list_task_path(@list, task) %>
 
-  <%= task.time_estimate %><%= " minutes" %>
-  </li> <%= link_to "Delete", list_task_path(@list, task), method: :delete %>
+    <% if @list.list_type == "Check List" %>
+      <%= task.time_estimate %><%= " minutes" %></li>
+    <% end %>
+
+  <% if @list.list_type == "Shopping List" %>
+    <%= "$" %><%= task.cost * task.quantity %></li>
+    <% end %>
+
+      <% link_to "Delete", list_task_path(@list, task), method: :delete %>
 
   <% end %>
 

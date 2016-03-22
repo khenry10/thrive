@@ -1,1 +1,10 @@
-<h2> Tasks Homepage <h2> 
+<h2> All Tasks <h2>
+
+<ul>
+  <%= @task.each do |task| %>
+    <% if task.complete == nil  %>
+      <li><%= check_box_tag :complete, 1, task.complete %>
+        <%= task.name %></li>
+    <% end %>
+  <% end %>
+</ul>
