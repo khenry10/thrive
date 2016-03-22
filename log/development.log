@@ -28246,3 +28246,1902 @@ Processing by TasksController#index as HTML
   [1m[36mTask Load (0.4ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
   Rendered tasks/index.html.erb within layouts/application (8.4ms)
 Completed 200 OK in 22ms (Views: 21.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/lists" for ::1 at 2016-03-22 14:14:40 -0400
+Processing by ListsController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks"
+  [1m[36mList Load (0.2ms)[0m  [1mSELECT "lists".* FROM "lists"[0m
+  [1m[35m (0.2ms)[0m  SELECT SUM("tasks"."cost") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 2]]
+  [1m[36m (0.3ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 1]]
+  [1m[35m (0.2ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 15]]
+  Rendered lists/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 20ms (Views: 18.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/lists/2" for ::1 at 2016-03-22 14:14:45 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mList Load (0.2ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.2ms)[0m  SELECT SUM("tasks"."cost") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 2]]
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 2]]
+  Rendered lists/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 21ms (Views: 19.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/lists" for ::1 at 2016-03-22 14:14:48 -0400
+Processing by ListsController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks"
+  [1m[36mList Load (0.3ms)[0m  [1mSELECT "lists".* FROM "lists"[0m
+  [1m[35m (0.2ms)[0m  SELECT SUM("tasks"."cost") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 2]]
+  [1m[36m (0.4ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 1]]
+  [1m[35m (0.2ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 15]]
+  Rendered lists/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 24ms (Views: 22.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/lists/1" for ::1 at 2016-03-22 14:14:50 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mList Load (0.2ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 1]]
+  [1m[36mTask Load (0.3ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 1]]
+  Rendered lists/show.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 25ms (Views: 23.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/lists" for ::1 at 2016-03-22 14:14:52 -0400
+Processing by ListsController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks"
+  [1m[36mList Load (0.3ms)[0m  [1mSELECT "lists".* FROM "lists"[0m
+  [1m[35m (0.2ms)[0m  SELECT SUM("tasks"."cost") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 2]]
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 1]]
+  [1m[35m (0.2ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 15]]
+  Rendered lists/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 17ms (Views: 15.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/lists/15" for ::1 at 2016-03-22 14:14:53 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mList Load (0.2ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1[0m  [["id", 15]]
+  [1m[35m (0.2ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 15]]
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 15]]
+  Rendered lists/show.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 17ms (Views: 15.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/lists/15/tasks/new" for ::1 at 2016-03-22 14:21:09 -0400
+Processing by TasksController#new as HTML
+  Parameters: {"list_id"=>"15"}
+  [1m[35mList Load (0.3ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1  [["id", 15]]
+  Rendered tasks/_form.html.erb (8.4ms)
+  Rendered tasks/new.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 40ms (Views: 32.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/lists/15/tasks/new" for ::1 at 2016-03-22 14:22:11 -0400
+Processing by TasksController#new as HTML
+  Parameters: {"list_id"=>"15"}
+  [1m[36mList Load (0.5ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1[0m  [["id", 15]]
+  Rendered tasks/_form.html.erb (3.9ms)
+  Rendered tasks/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 65ms (Views: 62.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.self-b0277688cbcc4e05f6cb1648a431edbaff53f191405e7a369bdd2683fd3bf57d.css?body=1" for ::1 at 2016-03-22 14:22:11 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-22 14:22:11 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-22 14:22:11 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-22 14:22:11 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-22 14:22:11 -0400
+
+
+Started GET "/lists" for ::1 at 2016-03-22 14:22:30 -0400
+Processing by ListsController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks"
+  [1m[36mList Load (0.4ms)[0m  [1mSELECT "lists".* FROM "lists"[0m
+  [1m[35m (0.2ms)[0m  SELECT SUM("tasks"."cost") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 2]]
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 1]]
+  [1m[35m (0.2ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 15]]
+  Rendered lists/index.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 24ms (Views: 22.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/lists/new" for ::1 at 2016-03-22 14:22:38 -0400
+Processing by ListsController#new as HTML
+  Rendered lists/_form.html.erb (4.5ms)
+  Rendered lists/new.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 23ms (Views: 22.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks" for ::1 at 2016-03-22 14:22:40 -0400
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.5ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 33ms (Views: 31.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/lists" for ::1 at 2016-03-22 14:22:41 -0400
+Processing by ListsController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks"
+  [1m[36mList Load (0.3ms)[0m  [1mSELECT "lists".* FROM "lists"[0m
+  [1m[35m (0.2ms)[0m  SELECT SUM("tasks"."cost") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 2]]
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 1]]
+  [1m[35m (0.2ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 15]]
+  Rendered lists/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 18ms (Views: 16.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/tasks" for ::1 at 2016-03-22 14:22:44 -0400
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.5ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 25ms (Views: 24.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/lists" for ::1 at 2016-03-22 14:22:50 -0400
+Processing by ListsController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks"
+  [1m[36mList Load (0.3ms)[0m  [1mSELECT "lists".* FROM "lists"[0m
+  [1m[35m (0.3ms)[0m  SELECT SUM("tasks"."cost") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 2]]
+  [1m[36m (0.3ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 1]]
+  [1m[35m (0.2ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 15]]
+  Rendered lists/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 21ms (Views: 18.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/lists" for ::1 at 2016-03-22 14:23:59 -0400
+Processing by ListsController#index as HTML
+  [1m[36m (0.6ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks"[0m
+  [1m[35mList Load (0.3ms)[0m  SELECT "lists".* FROM "lists"
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("tasks"."cost") FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 2]]
+  [1m[35m (0.2ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 15]]
+  Rendered lists/index.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 25ms (Views: 23.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/application.self-b0277688cbcc4e05f6cb1648a431edbaff53f191405e7a369bdd2683fd3bf57d.css?body=1" for ::1 at 2016-03-22 14:23:59 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-22 14:23:59 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-22 14:23:59 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-22 14:23:59 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-22 14:23:59 -0400
+
+
+Started GET "/lists" for ::1 at 2016-03-22 14:24:17 -0400
+Processing by ListsController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks"
+  [1m[36mList Load (0.3ms)[0m  [1mSELECT "lists".* FROM "lists"[0m
+  [1m[35m (0.2ms)[0m  SELECT SUM("tasks"."cost") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 2]]
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 1]]
+  [1m[35m (0.2ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 15]]
+  Rendered lists/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 36ms (Views: 33.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.self-b38da6140fa547b0a8b8b83826b1aef6d2340fd889a80689633c44bb19589747.css?body=1" for ::1 at 2016-03-22 14:24:17 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-22 14:24:17 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-22 14:24:17 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-22 14:24:17 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-22 14:24:17 -0400
+
+
+Started GET "/lists" for ::1 at 2016-03-22 14:24:18 -0400
+Processing by ListsController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks"[0m
+  [1m[35mList Load (0.3ms)[0m  SELECT "lists".* FROM "lists"
+  [1m[36m (0.3ms)[0m  [1mSELECT SUM("tasks"."cost") FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 2]]
+  [1m[35m (0.2ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 15]]
+  Rendered lists/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 18ms (Views: 16.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.self-b38da6140fa547b0a8b8b83826b1aef6d2340fd889a80689633c44bb19589747.css?body=1" for ::1 at 2016-03-22 14:24:18 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-22 14:24:18 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-22 14:24:18 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-22 14:24:18 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-22 14:24:18 -0400
+
+
+Started GET "/lists/2" for ::1 at 2016-03-22 14:24:23 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mList Load (0.3ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("tasks"."cost") FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 2]]
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 2]]
+  Rendered lists/show.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 19ms (Views: 17.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/lists/2/tasks/39/edit" for ::1 at 2016-03-22 14:24:24 -0400
+Processing by TasksController#edit as HTML
+  Parameters: {"list_id"=>"2", "id"=>"39"}
+  [1m[36mList Load (0.2ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mTask Load (0.2ms)[0m  SELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT 1  [["id", 39]]
+  Rendered tasks/_form.html.erb (3.5ms)
+  Rendered tasks/edit.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 26ms (Views: 23.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/lists" for ::1 at 2016-03-22 14:24:29 -0400
+Processing by ListsController#index as HTML
+  [1m[36m (0.4ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks"[0m
+  [1m[35mList Load (0.3ms)[0m  SELECT "lists".* FROM "lists"
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("tasks"."cost") FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 2]]
+  [1m[35m (0.2ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 15]]
+  Rendered lists/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 21ms (Views: 18.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/tasks" for ::1 at 2016-03-22 14:24:29 -0400
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.4ms)[0m  SELECT "tasks".* FROM "tasks"
+  Rendered tasks/index.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 25ms (Views: 24.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/lists" for ::1 at 2016-03-22 14:24:30 -0400
+Processing by ListsController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks"[0m
+  [1m[35mList Load (0.3ms)[0m  SELECT "lists".* FROM "lists"
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("tasks"."cost") FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 2]]
+  [1m[35m (0.2ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 15]]
+  Rendered lists/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 21ms (Views: 18.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/lists" for ::1 at 2016-03-22 14:24:51 -0400
+Processing by ListsController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks"
+  [1m[36mList Load (0.3ms)[0m  [1mSELECT "lists".* FROM "lists"[0m
+  [1m[35m (0.2ms)[0m  SELECT SUM("tasks"."cost") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 2]]
+  [1m[36m (0.4ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 1]]
+  [1m[35m (0.3ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 15]]
+  Rendered lists/index.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 22ms (Views: 19.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/application.self-b38da6140fa547b0a8b8b83826b1aef6d2340fd889a80689633c44bb19589747.css?body=1" for ::1 at 2016-03-22 14:24:51 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-22 14:24:51 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-22 14:24:51 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-22 14:24:51 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-22 14:24:51 -0400
+
+
+Started GET "/lists" for ::1 at 2016-03-22 14:25:02 -0400
+Processing by ListsController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks"[0m
+  [1m[35mList Load (0.3ms)[0m  SELECT "lists".* FROM "lists"
+  [1m[36m (0.3ms)[0m  [1mSELECT SUM("tasks"."cost") FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 2]]
+  [1m[35m (0.6ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 1]]
+  [1m[36m (0.4ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 15]]
+  Rendered lists/index.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 24ms (Views: 21.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/application.self-b38da6140fa547b0a8b8b83826b1aef6d2340fd889a80689633c44bb19589747.css?body=1" for ::1 at 2016-03-22 14:25:02 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-22 14:25:02 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-22 14:25:02 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-22 14:25:02 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-22 14:25:02 -0400
+
+
+Started GET "/lists" for ::1 at 2016-03-22 14:25:09 -0400
+Processing by ListsController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks"
+  [1m[36mList Load (0.3ms)[0m  [1mSELECT "lists".* FROM "lists"[0m
+  [1m[35m (0.2ms)[0m  SELECT SUM("tasks"."cost") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 2]]
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 1]]
+  [1m[35m (0.2ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 15]]
+  Rendered lists/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 16ms (Views: 13.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.self-b38da6140fa547b0a8b8b83826b1aef6d2340fd889a80689633c44bb19589747.css?body=1" for ::1 at 2016-03-22 14:25:09 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-22 14:25:09 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-22 14:25:09 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-22 14:25:09 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-22 14:25:09 -0400
+
+
+Started GET "/lists" for ::1 at 2016-03-22 14:25:35 -0400
+Processing by ListsController#index as HTML
+  [1m[36m (0.4ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks"[0m
+  [1m[35mList Load (0.5ms)[0m  SELECT "lists".* FROM "lists"
+  [1m[36m (0.5ms)[0m  [1mSELECT SUM("tasks"."cost") FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 2]]
+  [1m[35m (0.2ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 15]]
+  Rendered lists/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 48ms (Views: 45.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/application.self-b38da6140fa547b0a8b8b83826b1aef6d2340fd889a80689633c44bb19589747.css?body=1" for ::1 at 2016-03-22 14:25:35 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-22 14:25:35 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-22 14:25:35 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-22 14:25:35 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-22 14:25:35 -0400
+
+
+Started GET "/lists" for ::1 at 2016-03-22 14:26:10 -0400
+Processing by ListsController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks"
+  [1m[36mList Load (0.3ms)[0m  [1mSELECT "lists".* FROM "lists"[0m
+  [1m[35m (0.2ms)[0m  SELECT SUM("tasks"."cost") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 2]]
+  [1m[36m (0.4ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 1]]
+  [1m[35m (0.2ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 15]]
+  Rendered lists/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 43ms (Views: 41.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/application.self-ad424aad93c982ac6969b53e0bcb60a40f214fc841c303d8994bf0a2a7a9ceed.css?body=1" for ::1 at 2016-03-22 14:26:10 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-22 14:26:10 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-22 14:26:10 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-22 14:26:10 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-22 14:26:10 -0400
+
+
+Started GET "/lists/new" for ::1 at 2016-03-22 14:26:13 -0400
+Processing by ListsController#new as HTML
+  Rendered lists/_form.html.erb (4.9ms)
+  Rendered lists/new.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 26ms (Views: 24.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks" for ::1 at 2016-03-22 14:26:16 -0400
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.4ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 21ms (Views: 19.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tasks" for ::1 at 2016-03-22 14:26:29 -0400
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.5ms)[0m  SELECT "tasks".* FROM "tasks"
+  Rendered tasks/index.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 39ms (Views: 38.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-22 14:26:29 -0400
+
+
+Started GET "/assets/application.self-4c77167008ae9144c6ee84076aa33ce51e55106c728ab68e79d9b8654f62a197.css?body=1" for ::1 at 2016-03-22 14:26:29 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-22 14:26:29 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-22 14:26:29 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-22 14:26:29 -0400
+
+
+Started GET "/tasks" for ::1 at 2016-03-22 14:26:45 -0400
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.4ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 35ms (Views: 34.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.self-97135b22446bc46795b583d4e6b35adf0292795aba1db89cd291d819bf046f92.css?body=1" for ::1 at 2016-03-22 14:26:46 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-22 14:26:46 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-22 14:26:46 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-22 14:26:46 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-22 14:26:46 -0400
+
+
+Started GET "/tasks" for ::1 at 2016-03-22 14:27:29 -0400
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.4ms)[0m  SELECT "tasks".* FROM "tasks"
+  Rendered tasks/index.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 39ms (Views: 38.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-22 14:27:29 -0400
+
+
+Started GET "/assets/application.self-165080e618e7667dc7f480b21315576c4682bd2de8f22753ef8c34add1fed517.css?body=1" for ::1 at 2016-03-22 14:27:29 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-22 14:27:29 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-22 14:27:29 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-22 14:27:29 -0400
+
+
+Started GET "/tasks" for ::1 at 2016-03-22 14:27:55 -0400
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.8ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 38ms (Views: 37.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.self-d079915a77ba78540a677b0ca86a679224cc6b3910fd487c453baa654796b94a.css?body=1" for ::1 at 2016-03-22 14:27:55 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-22 14:27:55 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-22 14:27:55 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-22 14:27:55 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-22 14:27:55 -0400
+
+
+Started GET "/tasks" for ::1 at 2016-03-22 14:28:10 -0400
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.5ms)[0m  SELECT "tasks".* FROM "tasks"
+  Rendered tasks/index.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 34ms (Views: 33.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-22 14:28:10 -0400
+
+
+Started GET "/assets/application.self-20dcceab2315f4b39b0552ec23d6194b9190781b7dfc1d335c80482a39f2881b.css?body=1" for ::1 at 2016-03-22 14:28:10 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-22 14:28:10 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-22 14:28:10 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-22 14:28:10 -0400
+
+
+Started GET "/tasks" for ::1 at 2016-03-22 14:28:29 -0400
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.5ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 34ms (Views: 32.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-22 14:28:29 -0400
+
+
+Started GET "/assets/application.self-72efd1a74a9635a5b3b707a846657f102a26e88a66a6fa1664f5f857d1755b12.css?body=1" for ::1 at 2016-03-22 14:28:29 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-22 14:28:29 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-22 14:28:29 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-22 14:28:29 -0400
+
+
+Started GET "/tasks" for ::1 at 2016-03-22 14:28:36 -0400
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.5ms)[0m  SELECT "tasks".* FROM "tasks"
+  Rendered tasks/index.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 38ms (Views: 37.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-22 14:28:36 -0400
+
+
+Started GET "/assets/application.self-0632dcad1836559dfa608ebb3de47cb9ff6882031eff10d6f71b643f07bb9c8b.css?body=1" for ::1 at 2016-03-22 14:28:36 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-22 14:28:36 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-22 14:28:36 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-22 14:28:36 -0400
+
+
+Started GET "/lists" for ::1 at 2016-03-22 14:28:54 -0400
+Processing by ListsController#index as HTML
+  [1m[36m (0.4ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks"[0m
+  [1m[35mList Load (0.2ms)[0m  SELECT "lists".* FROM "lists"
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("tasks"."cost") FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 2]]
+  [1m[35m (0.2ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 15]]
+  Rendered lists/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 16ms (Views: 14.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/lists" for ::1 at 2016-03-22 14:31:52 -0400
+Processing by ListsController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks"
+  [1m[36mList Load (0.6ms)[0m  [1mSELECT "lists".* FROM "lists"[0m
+  [1m[35m (0.2ms)[0m  SELECT SUM("tasks"."cost") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 2]]
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 1]]
+  [1m[35m (0.2ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 15]]
+  Rendered lists/index.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 35ms (Views: 32.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-22 14:31:52 -0400
+
+
+Started GET "/assets/application.self-0632dcad1836559dfa608ebb3de47cb9ff6882031eff10d6f71b643f07bb9c8b.css?body=1" for ::1 at 2016-03-22 14:31:52 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-22 14:31:52 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-22 14:31:52 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-22 14:31:52 -0400
+
+
+Started GET "/lists" for ::1 at 2016-03-22 14:32:24 -0400
+Processing by ListsController#index as HTML
+  [1m[36m (0.8ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks"[0m
+  [1m[35mList Load (0.9ms)[0m  SELECT "lists".* FROM "lists"
+  [1m[36m (0.3ms)[0m  [1mSELECT SUM("tasks"."cost") FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 2]]
+  [1m[35m (0.4ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 1]]
+  [1m[36m (0.4ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 15]]
+  Rendered lists/index.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 31ms (Views: 27.8ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/application.self-0632dcad1836559dfa608ebb3de47cb9ff6882031eff10d6f71b643f07bb9c8b.css?body=1" for ::1 at 2016-03-22 14:32:24 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-22 14:32:24 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-22 14:32:24 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-22 14:32:24 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-22 14:32:24 -0400
+
+
+Started GET "/lists" for ::1 at 2016-03-22 14:32:25 -0400
+Processing by ListsController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks"
+  [1m[36mList Load (0.3ms)[0m  [1mSELECT "lists".* FROM "lists"[0m
+  [1m[35m (0.2ms)[0m  SELECT SUM("tasks"."cost") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 2]]
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 1]]
+  [1m[35m (0.2ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 15]]
+  Rendered lists/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 16ms (Views: 13.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-22 14:32:25 -0400
+
+
+Started GET "/assets/application.self-0632dcad1836559dfa608ebb3de47cb9ff6882031eff10d6f71b643f07bb9c8b.css?body=1" for ::1 at 2016-03-22 14:32:25 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-22 14:32:25 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-22 14:32:25 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-22 14:32:25 -0400
+
+
+Started GET "/lists" for ::1 at 2016-03-22 14:32:49 -0400
+Processing by ListsController#index as HTML
+  [1m[36m (0.4ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks"[0m
+  [1m[35mList Load (0.4ms)[0m  SELECT "lists".* FROM "lists"
+  [1m[36m (0.4ms)[0m  [1mSELECT SUM("tasks"."cost") FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 2]]
+  [1m[35m (0.4ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 1]]
+  [1m[36m (0.3ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 15]]
+  Rendered lists/index.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 23ms (Views: 20.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/application.self-0632dcad1836559dfa608ebb3de47cb9ff6882031eff10d6f71b643f07bb9c8b.css?body=1" for ::1 at 2016-03-22 14:32:49 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-22 14:32:49 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-22 14:32:49 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-22 14:32:49 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-22 14:32:49 -0400
+
+
+Started GET "/lists" for ::1 at 2016-03-22 14:32:56 -0400
+Processing by ListsController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks"
+  [1m[36mList Load (0.3ms)[0m  [1mSELECT "lists".* FROM "lists"[0m
+  [1m[35m (0.2ms)[0m  SELECT SUM("tasks"."cost") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 2]]
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 1]]
+  [1m[35m (0.4ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 15]]
+  Rendered lists/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 19ms (Views: 16.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/application.self-0632dcad1836559dfa608ebb3de47cb9ff6882031eff10d6f71b643f07bb9c8b.css?body=1" for ::1 at 2016-03-22 14:32:56 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-22 14:32:56 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-22 14:32:56 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-22 14:32:56 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-22 14:32:56 -0400
+
+
+Started GET "/lists" for ::1 at 2016-03-22 14:33:08 -0400
+Processing by ListsController#index as HTML
+  [1m[36m (0.4ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks"[0m
+  [1m[35mList Load (0.4ms)[0m  SELECT "lists".* FROM "lists"
+  [1m[36m (0.5ms)[0m  [1mSELECT SUM("tasks"."cost") FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 2]]
+  [1m[35m (0.2ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 15]]
+  Rendered lists/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 20ms (Views: 17.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/application.self-0632dcad1836559dfa608ebb3de47cb9ff6882031eff10d6f71b643f07bb9c8b.css?body=1" for ::1 at 2016-03-22 14:33:08 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-22 14:33:08 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-22 14:33:08 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-22 14:33:08 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-22 14:33:08 -0400
+
+
+Started GET "/lists" for ::1 at 2016-03-22 14:33:28 -0400
+Processing by ListsController#index as HTML
+  [1m[35m (0.6ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks"
+  [1m[36mList Load (0.3ms)[0m  [1mSELECT "lists".* FROM "lists"[0m
+  [1m[35m (0.2ms)[0m  SELECT SUM("tasks"."cost") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 2]]
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 1]]
+  [1m[35m (0.2ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 15]]
+  Rendered lists/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 17ms (Views: 15.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-22 14:33:28 -0400
+
+
+Started GET "/assets/application.self-0632dcad1836559dfa608ebb3de47cb9ff6882031eff10d6f71b643f07bb9c8b.css?body=1" for ::1 at 2016-03-22 14:33:28 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-22 14:33:28 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-22 14:33:28 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-22 14:33:28 -0400
+
+
+Started GET "/lists" for ::1 at 2016-03-22 14:33:59 -0400
+Processing by ListsController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks"[0m
+  [1m[35mList Load (0.2ms)[0m  SELECT "lists".* FROM "lists"
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("tasks"."cost") FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 2]]
+  [1m[35m (0.2ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 15]]
+  Rendered lists/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 17ms (Views: 15.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-22 14:33:59 -0400
+
+
+Started GET "/assets/application.self-0632dcad1836559dfa608ebb3de47cb9ff6882031eff10d6f71b643f07bb9c8b.css?body=1" for ::1 at 2016-03-22 14:33:59 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-22 14:33:59 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-22 14:33:59 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-22 14:33:59 -0400
+
+
+Started GET "/lists" for ::1 at 2016-03-22 14:34:35 -0400
+Processing by ListsController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks"
+  [1m[36mList Load (0.3ms)[0m  [1mSELECT "lists".* FROM "lists"[0m
+  [1m[35m (0.2ms)[0m  SELECT SUM("tasks"."cost") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 2]]
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 1]]
+  [1m[35m (0.2ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 15]]
+  Rendered lists/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 35ms (Views: 33.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-22 14:34:35 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-22 14:34:35 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-22 14:34:35 -0400
+
+
+Started GET "/assets/application.self-3460435a38e86585f1ff5d947a3272e6ccbf17551f88e5af75d89f1c3a1d64b5.css?body=1" for ::1 at 2016-03-22 14:34:35 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-22 14:34:35 -0400
+
+
+Started GET "/lists" for ::1 at 2016-03-22 14:35:47 -0400
+Processing by ListsController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks"[0m
+  [1m[35mList Load (0.2ms)[0m  SELECT "lists".* FROM "lists"
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("tasks"."cost") FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 2]]
+  [1m[35m (0.4ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 1]]
+  [1m[36m (0.3ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 15]]
+  Rendered lists/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 35ms (Views: 32.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/application.self-61a60b44a790aa35f52ed966b5d98fb45c275c4e1971116df9bdddac9a4cb778.css?body=1" for ::1 at 2016-03-22 14:35:47 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-22 14:35:47 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-22 14:35:47 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-22 14:35:47 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-22 14:35:47 -0400
+
+
+Started GET "/lists/15" for ::1 at 2016-03-22 14:36:04 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[35mList Load (0.3ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1  [["id", 15]]
+  [1m[36m (0.3ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 15]]
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 15]]
+  Rendered lists/show.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 18ms (Views: 15.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/lists/15" for ::1 at 2016-03-22 14:36:37 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mList Load (0.4ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1[0m  [["id", 15]]
+  [1m[35m (0.2ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 15]]
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 15]]
+  Rendered lists/show.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 35ms (Views: 33.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.self-9cb2a58aa8c3dc26211c8f3a6e37d3db4da6e97e2f127ddcbf2c1c27cd01b0ab.css?body=1" for ::1 at 2016-03-22 14:36:37 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-22 14:36:37 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-22 14:36:37 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-22 14:36:37 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-22 14:36:37 -0400
+
+
+Started GET "/lists/15" for ::1 at 2016-03-22 14:36:45 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[35mList Load (0.3ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1  [["id", 15]]
+  [1m[36m (0.3ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 15]]
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 15]]
+  Rendered lists/show.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 38ms (Views: 35.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.self-755557ab02b71792df521e977dc5fca38af2f47b3a2c1b923cc59c9ad2701921.css?body=1" for ::1 at 2016-03-22 14:36:45 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-22 14:36:45 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-22 14:36:45 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-22 14:36:45 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-22 14:36:45 -0400
+
+
+Started GET "/lists/15" for ::1 at 2016-03-22 14:36:55 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mList Load (0.2ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1[0m  [["id", 15]]
+  [1m[35m (0.3ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 15]]
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 15]]
+  Rendered lists/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 46ms (Views: 44.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-22 14:36:55 -0400
+
+
+Started GET "/assets/application.self-b76895e35ce4c91410c215bfab9bf96c55fab71e9c101e6c09383d7d5c193200.css?body=1" for ::1 at 2016-03-22 14:36:55 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-22 14:36:55 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-22 14:36:55 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-22 14:36:55 -0400
+
+
+Started GET "/lists" for ::1 at 2016-03-22 14:37:42 -0400
+Processing by ListsController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks"
+  [1m[36mList Load (0.3ms)[0m  [1mSELECT "lists".* FROM "lists"[0m
+  [1m[35m (0.2ms)[0m  SELECT SUM("tasks"."cost") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 2]]
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 1]]
+  [1m[35m (0.2ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 15]]
+  Rendered lists/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 17ms (Views: 15.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/lists/15" for ::1 at 2016-03-22 14:37:54 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mList Load (0.2ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1[0m  [["id", 15]]
+  [1m[35m (0.2ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 15]]
+  [1m[36mTask Load (0.3ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 15]]
+  Rendered lists/show.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 17ms (Views: 15.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tasks" for ::1 at 2016-03-22 14:38:19 -0400
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.5ms)[0m  SELECT "tasks".* FROM "tasks"
+  Rendered tasks/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 19ms (Views: 17.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tasks" for ::1 at 2016-03-22 14:38:42 -0400
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.4ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 22ms (Views: 21.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tasks" for ::1 at 2016-03-22 14:40:30 -0400
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.5ms)[0m  SELECT "tasks".* FROM "tasks"
+  Rendered tasks/index.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 39ms (Views: 38.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.self-2c5e7f7887a3f06ff8af7ee64e8bfa96f7dbdebb8531f6aca52b281287dfa4bb.css?body=1" for ::1 at 2016-03-22 14:40:30 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-22 14:40:30 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-22 14:40:30 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-22 14:40:30 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-22 14:40:30 -0400
+
+
+Started GET "/tasks" for ::1 at 2016-03-22 14:40:37 -0400
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.4ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 40ms (Views: 39.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.self-787722feaab34c9912757b9bde98a60ffd597907dbb30328320acc6f7a046133.css?body=1" for ::1 at 2016-03-22 14:40:38 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-22 14:40:38 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-22 14:40:38 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-22 14:40:38 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-22 14:40:38 -0400
+
+
+Started GET "/tasks" for ::1 at 2016-03-22 14:40:57 -0400
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.4ms)[0m  SELECT "tasks".* FROM "tasks"
+  Rendered tasks/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 38ms (Views: 37.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.self-bc642dfd50b184e63318d842b7a12f85235ca993d224052ac54012150c6d0e87.css?body=1" for ::1 at 2016-03-22 14:40:57 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-22 14:40:57 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-22 14:40:57 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-22 14:40:57 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-22 14:40:57 -0400
+
+
+Started GET "/tasks" for ::1 at 2016-03-22 14:41:15 -0400
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.5ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 41ms (Views: 39.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-22 14:41:16 -0400
+
+
+Started GET "/assets/application.self-165228af71e323dd4419c670ad76e9357b8b6a1ca9a3b6008913bd2056d8954c.css?body=1" for ::1 at 2016-03-22 14:41:16 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-22 14:41:16 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-22 14:41:16 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-22 14:41:16 -0400
+
+
+Started GET "/lists" for ::1 at 2016-03-22 14:41:44 -0400
+Processing by ListsController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks"
+  [1m[36mList Load (0.3ms)[0m  [1mSELECT "lists".* FROM "lists"[0m
+  [1m[35m (0.2ms)[0m  SELECT SUM("tasks"."cost") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 2]]
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 1]]
+  [1m[35m (0.2ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 15]]
+  Rendered lists/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 19ms (Views: 17.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/lists/15" for ::1 at 2016-03-22 14:41:46 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mList Load (0.2ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1[0m  [["id", 15]]
+  [1m[35m (0.3ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 15]]
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 15]]
+  Rendered lists/show.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 18ms (Views: 16.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tasks" for ::1 at 2016-03-22 14:41:50 -0400
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.5ms)[0m  SELECT "tasks".* FROM "tasks"
+  Rendered tasks/index.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 23ms (Views: 21.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/lists" for ::1 at 2016-03-22 14:41:51 -0400
+Processing by ListsController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks"[0m
+  [1m[35mList Load (0.3ms)[0m  SELECT "lists".* FROM "lists"
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("tasks"."cost") FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 2]]
+  [1m[35m (0.2ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 15]]
+  Rendered lists/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 16ms (Views: 14.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/lists" for ::1 at 2016-03-22 14:42:59 -0400
+Processing by ListsController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks"
+  [1m[36mList Load (0.3ms)[0m  [1mSELECT "lists".* FROM "lists"[0m
+  [1m[35m (0.5ms)[0m  SELECT SUM("tasks"."cost") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 2]]
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 1]]
+  [1m[35m (0.3ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 15]]
+  Rendered lists/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 26ms (Views: 23.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/application.self-165228af71e323dd4419c670ad76e9357b8b6a1ca9a3b6008913bd2056d8954c.css?body=1" for ::1 at 2016-03-22 14:42:59 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-22 14:42:59 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-22 14:42:59 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-22 14:42:59 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-22 14:42:59 -0400
+
+
+Started GET "/lists" for ::1 at 2016-03-22 14:43:04 -0400
+Processing by ListsController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks"[0m
+  [1m[35mList Load (0.3ms)[0m  SELECT "lists".* FROM "lists"
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("tasks"."cost") FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 2]]
+  [1m[35m (0.2ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 15]]
+  Rendered lists/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 20ms (Views: 18.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/lists/15" for ::1 at 2016-03-22 14:43:06 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[35mList Load (0.3ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1  [["id", 15]]
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 15]]
+  [1m[35mTask Load (0.3ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 15]]
+  Rendered lists/show.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 21ms (Views: 19.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/lists" for ::1 at 2016-03-22 14:43:47 -0400
+Processing by ListsController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks"[0m
+  [1m[35mList Load (0.3ms)[0m  SELECT "lists".* FROM "lists"
+  [1m[36m (0.3ms)[0m  [1mSELECT SUM("tasks"."cost") FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 2]]
+  [1m[35m (0.2ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 1]]
+  [1m[36m (0.3ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 15]]
+  Rendered lists/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 22ms (Views: 20.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/lists" for ::1 at 2016-03-22 14:44:24 -0400
+Processing by ListsController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks"
+  [1m[36mList Load (0.4ms)[0m  [1mSELECT "lists".* FROM "lists"[0m
+  [1m[35m (0.2ms)[0m  SELECT SUM("tasks"."cost") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 2]]
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 1]]
+  [1m[35m (0.2ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 15]]
+  Rendered lists/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 29ms (Views: 26.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/application.self-165228af71e323dd4419c670ad76e9357b8b6a1ca9a3b6008913bd2056d8954c.css?body=1" for ::1 at 2016-03-22 14:44:24 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-22 14:44:24 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-22 14:44:24 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-22 14:44:24 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-22 14:44:24 -0400
+
+
+Started GET "/lists" for ::1 at 2016-03-22 14:44:51 -0400
+Processing by ListsController#index as HTML
+  [1m[36m (0.4ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks"[0m
+  [1m[35mList Load (0.3ms)[0m  SELECT "lists".* FROM "lists"
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("tasks"."cost") FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 2]]
+  [1m[35m (0.2ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 15]]
+  Rendered lists/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 19ms (Views: 17.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/application.self-165228af71e323dd4419c670ad76e9357b8b6a1ca9a3b6008913bd2056d8954c.css?body=1" for ::1 at 2016-03-22 14:44:51 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-22 14:44:51 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-22 14:44:51 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-22 14:44:51 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-22 14:44:51 -0400
+
+
+Started GET "/lists" for ::1 at 2016-03-22 14:45:02 -0400
+Processing by ListsController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks"
+  [1m[36mList Load (0.3ms)[0m  [1mSELECT "lists".* FROM "lists"[0m
+  [1m[35m (0.2ms)[0m  SELECT SUM("tasks"."cost") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 2]]
+  [1m[36m (0.4ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 1]]
+  [1m[35m (0.3ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 15]]
+  Rendered lists/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 17ms (Views: 15.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/application.self-165228af71e323dd4419c670ad76e9357b8b6a1ca9a3b6008913bd2056d8954c.css?body=1" for ::1 at 2016-03-22 14:45:02 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-22 14:45:02 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-22 14:45:02 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-22 14:45:02 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-22 14:45:02 -0400
+
+
+Started GET "/lists" for ::1 at 2016-03-22 14:45:04 -0400
+Processing by ListsController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks"[0m
+  [1m[35mList Load (0.5ms)[0m  SELECT "lists".* FROM "lists"
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("tasks"."cost") FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 2]]
+  [1m[35m (0.2ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 15]]
+  Rendered lists/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 15ms (Views: 12.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-22 14:45:04 -0400
+
+
+Started GET "/assets/application.self-165228af71e323dd4419c670ad76e9357b8b6a1ca9a3b6008913bd2056d8954c.css?body=1" for ::1 at 2016-03-22 14:45:04 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-22 14:45:04 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-22 14:45:04 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-22 14:45:04 -0400
+
+
+Started GET "/lists" for ::1 at 2016-03-22 14:45:05 -0400
+Processing by ListsController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks"
+  [1m[36mList Load (0.3ms)[0m  [1mSELECT "lists".* FROM "lists"[0m
+  [1m[35m (0.2ms)[0m  SELECT SUM("tasks"."cost") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 2]]
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 1]]
+  [1m[35m (0.2ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 15]]
+  Rendered lists/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 16ms (Views: 14.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.self-165228af71e323dd4419c670ad76e9357b8b6a1ca9a3b6008913bd2056d8954c.css?body=1" for ::1 at 2016-03-22 14:45:05 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-22 14:45:05 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-22 14:45:05 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-22 14:45:05 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-22 14:45:05 -0400
+
+
+Started GET "/lists" for ::1 at 2016-03-22 14:45:11 -0400
+Processing by ListsController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks"[0m
+  [1m[35mList Load (0.2ms)[0m  SELECT "lists".* FROM "lists"
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("tasks"."cost") FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 2]]
+  [1m[35m (0.2ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 1]]
+  [1m[36m (0.4ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 15]]
+  Rendered lists/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 17ms (Views: 14.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/application.self-165228af71e323dd4419c670ad76e9357b8b6a1ca9a3b6008913bd2056d8954c.css?body=1" for ::1 at 2016-03-22 14:45:11 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-22 14:45:11 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-22 14:45:11 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-22 14:45:11 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-22 14:45:11 -0400
+
+
+Started GET "/tasks" for ::1 at 2016-03-22 14:45:18 -0400
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.4ms)[0m  SELECT "tasks".* FROM "tasks"
+  Rendered tasks/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 20ms (Views: 19.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/lists" for ::1 at 2016-03-22 14:45:30 -0400
+Processing by ListsController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks"[0m
+  [1m[35mList Load (0.3ms)[0m  SELECT "lists".* FROM "lists"
+  [1m[36m (0.3ms)[0m  [1mSELECT SUM("tasks"."cost") FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 2]]
+  [1m[35m (0.2ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 15]]
+  Rendered lists/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 17ms (Views: 14.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/lists" for ::1 at 2016-03-22 14:46:33 -0400
+Processing by ListsController#index as HTML
+  [1m[35m (0.7ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks"
+  [1m[36mList Load (0.7ms)[0m  [1mSELECT "lists".* FROM "lists"[0m
+  [1m[35m (0.2ms)[0m  SELECT SUM("tasks"."cost") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 2]]
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 1]]
+  [1m[35m (0.2ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 15]]
+  Rendered lists/index.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 40ms (Views: 37.5ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/application.self-d6451cab33c1e92f370ea9a2c12eba109093efbd586c59775112641a774bf26a.css?body=1" for ::1 at 2016-03-22 14:46:33 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-22 14:46:33 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-22 14:46:33 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-22 14:46:33 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-22 14:46:33 -0400
+
+
+Started GET "/tasks" for ::1 at 2016-03-22 14:46:36 -0400
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.5ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 22ms (Views: 21.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tasks" for ::1 at 2016-03-22 14:46:37 -0400
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.4ms)[0m  SELECT "tasks".* FROM "tasks"
+  Rendered tasks/index.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 21ms (Views: 19.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.self-d6451cab33c1e92f370ea9a2c12eba109093efbd586c59775112641a774bf26a.css?body=1" for ::1 at 2016-03-22 14:46:37 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-22 14:46:37 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-22 14:46:37 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-22 14:46:37 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-22 14:46:37 -0400
+
+
+Started GET "/tasks" for ::1 at 2016-03-22 14:46:46 -0400
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.4ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 34ms (Views: 33.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.self-42331f552db05ada08cebac0100122ab204085511ab2cda4ff67d1f40207de63.css?body=1" for ::1 at 2016-03-22 14:46:46 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-22 14:46:46 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-22 14:46:46 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-22 14:46:46 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-22 14:46:46 -0400
+
+
+Started GET "/tasks" for ::1 at 2016-03-22 14:46:48 -0400
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.8ms)[0m  SELECT "tasks".* FROM "tasks"
+  Rendered tasks/index.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 19ms (Views: 18.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-22 14:46:48 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-22 14:46:48 -0400
+
+
+Started GET "/assets/application.self-42331f552db05ada08cebac0100122ab204085511ab2cda4ff67d1f40207de63.css?body=1" for ::1 at 2016-03-22 14:46:48 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-22 14:46:48 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-22 14:46:48 -0400
+
+
+Started GET "/tasks" for ::1 at 2016-03-22 14:47:00 -0400
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.4ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 35ms (Views: 33.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.self-42e46f6cc26cb41719ec6e43cf6f42612174a992641d948a6816275330333b39.css?body=1" for ::1 at 2016-03-22 14:47:00 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-22 14:47:00 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-22 14:47:00 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-22 14:47:00 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-22 14:47:00 -0400
+
+
+Started GET "/tasks" for ::1 at 2016-03-22 14:48:25 -0400
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.4ms)[0m  SELECT "tasks".* FROM "tasks"
+  Rendered tasks/index.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 33ms (Views: 31.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-22 14:48:25 -0400
+
+
+Started GET "/assets/application.self-9dd0126be2e17be0c0d2b6fb9c059a386d8be6ebbb72b7d1602192af4e2a5bbe.css?body=1" for ::1 at 2016-03-22 14:48:25 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-22 14:48:25 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-22 14:48:25 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-22 14:48:25 -0400
+
+
+Started GET "/tasks" for ::1 at 2016-03-22 14:49:01 -0400
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.6ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 38ms (Views: 36.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-22 14:49:01 -0400
+
+
+Started GET "/assets/application.self-5d4ae3eb598845b4feadc0fc192493f3cb28d135fb34170d16dca06fb4032d91.css?body=1" for ::1 at 2016-03-22 14:49:01 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-22 14:49:01 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-22 14:49:01 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-22 14:49:01 -0400
+
+
+Started GET "/tasks" for ::1 at 2016-03-22 14:49:29 -0400
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.6ms)[0m  SELECT "tasks".* FROM "tasks"
+  Rendered tasks/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 35ms (Views: 32.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-22 14:49:29 -0400
+
+
+Started GET "/assets/application.self-22e7969677ffd201ab3d22d0e52203dffb5d7151693b74668351c02cf93ff385.css?body=1" for ::1 at 2016-03-22 14:49:29 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-22 14:49:29 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-22 14:49:29 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-22 14:49:29 -0400
+
+
+Started GET "/tasks" for ::1 at 2016-03-22 14:49:48 -0400
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.4ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 37ms (Views: 35.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.self-889ed0088dbd1611aedbac2d07c06b610ec81afa6bd8203437e6e6fc446aa1d9.css?body=1" for ::1 at 2016-03-22 14:49:48 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-22 14:49:48 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-22 14:49:48 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-22 14:49:48 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-22 14:49:48 -0400
+
+
+Started GET "/tasks" for ::1 at 2016-03-22 14:49:56 -0400
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.4ms)[0m  SELECT "tasks".* FROM "tasks"
+  Rendered tasks/index.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 35ms (Views: 33.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.self-c8ae5a6e956266a4b9c27a5402529b37e7393084819805732e6f81b0cb02724b.css?body=1" for ::1 at 2016-03-22 14:49:56 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-22 14:49:56 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-22 14:49:56 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-22 14:49:56 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-22 14:49:56 -0400
+
+
+Started GET "/tasks" for ::1 at 2016-03-22 14:50:15 -0400
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.4ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 33ms (Views: 32.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-22 14:50:15 -0400
+
+
+Started GET "/assets/application.self-d19234006cb931717f99604e5b0bbec5c70a7f5899bb332684dc510da5628f02.css?body=1" for ::1 at 2016-03-22 14:50:15 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-22 14:50:15 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-22 14:50:15 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-22 14:50:15 -0400
+
+
+Started GET "/tasks" for ::1 at 2016-03-22 14:50:31 -0400
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.5ms)[0m  SELECT "tasks".* FROM "tasks"
+  Rendered tasks/index.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 36ms (Views: 34.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.self-eee5bd54323a18cccd4d0214b82eb2fc0ba347061f8e7a70731769987494a28d.css?body=1" for ::1 at 2016-03-22 14:50:31 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-22 14:50:31 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-22 14:50:31 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-22 14:50:31 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-22 14:50:31 -0400
+
+
+Started GET "/tasks" for ::1 at 2016-03-22 14:50:48 -0400
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.5ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 38ms (Views: 37.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.self-47949deff3abc2aa244753f0733b06605ccab4e6d6be4cdc6da7a87bd76e4e5f.css?body=1" for ::1 at 2016-03-22 14:50:49 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-22 14:50:49 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-22 14:50:49 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-22 14:50:49 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-22 14:50:49 -0400
+
+
+Started GET "/tasks" for ::1 at 2016-03-22 14:51:01 -0400
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.4ms)[0m  SELECT "tasks".* FROM "tasks"
+  Rendered tasks/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 23ms (Views: 22.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-22 14:51:02 -0400
+
+
+Started GET "/assets/application.self-5d4ae3eb598845b4feadc0fc192493f3cb28d135fb34170d16dca06fb4032d91.css?body=1" for ::1 at 2016-03-22 14:51:02 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-22 14:51:02 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-22 14:51:02 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-22 14:51:02 -0400
+
+
+Started GET "/tasks" for ::1 at 2016-03-22 14:51:35 -0400
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.4ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 21ms (Views: 20.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-22 14:51:35 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-22 14:51:35 -0400
+
+
+Started GET "/assets/application.self-5d4ae3eb598845b4feadc0fc192493f3cb28d135fb34170d16dca06fb4032d91.css?body=1" for ::1 at 2016-03-22 14:51:35 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-22 14:51:35 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-22 14:51:35 -0400
+
+
+Started GET "/tasks" for ::1 at 2016-03-22 14:52:30 -0400
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.4ms)[0m  SELECT "tasks".* FROM "tasks"
+  Rendered tasks/index.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 49ms (Views: 47.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-22 14:52:30 -0400
+
+
+Started GET "/assets/application.self-25e28f33c029df277c75d2efaaa6685cf8cf45ff0fa5d0acd5cd3c6e949f1361.css?body=1" for ::1 at 2016-03-22 14:52:30 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-22 14:52:30 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-22 14:52:30 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-22 14:52:30 -0400
+
+
+Started GET "/tasks" for ::1 at 2016-03-22 14:52:44 -0400
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.4ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 38ms (Views: 36.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-22 14:52:44 -0400
+
+
+Started GET "/assets/application.self-6b3a717386a15bb7a0b9cbf5c2da24663b203b6c129675400160018cfb6b584b.css?body=1" for ::1 at 2016-03-22 14:52:44 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-22 14:52:44 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-22 14:52:44 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-22 14:52:44 -0400
+
+
+Started GET "/tasks" for ::1 at 2016-03-22 14:53:08 -0400
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.4ms)[0m  SELECT "tasks".* FROM "tasks"
+  Rendered tasks/index.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 39ms (Views: 38.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-22 14:53:08 -0400
+
+
+Started GET "/assets/application.self-1a294e514318c6bcb9b77ebd73645bc8b515462820046bfc7fd6eb36966d2b28.css?body=1" for ::1 at 2016-03-22 14:53:08 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-22 14:53:08 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-22 14:53:08 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-22 14:53:08 -0400
+
+
+Started GET "/tasks" for ::1 at 2016-03-22 14:53:09 -0400
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.9ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 22ms (Views: 20.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-22 14:53:09 -0400
+
+
+Started GET "/assets/application.self-1a294e514318c6bcb9b77ebd73645bc8b515462820046bfc7fd6eb36966d2b28.css?body=1" for ::1 at 2016-03-22 14:53:09 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-22 14:53:09 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-22 14:53:09 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-22 14:53:09 -0400
+
+
+Started GET "/lists" for ::1 at 2016-03-22 14:53:13 -0400
+Processing by ListsController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks"
+  [1m[36mList Load (0.7ms)[0m  [1mSELECT "lists".* FROM "lists"[0m
+  [1m[35m (0.2ms)[0m  SELECT SUM("tasks"."cost") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 2]]
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 1]]
+  [1m[35m (0.2ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 15]]
+  Rendered lists/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 17ms (Views: 15.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/lists/2" for ::1 at 2016-03-22 14:53:14 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mList Load (0.2ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.2ms)[0m  SELECT SUM("tasks"."cost") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 2]]
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 2]]
+  Rendered lists/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 15ms (Views: 13.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/lists" for ::1 at 2016-03-22 14:53:19 -0400
+Processing by ListsController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks"
+  [1m[36mList Load (0.3ms)[0m  [1mSELECT "lists".* FROM "lists"[0m
+  [1m[35m (0.2ms)[0m  SELECT SUM("tasks"."cost") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 2]]
+  [1m[36m (0.3ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 1]]
+  [1m[35m (0.2ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 15]]
+  Rendered lists/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 18ms (Views: 15.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/lists/15" for ::1 at 2016-03-22 14:53:20 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mList Load (0.2ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1[0m  [["id", 15]]
+  [1m[35m (0.2ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 15]]
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 15]]
+  Rendered lists/show.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 16ms (Views: 14.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/lists" for ::1 at 2016-03-22 14:53:37 -0400
+Processing by ListsController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks"
+  [1m[36mList Load (0.3ms)[0m  [1mSELECT "lists".* FROM "lists"[0m
+  [1m[35m (0.3ms)[0m  SELECT SUM("tasks"."cost") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 2]]
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 1]]
+  [1m[35m (0.2ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 15]]
+  Rendered lists/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 16ms (Views: 14.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/lists" for ::1 at 2016-03-22 14:54:46 -0400
+Processing by ListsController#index as HTML
+  [1m[36m (0.4ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks"[0m
+  [1m[35mList Load (0.5ms)[0m  SELECT "lists".* FROM "lists"
+  [1m[36m (0.5ms)[0m  [1mSELECT SUM("tasks"."cost") FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 2]]
+  [1m[35m (0.3ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 15]]
+  Rendered lists/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 23ms (Views: 20.3ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-22 14:54:46 -0400
+
+
+Started GET "/assets/application.self-1a294e514318c6bcb9b77ebd73645bc8b515462820046bfc7fd6eb36966d2b28.css?body=1" for ::1 at 2016-03-22 14:54:46 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-22 14:54:46 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-22 14:54:46 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-22 14:54:46 -0400
+
+
+Started GET "/lists/15" for ::1 at 2016-03-22 14:54:47 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[35mList Load (0.4ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1  [["id", 15]]
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 15]]
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 15]]
+  Rendered lists/show.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 22ms (Views: 19.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/tasks" for ::1 at 2016-03-22 14:55:12 -0400
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.5ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 24ms (Views: 22.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/lists" for ::1 at 2016-03-22 14:55:15 -0400
+Processing by ListsController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks"
+  [1m[36mList Load (0.3ms)[0m  [1mSELECT "lists".* FROM "lists"[0m
+  [1m[35m (0.2ms)[0m  SELECT SUM("tasks"."cost") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 2]]
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 1]]
+  [1m[35m (0.3ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 15]]
+  Rendered lists/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 18ms (Views: 15.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/lists/1" for ::1 at 2016-03-22 14:55:17 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mList Load (0.2ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 1]]
+  Rendered lists/show.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tasks" for ::1 at 2016-03-22 14:55:22 -0400
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.4ms)[0m  SELECT "tasks".* FROM "tasks"
+  Rendered tasks/index.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 22ms (Views: 21.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/lists" for ::1 at 2016-03-22 14:55:24 -0400
+Processing by ListsController#index as HTML
+  [1m[36m (0.4ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks"[0m
+  [1m[35mList Load (0.6ms)[0m  SELECT "lists".* FROM "lists"
+  [1m[36m (0.3ms)[0m  [1mSELECT SUM("tasks"."cost") FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 2]]
+  [1m[35m (0.3ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 15]]
+  Rendered lists/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 17ms (Views: 14.9ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/lists/2" for ::1 at 2016-03-22 14:55:25 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mList Load (0.3ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("tasks"."cost") FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 2]]
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 2]]
+  Rendered lists/show.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 16ms (Views: 14.8ms | ActiveRecord: 0.7ms)
