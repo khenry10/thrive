@@ -22,6 +22,7 @@ class TasksController < ApplicationController
   def edit
     @list = List.find(params[:list_id])
     @task = Task.find(params[:id])
+    
   end
 
   def update

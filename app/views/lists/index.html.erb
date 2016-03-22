@@ -1,7 +1,10 @@
 
+<h2><%= Task.sum(:time_estimate) %></h2>
+
   <ul>
     <% @list.each do |list| %>
-    <li><%= link_to list.name, list %></li>
+    <li><%= link_to list.name, list %> <%= (Task.where(list_id: list.id).sum(:time_estimate))/60%><%= " hours" %></li>
     <% end %>
-    <li><%= link_to "New List", new_list_path %></li>
   </ul>
+
+  <%= link_to "+ New List", new_list_path %>

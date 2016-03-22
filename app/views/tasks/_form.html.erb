@@ -3,13 +3,16 @@
 <%= f.text_field :name %></li>
 <li><%= f.label :category %>
 <%= f.text_field :category %></li>
+
 <% if @list.list_type == "Check List" %>
+
   <% if @task.id != nil %>
 <li><%= f.label :complete %>
   <%= f.check_box :complete %></li>
   <% end %>
+
 <li><%= f.label :time_estimate %>
-  <%= f.text_field :time_estimate %></li>
+  <%= f.text_field :time_estimate, :value => "Enter estimate in minutes" %></li>
   <li><%= f.label :time_actual %>
     <%= f.text_field :time_actual %></li>
 <li><%= f.label :priority %>
@@ -19,8 +22,10 @@
 <li><%= f.label :deadline %>
 <%= f.date_field :deadline %></li>
 <% end %>
+
 <li><%= f.label :description %>
 <%= f.text_area :description %></li>
+
 <% if @list.list_type == "Shopping List" %>
   <li><%= f.label :cost %>
     <%= f.text_field :cost %></li>
@@ -29,5 +34,6 @@
 <li><%= f.label :quantity %>
 <%= f.text_field :quantity %></li>
 <% end %>
-<li><%= f.submit %></li>
+
+<%= f.submit %>
 <% end %>
