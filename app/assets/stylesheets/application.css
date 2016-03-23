@@ -1,8 +1,11 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
 body {
   background-color: white;
   align-items: center;
   align-content: center;
   margin: 0;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .nav {
@@ -10,7 +13,8 @@ body {
   background-color: #54ACD2;
   display: block;
   color: white;
-  padding-right: : 5px; 
+  padding-right: : 5px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .left-nav {
@@ -23,7 +27,7 @@ body {
 
 .nav-item {
   padding: 10px;
-  font-size: 20px;
+  font-size: 25px;
   display: inline-block;
   border-right: 2px white solid;
 }
@@ -133,7 +137,7 @@ h2 {
 .nav-button {
   font-size: 15px;
   border-radius: 10px;
-  width: 100px;
+  width: 110px;
   height: 20px;
   padding: 10px;
   text-align: center;

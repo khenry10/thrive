@@ -2,13 +2,13 @@ class ListsController < ApplicationController
 
   def index
     @list = List.all
-
+    
   end
 
   def show
     @list = List.find(params[:id])
     @tasks = @list.check_for_complete
-
+    @total_list_time = @list.add_tasks_time
   end
 
   def new

@@ -1,6 +1,6 @@
 
 <div class="content">
-  <h2><%= (Task.where(complete: [false, nil]).sum(:time_estimate))/60 %><%= " hours of tasks" %></h2>
+  <h2><%= (Task.where(complete: [false, nil]).sum(:time_estimate)/60).round(2) %><%= " hours of tasks" %></h2>
 
     <ul>
       <% @list.each do |list| %>
