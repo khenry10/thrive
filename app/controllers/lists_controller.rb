@@ -2,11 +2,13 @@ class ListsController < ApplicationController
 
   def index
     @list = List.all
+
   end
 
   def show
     @list = List.find(params[:id])
-    @task = Task.where(list_id: :id)
+    @tasks = @list.check_for_complete
+
   end
 
   def new
@@ -26,7 +28,6 @@ class ListsController < ApplicationController
   def update
     @list = List.find(params[:id]).update(list_params)
 
-
     redirect_to list_path
   end
 
@@ -44,7 +45,8 @@ class ListsController < ApplicationController
     @list = List.find(params[:id])
     @task = Task.find(params[:task_id])
 
-    @task.update(complete: true)
+      @task.update(complete: true)
+
     redirect_to @list
   end
 

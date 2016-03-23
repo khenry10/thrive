@@ -1,8 +1,8 @@
-<div class="all-tasks">
+<div class="content">
   <h2> All Tasks <h2>
 
   <ul>
-    <%= @task.each do |task| %>
+    <% @tasks.each do |task| %>
       <% if task.complete == nil  %>
         <li><%= check_box_tag :complete, 1, task.complete %>
           <%= task.name  %></li>

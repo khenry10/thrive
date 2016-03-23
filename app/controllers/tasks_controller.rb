@@ -1,7 +1,7 @@
 class TasksController < ApplicationController
 
   def index
-    @task = Task.all
+    @tasks = Task.where(complete: [nil, false])
   end
 
   def show
@@ -16,6 +16,7 @@ class TasksController < ApplicationController
   def create
     @list = List.find(params[:list_id])
     @task = @list.tasks.create!(task_param)
+
     redirect_to list_path(@list)
   end
 

@@ -7,7 +7,7 @@ body {
 .nav {
   position: relative;
   width: 100%;
-  top: -10px;
+  top: -16px;
   left: -10px;
   background-color: #54ACD2;
   height: 50px;
@@ -19,9 +19,6 @@ body {
   color: white;
 }
 
-h1 nav {
-  outline: 1px white solid;
-}
 
 .left-nav {
   position: absolute;
@@ -50,7 +47,6 @@ h1 nav {
   top: 50px;
   width: 90%;
   min-height: 650px;
-  height: 100%;
   margin-left: 5%;
   background-color: #EFEFEF;
 }
@@ -85,7 +81,6 @@ a {
   background-color: #EB6B56;
   display: flex;
   justify-content: space-between;
-
 }
 
 input[type=text] {
@@ -112,6 +107,7 @@ input[type=checkbox] {
   border: 3px #EFEFEF solid;
   border-radius: 25px;
   background-color: #EB6B56;
+  box-shadow: 1px 1px 1px black;
 }
 
 .new-form {
@@ -132,9 +128,48 @@ input[type=checkbox] {
 .new-form ul {
   border-radius: 10px;
   background-color: #EB6B56;
+
 }
 
 h2 {
   color: black;
-  font-size: 25px; 
+  font-size: 25px;
+}
+
+.new-form h2 {
+  color: black;
+  font-size: 25px;
+}
+
+.nav-button {
+  font-size: 15px;
+  border-radius: 10px;
+  width: 100px;
+  height: 20px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 1px 1px 1px black;
+  display: inline-block;
+}
+
+.button-one {
+  background-color: #61BD6D;
+}
+
+.button-two {
+  background-color: #9365B8;
+}
+
+.button-three {
+  background-color: #E25041;
+}
+
+.content-navigation {
+  display: inline-flex;
+  justify-content: space-between;
+  width: 700px;
+  height: auto;
+  vertical-align: middle;
+  height: 30px;
+  padding-bottom: 40px;
 }
