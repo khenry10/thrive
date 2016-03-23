@@ -14,7 +14,7 @@ class ListsController < ApplicationController
   end
 
   def create
-    @list = List.create!(list_params)
+    @list = List.create!(list_params.merge(user: current_user))
 
     redirect_to @list
   end
@@ -32,7 +32,11 @@ class ListsController < ApplicationController
 
   def destroy
     @list = List.find(params[:id]).destroy
-
+    if @list.user == current_user
+      @list.destroy
+    else
+      flash[:alert] = "Sorry you can only delete lists that you created"
+    end
     redirect_to lists_path
   end
 

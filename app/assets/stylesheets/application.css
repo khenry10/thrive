@@ -28,6 +28,11 @@ h1 nav {
   left: 10px;
 }
 
+.right-nav {
+  position: absolute;
+  right: 10px;
+}
+
 .nav-item {
   padding: 10px;
   display: inline-block;
@@ -42,7 +47,7 @@ h1 nav {
 .container {
   position: relative;
   display: flex;
-  top: -10px;
+  top: 50px;
   width: 90%;
   min-height: 650px;
   height: 100%;
@@ -93,8 +98,6 @@ input[type=checkbox] {
    height:20px;
 }
 
-
-
 .all-tasks {
   margin-left: auto;
   margin-right: auto;
@@ -109,4 +112,29 @@ input[type=checkbox] {
   border: 3px #EFEFEF solid;
   border-radius: 25px;
   background-color: #EB6B56;
+}
+
+.new-form {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.new-form li {
+  font-size: 20px;
+  list-style: none;
+  align-self: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  /*border: 3px #EFEFEF solid;*/
+}
+
+.new-form ul {
+  border-radius: 10px;
+  background-color: #EB6B56;
+}
+
+h2 {
+  color: black;
+  font-size: 25px; 
 }
