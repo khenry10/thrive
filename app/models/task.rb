@@ -9,9 +9,10 @@ class Task < ActiveRecord::Base
     end
   end
 
-  def check_completed
+  def self.check_completed
     todo_tasks = []
-    self.tasks.each do |task|
+    NilClass.instance_methods.include?
+    task.each do |task|
       if task.complete == false || task.complete == nil
         todo_tasks << task
       end
