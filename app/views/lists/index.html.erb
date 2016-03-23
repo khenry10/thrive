@@ -8,7 +8,7 @@
         <li><%= link_to list.name, list %>
 
         <% if list.list_type == "Check List" %>
-        <%= (Task.where(list_id: list.id).where(complete: [false, nil]).sum(:time_estimate))/60.0 %><%= " hours" %></li>
+        <%= ((Task.where(list_id: list.id).where(complete: [false, nil]).sum(:time_estimate))/60.0).round(2) %><%= " hours" %></li>
         <% end %>
 
         <% if list.list_type == "Shopping List" %>

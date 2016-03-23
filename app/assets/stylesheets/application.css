@@ -2,49 +2,38 @@ body {
   background-color: white;
   align-items: center;
   align-content: center;
+  margin: 0;
 }
 
 .nav {
-  position: relative;
   width: 100%;
-  top: -16px;
-  left: -10px;
   background-color: #54ACD2;
-  height: 50px;
-  margin-bottom: 0px;
-  font-weight: bolder;
-  font-size: 12px;
-  padding-left: 15px;
-  padding-top: 0px;
+  display: block;
   color: white;
+  padding-right: : 5px; 
 }
 
-
 .left-nav {
-  position: absolute;
   left: 10px;
 }
 
 .right-nav {
-  position: absolute;
-  right: 10px;
+  float: right;
 }
 
 .nav-item {
   padding: 10px;
-  display: inline-block;
   font-size: 20px;
-  top: 0px;
-  outline: 2px white solid;
-  height: 50px;
-  padding-right: 30px;
-  left: -5px;
+  display: inline-block;
+  border-right: 2px white solid;
 }
 
+span.nav-item:nth-child(1) {
+  border-left: 2px white solid;
+}
+
+
 .container {
-  position: relative;
-  display: flex;
-  top: 50px;
   width: 90%;
   min-height: 650px;
   margin-left: 5%;
@@ -172,4 +161,48 @@ h2 {
   vertical-align: middle;
   height: 30px;
   padding-bottom: 40px;
+}
+
+.new_user {
+  position: relative;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 100px;
+
+}
+
+.field {
+  align-self: center;
+  padding-left: 40%;
+  font-size: 25px;
+  color: white;
+}
+
+.actions {
+  align-self: center;
+  padding-left: 45%;
+  font-size: 25px;
+}
+
+input[type=password] {
+  width: 200px;
+  height: 30px;
+  border-radius: 10px;
+}
+
+input[type=email] {
+  width: 200px;
+  height: 30px;
+  border-radius: 10px;
+}
+
+.form-links {
+  padding-top: 430px;
+  color: white;
+  font-size: 20px;
+}
+
+.login-title {
+  overflow: hidden;
 }
