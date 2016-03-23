@@ -39,10 +39,6 @@ class TasksController < ApplicationController
     redirect_to list_path(@list)
   end
 
-  def complete
-    @task = Task.find(params[:id]).update(column: "true")
-  end
-
 
   private
   def task_param

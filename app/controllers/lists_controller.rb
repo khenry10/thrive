@@ -6,6 +6,8 @@ class ListsController < ApplicationController
 
   def show
     @list = List.find(params[:id])
+    @tasks = @list.tasks
+
   end
 
   def new
@@ -25,14 +27,24 @@ class ListsController < ApplicationController
   def update
     @list = List.find(params[:id]).update(list_params)
 
+
     redirect_to list_path
   end
 
   def destroy
     @list = List.find(params[:id]).destroy
 
-    redirect_to lists_path 
+    redirect_to lists_path
   end
+
+  def completed_task
+    @list = List.find(params[:id])
+    @task = Task.find(params[:task_id])
+
+    @task.update(complete: true)
+    redirect_to @list
+  end
+
 
   private
   def list_params

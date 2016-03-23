@@ -4,6 +4,9 @@ Rails.application.routes.draw do
 
   resources :lists do
     resources :tasks
+      member do
+        put 'completed_task'
+      end
   end
 
   resources :tasks, only: [:index]

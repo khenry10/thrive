@@ -1,6 +1,7 @@
 <div class="content">
   <h2><%= @list.name %> - <%= link_to "Edit", edit_list_path %> <%= link_to "Delete", list_path(@list), method: :delete %></h2>
 
+    <!-- Logic to show time for Check lists and Money for Shopping list  -->
     <% if @list.list_type == "Check List" %>
       <h3><%= (Task.where(list_id: @list.id).sum(:time_estimate))/60 %><%= " hours" %></h3>
     <% end %>
@@ -8,22 +9,32 @@
     <% if @list.list_type == "Shopping List" %>
       <h3><%= "$" %><%= Task.where(list_id: @list.id).sum(:cost) %></h3>
     <% end %>
+
+    <!-- list -->
   <ul>
-    <%  @list.tasks.each do |task| %>
-    <li><%= check_box_tag :complete, 1, task.complete %>
-      <%= link_to task.name, edit_list_task_path(@list, task) %>
 
-      <% if @list.list_type == "Check List" %>
-        <%= task.time_estimate %><%= " minutes" %></li>
-      <% end %>
+    <%= form_tag(completed_task_list_path(@list), :method => 'put') do %>
+   <%= label_tag "Task" %>
+   <% @list.tasks.each do |task|%>
+  <li><%= check_box_tag(:task_id, task.id, task.complete)%>
+     <%= link_to task.name, edit_list_task_path(@list, task) %>
 
-    <% if @list.list_type == "Shopping List" %>
-      <%= "$" %><%= task.cost * task.quantity %></li>
-      <% end %>
+     <% if @list.list_type == "Check List" %>
+       <%= task.time_estimate %><%= " minutes" %></li>
+     <% end %>
 
-        <% link_to "Delete", list_task_path(@list, task), method: :delete %>
+   <% if @list.list_type == "Shopping List" %>
+     <%= "$" %><%= task.cost * task.quantity %></li>
+     <% end %>
 
-    <% end %>
+   </li>
+     <% end %>
+   <%= submit_tag "Complete Task" %>
+ <% end %>
+
+
   </ul>
+
   <%= link_to "Add New Task", new_list_task_path(@list) %>
+
 </div>
