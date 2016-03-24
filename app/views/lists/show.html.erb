@@ -3,7 +3,7 @@
     <h2><%= @list.name %></h2>
     <!-- Logic to show time for Check lists and Money for Shopping list  -->
     <% if @list.list_type == "Check List" %>
-      <h3><%= (Task.where(complete: [false, nil]).where(list_id: @list.id).sum(:time_estimate)/60.0)  %><%= " hours" %></h3>
+      <h3><%= (Task.where(complete: [false, nil]).where(list_id: @list.id).sum(:time_estimate)/60.0).round(2)  %><%= " hours" %></h3>
     <% end %>
 
     <% if @list.list_type == "Shopping List" %><h2>
