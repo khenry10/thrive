@@ -13,7 +13,7 @@ body {
   background-color: #54ACD2;
   display: block;
   color: white;
-  padding-right: : 5px;
+  padding-right: 5px;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -122,7 +122,7 @@ input[type=checkbox] {
 .new-form ul {
   border-radius: 10px;
   background-color: #1ABC9C;
-  color: white; 
+  color: white;
 
 }
 
