@@ -1,4 +1,5 @@
 class TasksController < ApplicationController
+  before_action :authenticate_user!, only:[:new, :create]
 
   def index
     @tasks = Task.where(complete: [nil, false])

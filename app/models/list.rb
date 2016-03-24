@@ -7,7 +7,6 @@ class List < ActiveRecord::Base
   end
 
   def self.add_lists_time
-
     self.map { |list|
       incomplete_tasks = list.tasks.where(complete: [false, nil])
       total_time =  incomplete_tasks.map{|task| task.time_estimate}.sum
@@ -15,12 +14,13 @@ class List < ActiveRecord::Base
 
   end
 
-  def add_tasks_time
-    incomplete_tasks = self.tasks.where(complete: [false, nil])
-    total_time =  incomplete_tasks.map{|task| task.time_estimate}.sum
-    hours = total_time/60
-    minutes = total_time%60
-    return "#{hours}:#{minutes}"
-  end
+  # def add_tasks_time
+  #   incomplete_tasks = self.tasks.where(complete: [false, nil])
+  #   total_time =  incomplete_tasks.map{|task| task.time_estimate}.sum
+  #   hours = total_time/60
+  #   minutes = total_time%60
+  #   return "#{hours}:#{minutes}"
+  # end
+
 
 end

@@ -74,6 +74,7 @@ a {
   background-color: #EB6B56;
   display: flex;
   justify-content: space-between;
+  color: white;
 }
 
 input[type=text] {
@@ -143,6 +144,7 @@ h2 {
   text-align: center;
   box-shadow: 1px 1px 1px black;
   display: inline-block;
+  color: white; 
 }
 
 .button-one {
@@ -180,7 +182,7 @@ h2 {
   align-self: center;
   padding-left: 40%;
   font-size: 25px;
-  color: white;
+  color: black;
 }
 
 .actions {

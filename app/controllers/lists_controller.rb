@@ -1,14 +1,15 @@
 class ListsController < ApplicationController
+  before_action :authenticate_user!, only:[:new, :create]
 
   def index
-    @list = List.all
-    
+    @lists = List.where(user_id: current_user)
+
   end
 
   def show
     @list = List.find(params[:id])
     @tasks = @list.check_for_complete
-    @total_list_time = @list.add_tasks_time
+    # @total_list_time = @list.add_tasks_time
   end
 
   def new
