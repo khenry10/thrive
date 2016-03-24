@@ -2,6 +2,7 @@
 <div class="content">
   <!-- <h2><%= (Task.where(complete: [false, nil]).sum(:time_estimate)/60).round(2) %><%= " hours of tasks" %></h2> -->
 
+  <%= link_to "Add New List", new_list_path, class: "nav-button button-one" %>
     <ul>
       <% @lists.each do |list| %>
 
@@ -12,10 +13,9 @@
         <% end %>
 
         <% if list.list_type == "Shopping List" %>
-        <%= "$" %><%= Task.where(list_id: list.id).sum(:cost) %></li>
+        <%= number_to_currency(Task.where(list_id: list.id).sum(:cost)) %></li>
         <% end %>
       <% end %>
     </ul>
 
-  <%= link_to "+ New List", new_list_path %>
 </div>

@@ -1,3 +1,5 @@
+
+
 <ul>
   <%= form_for @list do |f| %>
   <li><%= f.label :name %>
@@ -7,17 +9,17 @@
   <%= f.radio_button :list_type, 'Shopping List' %> Shopping List</li>
   <li><%= f.label :category %>
   <%= f.text_field :category %></li>
-  <li><%= f.label :list_time %>
+  <!-- <li><%= f.label :list_time %>
   <%= f.number_field :list_time %> Hours
-  <%= f.number_field :list_time %> Minutes </li></li>
+  <%= f.number_field :list_time %> Minutes </li></li> -->
   <li><%= f.label :deadline %>
   <%= f.date_field :deadline %></li>
-  <li><%= f.label :recurring %>
+  <!-- <li><%= f.label :recurring %>
   <%= f.radio_button :recurring, 'Daily' %> Daily
   <%= f.radio_button :recurring, 'Weekly' %> Weekly
   <%= f.radio_button :recurring, 'Monthly' %> Monthly
   <%= f.radio_button :recurring, 'Quarterly' %> Quarterly
-  <%= f.radio_button :recurring, 'Weekly' %> Yearly </li>
+  <%= f.radio_button :recurring, 'Weekly' %> Yearly </li> -->
   <li><%= f.submit %></li>
   <% end %>
 </ul>

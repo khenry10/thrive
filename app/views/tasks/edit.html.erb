@@ -3,4 +3,7 @@
   <h2><%= @task.name %></h2>
 
   <%= render "form" %>
+
+    <%= link_to "Delete", list_task_path(@list, @task), method: :delete, class: "nav-button button-three"  %>
+
 </div>

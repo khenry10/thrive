@@ -3,18 +3,22 @@
     <h2><%= @list.name %></h2>
     <!-- Logic to show time for Check lists and Money for Shopping list  -->
     <% if @list.list_type == "Check List" %>
-      <h3><%= (Task.where(complete: [false, nil]).where(list_id: :list_id).sum(:time_estimate)/60).round(2)  %><%= " hours" %></h3>
+      <h3><%= (Task.where(complete: [false, nil]).where(list_id: @list.id).sum(:time_estimate)/60.0)  %><%= " hours" %></h3>
     <% end %>
 
     <% if @list.list_type == "Shopping List" %><h2>
 
-    <h3><%= "$" %><%= Task.where(list_id: @list.id).sum(:cost) %></h3>
+    <h3><%= number_to_currency(Task.where(list_id: @list.id).sum(:cost)) %></h3>
     <% end %>
-    <%= link_to "Add New Task", new_list_task_path(@list), class: "nav-button button-one" %>
+
+    <% if @list.list_type == "Check List" %>
+      <%= link_to "Add New Task", new_list_task_path(@list), class: "nav-button button-one" %>
+    <% end %>
+    <% if @list.list_type == "Shopping List" %>
+      <%= link_to "Add New Item", new_list_task_path(@list), class: "nav-button button-one" %>
+    <% end %>
     <%= link_to "Edit", edit_list_path, class: "nav-button button-two" %>
     <%= link_to "Delete", list_path(@list), method: :delete, class: "nav-button button-three"  %>
-
-
 
   </div>
 
@@ -33,16 +37,14 @@
      <% end %>
 
    <% if @list.list_type == "Shopping List" %>
-     <%= "$" %><%= task.cost  %></li>
+     <%= number_to_currency(task.cost)  %></li>
      <% end %>
 
    </li>
      <% end %>
-   <%= submit_tag "Complete Task" %>
+   <%= submit_tag "Clear Complete" %>
  <% end %>
 
-
   </ul>
-
 
 </div>

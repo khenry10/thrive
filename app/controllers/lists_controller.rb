@@ -44,9 +44,12 @@ class ListsController < ApplicationController
 
   def completed_task
     @list = List.find(params[:id])
-    @task = Task.find(params[:task_id])
+
+    if params[:task_id].present?
+      @task = Task.find(params[:task_id])
 
       @task.update(complete: true)
+    end
 
     redirect_to @list
   end
