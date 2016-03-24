@@ -3,10 +3,10 @@ class ListsController < ApplicationController
 
   def index
     @lists = List.where(user_id: current_user)
-
   end
 
   def show
+    authenticate_user!
     @list = List.find(params[:id])
     @tasks = @list.check_for_complete
     # @total_list_time = @list.add_tasks_time
