@@ -1,14 +1,14 @@
-<div class="content">
   <div class="content-navigation">
     <h2><%= @list.name %></h2>
     <!-- Logic to show time for Check lists and Money for Shopping list  -->
     <% if @list.list_type == "Check List" %>
-      <h3><%= (Task.where(complete: [false, nil]).where(list_id: @list.id).sum(:time_estimate)/60.0).round(2)  %><%= " hours" %></h3>
+      <h3><%= @total_list_time  %></h3>
+
     <% end %>
 
     <% if @list.list_type == "Shopping List" %><h2>
 
-    <h3><%= number_to_currency(Task.where(list_id: @list.id).sum(:cost)) %></h3>
+    <h3><%= number_to_currency(@total_list_time) %></h3>
     <% end %>
 
     <% if @list.list_type == "Check List" %>
@@ -21,6 +21,7 @@
     <%= link_to "Delete", list_path(@list), method: :delete, class: "nav-button button-three"  %>
 
   </div>
+  <div class="content">
 
 
     <!-- list -->

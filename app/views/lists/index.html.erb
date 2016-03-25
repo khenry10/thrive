@@ -4,6 +4,9 @@
 
   <%= link_to "Add New List", new_list_path, class: "nav-button button-one" %>
     <ul>
+
+      <%= @total_list_time %>
+
       <% @lists.each do |list| %>
 
         <li><%= link_to list.name, list %>

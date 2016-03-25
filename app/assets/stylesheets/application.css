@@ -139,7 +139,7 @@ h2 {
 .nav-button {
   font-size: 15px;
   border-radius: 10px;
-  width: 110px;
+  width: 115px;
   height: 20px;
   padding: 10px;
   text-align: center;
@@ -163,11 +163,13 @@ h2 {
 .content-navigation {
   display: inline-flex;
   justify-content: space-between;
-  width: 700px;
+  width: 80%;
   height: auto;
   vertical-align: middle;
   height: 30px;
   padding-bottom: 40px;
+  margin-left: 10%;
+  padding-top: 40px;
 }
 
 .new_user {
