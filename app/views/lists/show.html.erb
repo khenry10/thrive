@@ -1,5 +1,7 @@
   <div class="content-navigation">
     <h2><%= @list.name %></h2>
+
+    <!-- JGZ - yay for commenting! -->
     <!-- Logic to show time for Check lists and Money for Shopping list  -->
     <% if @list.list_type == "Check List" %>
       <h3><%= @total_list_time  %></h3>
@@ -27,6 +29,7 @@
     <!-- list -->
   <ul>
 
+<!-- JGZ - Woohoo! -->
     <%= form_tag(completed_task_list_path(@list), :method => 'put') do %>
    <!-- <%= label_tag "task" %> -->
    <% @tasks.each do |task|%>

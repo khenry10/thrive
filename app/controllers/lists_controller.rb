@@ -9,6 +9,7 @@ class ListsController < ApplicationController
   def show
     @list = List.find(params[:id])
     @tasks = @list.check_for_complete
+    # JGZ - nice!
     @total_list_time = @list.add_tasks_time
   end
 
@@ -37,12 +38,15 @@ class ListsController < ApplicationController
     if @list.user == current_user
       @list.destroy
     else
+      # JGZ - Nice use of flash!
       flash[:alert] = "Sorry you can only delete lists that you created"
     end
     redirect_to lists_path
   end
 
   def completed_task
+
+    # JGZ - OHHH cool! I see what this is doing in routes now. well done!
     @list = List.find(params[:id])
 
     if params[:task_id].present?
