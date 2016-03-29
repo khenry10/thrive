@@ -17,6 +17,7 @@ class List < ActiveRecord::Base
   #
   # end
 
+# JGZ - Nice! Love the use of model method here
   def add_tasks_time
     incomplete_tasks = self.tasks.where(complete: [false, nil])
       if self.list_type == "Check List"

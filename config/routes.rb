@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 
   resources :lists do
     resources :tasks
+    # JGZ - Cool! would love to understand how this is working?
       member do
         put 'completed_task'
       end

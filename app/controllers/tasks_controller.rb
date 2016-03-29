@@ -10,6 +10,12 @@ class TasksController < ApplicationController
   end
 
   def new
+    # JGZ - Could be cleaned up so you don't have to repeat this over and over
+    # before_action :set_list, only: [:new,:edit,:create,:update,:destroy]
+    # and then in your private area:
+    # def set_list
+    #   @list = List.find(params[:id])
+    # end
     @list = List.find(params[:list_id])
     @task = Task.new
   end
