@@ -4,7 +4,7 @@ See the full rubric [here](https://github.com/ga-wdi-exercises/project2/blob/mas
 ​
 My code comments are here:
 ​
-[link to PR]()
+[link to PR](https://github.com/khenry10/thrive/pull/1)
 ​
 ## Technical Requirements
 ​
