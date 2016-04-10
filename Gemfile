@@ -50,3 +50,5 @@ end
   gem "pry"
 
   gem "devise"
+
+  gem "simple_calendar", "~> 2.0"
