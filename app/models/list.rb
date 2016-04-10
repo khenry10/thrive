@@ -6,18 +6,7 @@ class List < ActiveRecord::Base
     self.tasks.where(complete: [false, nil])
   end
 
-
-# Need to re-visit bottom two methods since this logic is being done with Active Record methods in the htnl.
-
-  # def self.add_lists_time
-  #   self.map { |list|
-  #     incomplete_tasks = list.tasks.where(complete: [false, nil])
-  #     total_time =  incomplete_tasks.map{|task| task.time_estimate}.sum
-  #   }.sum
-  #
-  # end
-
-  def add_tasks_time
+  def aggregrate_tasks
     incomplete_tasks = self.tasks.where(complete: [false, nil])
       if self.list_type == "Check List"
         total_time =  incomplete_tasks.map{|task| task.time_estimate}.sum
@@ -25,11 +14,17 @@ class List < ActiveRecord::Base
         minutes = total_time%60
       return "#{hours} hours #{minutes} minutes "
       end
-      if self.list_type == "Shopping List"
-        total_cost = incomplete_tasks.map{|task| task.cost}.sum
+    else self.list_type == "Shopping List"
+        total_cost = incomplete_tasks.map{|task| task.cost * task.quantity.to_i}.sum
       return total_cost
-      end
   end
+
+  def add id
+    tasks = Task.find(list_id: id)
+    tasks_total = tasks.map{|task| task.cost * task.quantity.to_i}.sum
+    return tasks_total
+  end
+
 
 
 end

@@ -15,10 +15,12 @@
         <%= ((Task.where(list_id: list.id).where(complete: [false, nil]).sum(:time_estimate))/60.0).round(2) %><%= " hours" %></li>
         <% end %>
 
-        <% if list.list_type == "Shopping List" %>
+        <!-- <% if list.list_type == "Shopping List" %>
         <%= number_to_currency(Task.where(list_id: list.id).sum(:cost)) %></li>
-        <% end %>
+        <% end %> -->
       <% end %>
     </ul>
+
+
 
 </div>

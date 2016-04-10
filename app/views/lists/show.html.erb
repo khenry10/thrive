@@ -2,13 +2,13 @@
     <h2><%= @list.name %></h2>
     <!-- Logic to show time for Check lists and Money for Shopping list  -->
     <% if @list.list_type == "Check List" %>
-      <h3><%= @total_list_time  %></h3>
+      <h3><%= @task_aggregates  %></h3>
 
     <% end %>
 
     <% if @list.list_type == "Shopping List" %><h2>
 
-    <h3><%= number_to_currency(@total_list_time) %></h3>
+    <h3><%= number_to_currency(@task_aggregates) %></h3>
     <% end %>
 
     <% if @list.list_type == "Check List" %>
@@ -38,7 +38,7 @@
      <% end %>
 
    <% if @list.list_type == "Shopping List" %>
-     <%= number_to_currency(task.cost)  %></li>
+     <%= number_to_currency(task.cost * task.quantity.to_i)  %></li>
      <% end %>
 
    </li>

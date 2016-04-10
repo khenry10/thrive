@@ -32,8 +32,8 @@
       <%= f.text_field :cost %></li>
     <!-- <li><%= f.label :image %>
       <%= f.text_field :image %></li> -->
-  <!-- <li><%= f.label :quantity %>
-  <%= f.text_field :quantity %></li> -->
+  <li><%= f.label :quantity %>
+  <%= f.number_field :quantity, :min => 1 %></li>
   <% end %>
 
   <%= f.submit %>
