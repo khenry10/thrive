@@ -36,7 +36,6 @@ span.nav-item:nth-child(1) {
   border-left: 2px white solid;
 }
 
-
 .container {
   width: 90%;
   min-height: 650px;
@@ -75,6 +74,10 @@ a {
   display: flex;
   justify-content: space-between;
   color: white;
+}
+
+.content li:hover{
+  box-shadow: 1px 1px 1px black;
 }
 
 input[type=text] {
@@ -146,6 +149,10 @@ h2 {
   box-shadow: 1px 1px 1px black;
   display: inline-block;
   color: white;
+}
+
+.nav-button:hover{
+  box-shadow: 2px 2px 2px white;
 }
 
 .button-one {
