@@ -213,6 +213,10 @@ input[type=email] {
   border-radius: 10px;
 }
 
+input {
+  border-radius: 10px;
+}
+
 .form-links {
   padding-top: 430px;
   color: white;
