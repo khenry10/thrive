@@ -11,6 +11,7 @@ class ListsController < ApplicationController
 
   def show
     @list = List.find(params[:id])
+    # check_for_complete is a model method that filters for tasks that are complete: false or nil
     @tasks = @list.check_for_complete
     @task_aggregates = @list.aggregrate_tasks
     respond_to do |format|
@@ -52,10 +53,13 @@ class ListsController < ApplicationController
   def completed_task
     @list = List.find(params[:id])
 
-    if params[:task_id].present?
-      @task = Task.find(params[:task_id])
 
-      @task.update(complete: true)
+    if params[:task_ids].present?
+      @tasks = Task.find(params[:task_ids])
+
+      @tasks.each do |task|
+        task.update(complete: true)
+      end
     end
 
     redirect_to @list

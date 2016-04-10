@@ -55610,3 +55610,1744 @@ Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8b
 
 
 Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-10 16:55:48 -0400
+
+
+Started GET "/lists" for ::1 at 2016-04-10 16:57:38 -0400
+Processing by ListsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.4ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)[0m
+  [1m[35mList Load (0.3ms)[0m  SELECT "lists".* FROM "lists" WHERE "lists"."user_id" = 1
+  [1m[36m (0.3ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)[0m  [["list_id", 17]]
+  [1m[35m (0.2ms)[0m  SELECT SUM("tasks"."cost") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 19]]
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)[0m  [["list_id", 27]]
+  [1m[35m (0.2ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)  [["list_id", 31]]
+  [1m[36m (0.3ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)[0m  [["list_id", 26]]
+  [1m[35m (0.2ms)[0m  SELECT SUM("tasks"."cost") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 32]]
+  Rendered lists/index.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 28ms (Views: 24.1ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/lists" for ::1 at 2016-04-10 16:57:38 -0400
+Processing by ListsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.5ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)
+  [1m[36mList Load (0.3ms)[0m  [1mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = 1[0m
+  [1m[35m (0.3ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)  [["list_id", 17]]
+  [1m[36m (0.3ms)[0m  [1mSELECT SUM("tasks"."cost") FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 19]]
+  [1m[35m (0.2ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)  [["list_id", 27]]
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)[0m  [["list_id", 31]]
+  [1m[35m (0.2ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)  [["list_id", 26]]
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("tasks"."cost") FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 32]]
+  Rendered lists/index.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 22ms (Views: 17.7ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/lists/17" for ::1 at 2016-04-10 17:05:47 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[35mList Load (0.2ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1  [["id", 17]]
+  [1m[36mTask Load (0.6ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)[0m  [["list_id", 17]]
+  Rendered lists/show.html.erb within layouts/application (7.2ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.9ms)
+
+SyntaxError (/Users/keithprifte/wdi/projects/thrive/app/views/lists/show.html.erb:53: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/views/lists/show.html.erb:53: syntax error, unexpected keyword_ensure, expecting end-of-input
+  app/controllers/lists_controller.rb:16:in `show'
+
+
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.8ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.1ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (68.9ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (40.8ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (93.8ms)
+
+
+Started GET "/lists/17" for ::1 at 2016-04-10 17:05:47 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[35mList Load (0.2ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1  [["id", 17]]
+  [1m[36mTask Load (0.3ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)[0m  [["list_id", 17]]
+  Rendered lists/show.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.5ms)
+
+SyntaxError (/Users/keithprifte/wdi/projects/thrive/app/views/lists/show.html.erb:53: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/views/lists/show.html.erb:53: syntax error, unexpected keyword_ensure, expecting end-of-input
+  app/controllers/lists_controller.rb:16:in `show'
+
+
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.4ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.5ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (68.7ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (44.9ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (94.7ms)
+
+
+Started GET "/lists/17" for ::1 at 2016-04-10 17:06:02 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[35mList Load (0.2ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1  [["id", 17]]
+  [1m[36mTask Load (0.3ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)[0m  [["list_id", 17]]
+  Rendered lists/show.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.5ms)
+
+SyntaxError (/Users/keithprifte/wdi/projects/thrive/app/views/lists/show.html.erb:53: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/views/lists/show.html.erb:53: syntax error, unexpected keyword_ensure, expecting end-of-input
+  app/controllers/lists_controller.rb:16:in `show'
+
+
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.0ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (67.0ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (46.0ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (96.5ms)
+
+
+Started GET "/lists/17" for ::1 at 2016-04-10 17:06:45 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[35mList Load (0.3ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1  [["id", 17]]
+  [1m[36mTask Load (0.5ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)[0m  [["list_id", 17]]
+  Rendered lists/show.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.9ms)
+
+SyntaxError (/Users/keithprifte/wdi/projects/thrive/app/views/lists/show.html.erb:53: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/views/lists/show.html.erb:53: syntax error, unexpected keyword_ensure, expecting end-of-input
+  app/controllers/lists_controller.rb:16:in `show'
+
+
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.3ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (68.2ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (41.7ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (98.0ms)
+
+
+Started GET "/lists/17" for ::1 at 2016-04-10 17:06:55 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[35mList Load (0.2ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1  [["id", 17]]
+  [1m[36mTask Load (0.4ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)[0m  [["list_id", 17]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)  [["list_id", 17]]
+  Rendered lists/show.html.erb within layouts/application (4.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 27ms (Views: 22.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.self-1fd4e9aa9f5634133db2d0dea261c7941d022714ba62ebc238b35c44af873419.css?body=1" for ::1 at 2016-04-10 17:06:55 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-10 17:06:55 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-10 17:06:55 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-10 17:06:55 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-04-10 17:06:55 -0400
+
+
+Started GET "/lists/17" for ::1 at 2016-04-10 17:07:02 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[35mList Load (0.2ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1  [["id", 17]]
+  [1m[36mTask Load (0.3ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)[0m  [["list_id", 17]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)  [["list_id", 17]]
+  Rendered lists/show.html.erb within layouts/application (5.7ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.5ms)
+
+ActionView::Template::Error (wrong number of arguments (0 for 1)):
+    30:     <%= form_tag(completed_task_list_path(@list), :method => 'put') do %>
+    31:    <!-- <%= label_tag "task" %> -->
+    32:    <% @tasks.each do |task|%>
+    33:   <li><%= check_box_tag(:task_id, task.id[], task.complete)%>
+    34:      <%= link_to task.name, edit_list_task_path(@list, task) %>
+    35: 
+    36:      <% if @list.list_type == "Check List" %>
+  app/views/lists/show.html.erb:33:in `[]'
+  app/views/lists/show.html.erb:33:in `block (2 levels) in _app_views_lists_show_html_erb___1594204935125704842_70197812982360'
+  app/views/lists/show.html.erb:32:in `block in _app_views_lists_show_html_erb___1594204935125704842_70197812982360'
+  app/views/lists/show.html.erb:30:in `_app_views_lists_show_html_erb___1594204935125704842_70197812982360'
+  app/controllers/lists_controller.rb:16:in `show'
+
+
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.0ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (60.9ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (42.0ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (90.5ms)
+
+
+Started GET "/lists/17" for ::1 at 2016-04-10 17:07:21 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mList Load (0.2ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1[0m  [["id", 17]]
+  [1m[35mTask Load (0.3ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)  [["list_id", 17]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)[0m  [["list_id", 17]]
+  Rendered lists/show.html.erb within layouts/application (4.9ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 20ms (Views: 16.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.self-1fd4e9aa9f5634133db2d0dea261c7941d022714ba62ebc238b35c44af873419.css?body=1" for ::1 at 2016-04-10 17:07:21 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-10 17:07:21 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-10 17:07:21 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-10 17:07:21 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-04-10 17:07:21 -0400
+
+
+Started GET "/lists/17" for ::1 at 2016-04-10 17:12:32 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mList Load (0.2ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1[0m  [["id", 17]]
+  [1m[35mTask Load (0.3ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)  [["list_id", 17]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)[0m  [["list_id", 17]]
+  Rendered lists/show.html.erb within layouts/application (3.7ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 21ms (Views: 17.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.self-1fd4e9aa9f5634133db2d0dea261c7941d022714ba62ebc238b35c44af873419.css?body=1" for ::1 at 2016-04-10 17:12:32 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-10 17:12:32 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-04-10 17:12:32 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-10 17:12:32 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-10 17:12:32 -0400
+
+
+Started GET "/lists/17" for ::1 at 2016-04-10 17:12:52 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mList Load (0.2ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1[0m  [["id", 17]]
+  [1m[35mTask Load (0.4ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)  [["list_id", 17]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)[0m  [["list_id", 17]]
+  Rendered lists/show.html.erb within layouts/application (2.9ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 19ms (Views: 15.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.self-1fd4e9aa9f5634133db2d0dea261c7941d022714ba62ebc238b35c44af873419.css?body=1" for ::1 at 2016-04-10 17:12:52 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-10 17:12:52 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-10 17:12:52 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-04-10 17:12:52 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-10 17:12:52 -0400
+
+
+Started GET "/lists" for ::1 at 2016-04-10 17:13:04 -0400
+Processing by ListsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.5ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)
+  [1m[36mList Load (0.5ms)[0m  [1mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = 1[0m
+  [1m[35m (0.3ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)  [["list_id", 17]]
+  [1m[36m (0.4ms)[0m  [1mSELECT SUM("tasks"."cost") FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 19]]
+  [1m[35m (0.2ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)  [["list_id", 27]]
+  [1m[36m (0.4ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)[0m  [["list_id", 31]]
+  [1m[35m (0.2ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)  [["list_id", 26]]
+  [1m[36m (0.4ms)[0m  [1mSELECT SUM("tasks"."cost") FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 32]]
+  Rendered lists/index.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 25ms (Views: 19.9ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/lists/17" for ::1 at 2016-04-10 17:13:07 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[35mList Load (0.2ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1  [["id", 17]]
+  [1m[36mTask Load (0.3ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)[0m  [["list_id", 17]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)  [["list_id", 17]]
+  Rendered lists/show.html.erb within layouts/application (2.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 19ms (Views: 15.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/lists/17" for ::1 at 2016-04-10 17:13:24 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[35mList Load (0.3ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1  [["id", 17]]
+  [1m[36mTask Load (0.3ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)[0m  [["list_id", 17]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)  [["list_id", 17]]
+  Rendered lists/show.html.erb within layouts/application (4.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 21ms (Views: 16.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.self-1fd4e9aa9f5634133db2d0dea261c7941d022714ba62ebc238b35c44af873419.css?body=1" for ::1 at 2016-04-10 17:13:24 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-10 17:13:24 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-10 17:13:24 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-04-10 17:13:24 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-10 17:13:24 -0400
+
+
+Started GET "/lists/17" for ::1 at 2016-04-10 17:13:29 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[35mList Load (0.2ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1  [["id", 17]]
+  [1m[36mTask Load (0.3ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)[0m  [["list_id", 17]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)  [["list_id", 17]]
+  Rendered lists/show.html.erb within layouts/application (4.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 20ms (Views: 17.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.self-1fd4e9aa9f5634133db2d0dea261c7941d022714ba62ebc238b35c44af873419.css?body=1" for ::1 at 2016-04-10 17:13:29 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-10 17:13:29 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-04-10 17:13:29 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-10 17:13:29 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-10 17:13:29 -0400
+
+
+Started GET "/lists/17/tasks/122/edit" for ::1 at 2016-04-10 17:13:32 -0400
+Processing by TasksController#edit as HTML
+  Parameters: {"list_id"=>"17", "id"=>"122"}
+  [1m[35mList Load (0.3ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1  [["id", 17]]
+  [1m[36mTask Load (0.4ms)[0m  [1mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT 1[0m  [["id", 122]]
+  Rendered tasks/_form.html.erb (18.3ms)
+  Rendered tasks/edit.html.erb within layouts/application (21.2ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 53ms (Views: 35.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/lists" for ::1 at 2016-04-10 17:13:35 -0400
+Processing by ListsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.4ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)
+  [1m[36mList Load (0.3ms)[0m  [1mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = 1[0m
+  [1m[35m (0.3ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)  [["list_id", 17]]
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("tasks"."cost") FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 19]]
+  [1m[35m (0.3ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)  [["list_id", 27]]
+  [1m[36m (0.3ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)[0m  [["list_id", 31]]
+  [1m[35m (0.3ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)  [["list_id", 26]]
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("tasks"."cost") FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 32]]
+  Rendered lists/index.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 23ms (Views: 18.8ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/lists/32" for ::1 at 2016-04-10 17:13:36 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"32"}
+  [1m[35mList Load (0.2ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36mTask Load (0.3ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)[0m  [["list_id", 32]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)  [["list_id", 32]]
+  Rendered lists/show.html.erb within layouts/application (2.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 18ms (Views: 14.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/lists" for ::1 at 2016-04-10 17:13:38 -0400
+Processing by ListsController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.4ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)[0m
+  [1m[35mList Load (0.5ms)[0m  SELECT "lists".* FROM "lists" WHERE "lists"."user_id" = 1
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)[0m  [["list_id", 17]]
+  [1m[35m (0.3ms)[0m  SELECT SUM("tasks"."cost") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 19]]
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)[0m  [["list_id", 27]]
+  [1m[35m (0.3ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)  [["list_id", 31]]
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)[0m  [["list_id", 26]]
+  [1m[35m (0.3ms)[0m  SELECT SUM("tasks"."cost") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 32]]
+  Rendered lists/index.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 22ms (Views: 18.2ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/lists/17" for ::1 at 2016-04-10 17:13:39 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mList Load (0.2ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1[0m  [["id", 17]]
+  [1m[35mTask Load (0.3ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)  [["list_id", 17]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)[0m  [["list_id", 17]]
+  Rendered lists/show.html.erb within layouts/application (3.2ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 18ms (Views: 15.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/lists/17/tasks/122/edit" for ::1 at 2016-04-10 17:13:45 -0400
+Processing by TasksController#edit as HTML
+  Parameters: {"list_id"=>"17", "id"=>"122"}
+  [1m[36mList Load (0.2ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1[0m  [["id", 17]]
+  [1m[35mTask Load (0.2ms)[0m  SELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT 1  [["id", 122]]
+  Rendered tasks/_form.html.erb (3.1ms)
+  Rendered tasks/edit.html.erb within layouts/application (4.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 19ms (Views: 17.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/lists" for ::1 at 2016-04-10 17:14:11 -0400
+Processing by ListsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.4ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)[0m
+  [1m[35mList Load (0.5ms)[0m  SELECT "lists".* FROM "lists" WHERE "lists"."user_id" = 1
+  [1m[36m (0.3ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)[0m  [["list_id", 17]]
+  [1m[35m (0.2ms)[0m  SELECT SUM("tasks"."cost") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 19]]
+  [1m[36m (0.3ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)[0m  [["list_id", 27]]
+  [1m[35m (0.3ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)  [["list_id", 31]]
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)[0m  [["list_id", 26]]
+  [1m[35m (0.2ms)[0m  SELECT SUM("tasks"."cost") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 32]]
+  Rendered lists/index.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 22ms (Views: 18.4ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/lists" for ::1 at 2016-04-10 17:21:52 -0400
+Processing by ListsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.6ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)
+  [1m[36mList Load (0.4ms)[0m  [1mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = 1[0m
+  [1m[35m (0.3ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)  [["list_id", 17]]
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("tasks"."cost") FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 19]]
+  [1m[35m (0.2ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)  [["list_id", 27]]
+  [1m[36m (0.3ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)[0m  [["list_id", 31]]
+  [1m[35m (0.2ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)  [["list_id", 26]]
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("tasks"."cost") FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 32]]
+  Rendered lists/index.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 27ms (Views: 22.2ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/application.self-1fd4e9aa9f5634133db2d0dea261c7941d022714ba62ebc238b35c44af873419.css?body=1" for ::1 at 2016-04-10 17:21:52 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-10 17:21:52 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-10 17:21:52 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-04-10 17:21:52 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-10 17:21:52 -0400
+
+
+Started GET "/lists/17" for ::1 at 2016-04-10 17:21:53 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[35mList Load (0.2ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1  [["id", 17]]
+  [1m[36mTask Load (0.3ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)[0m  [["list_id", 17]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)  [["list_id", 17]]
+  Rendered lists/show.html.erb within layouts/application (4.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 21ms (Views: 17.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/lists" for ::1 at 2016-04-10 17:21:58 -0400
+Processing by ListsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.4ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)[0m
+  [1m[35mList Load (0.4ms)[0m  SELECT "lists".* FROM "lists" WHERE "lists"."user_id" = 1
+  [1m[36m (0.3ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)[0m  [["list_id", 17]]
+  [1m[35m (0.2ms)[0m  SELECT SUM("tasks"."cost") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 19]]
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)[0m  [["list_id", 27]]
+  [1m[35m (0.2ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)  [["list_id", 31]]
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)[0m  [["list_id", 26]]
+  [1m[35m (0.2ms)[0m  SELECT SUM("tasks"."cost") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 32]]
+  Rendered lists/index.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 22ms (Views: 18.1ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/lists/new" for ::1 at 2016-04-10 17:22:00 -0400
+Processing by ListsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered lists/_form.html.erb (3.2ms)
+  Rendered lists/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 20ms (Views: 18.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/lists" for ::1 at 2016-04-10 17:22:04 -0400
+Processing by ListsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cuxWOzW7VUC3CUaTDhcw6cw4Y9HuS4Zyx27NtUlYdurw7Kyec7wasVD/tRryuGd5rkbf0iX7HECeqDU6LIX5Mw==", "list"=>{"name"=>"Test", "list_type"=>"Check List", "category"=>"", "deadline"=>""}, "commit"=>"Create List"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "lists" ("name", "list_type", "category", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["name", "Test"], ["list_type", "Check List"], ["category", ""], ["user_id", 1], ["created_at", "2016-04-10 21:22:04.679845"], ["updated_at", "2016-04-10 21:22:04.679845"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/lists/33
+Completed 302 Found in 10ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/lists/33" for ::1 at 2016-04-10 17:22:04 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[35mList Load (0.2ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1  [["id", 33]]
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)[0m  [["list_id", 33]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)  [["list_id", 33]]
+  Rendered lists/show.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 16ms (Views: 13.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/lists/33/tasks/new" for ::1 at 2016-04-10 17:22:05 -0400
+Processing by TasksController#new as HTML
+  Parameters: {"list_id"=>"33"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mList Load (0.2ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1[0m  [["id", 33]]
+  Rendered tasks/_form.html.erb (4.5ms)
+  Rendered tasks/new.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 21ms (Views: 18.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/lists/33/tasks" for ::1 at 2016-04-10 17:22:08 -0400
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AqgcvW4wQzQkZGKK3E7tQGGFJ6Pj90Lv3DT0afLzgCWAqOYYKDcMxcOSkQMg4brQA/uboChH2N2F8gzmly4P/A==", "task"=>{"name"=>"test", "category"=>"", "time_estimate"=>"Enter estimate in minutes", "time_actual"=>"", "deadline"=>"", "description"=>""}, "commit"=>"Create Task", "list_id"=>"33"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mList Load (0.2ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1[0m  [["id", 33]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tasks" ("name", "category", "description", "time_estimate", "list_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "test"], ["category", ""], ["description", ""], ["time_estimate", 0], ["list_id", 33], ["created_at", "2016-04-10 21:22:08.146575"], ["updated_at", "2016-04-10 21:22:08.146575"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/lists/33
+Completed 302 Found in 8ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/lists/33" for ::1 at 2016-04-10 17:22:08 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[36mList Load (0.3ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1[0m  [["id", 33]]
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)  [["list_id", 33]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)[0m  [["list_id", 33]]
+  Rendered lists/show.html.erb within layouts/application (1.5ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 19ms (Views: 15.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/lists/33/tasks/new" for ::1 at 2016-04-10 17:22:10 -0400
+Processing by TasksController#new as HTML
+  Parameters: {"list_id"=>"33"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mList Load (0.2ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1  [["id", 33]]
+  Rendered tasks/_form.html.erb (2.8ms)
+  Rendered tasks/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 19ms (Views: 16.4ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/lists/33/tasks" for ::1 at 2016-04-10 17:22:13 -0400
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MAvKB725LDTeOX0L5tabd40VmfWg/0xX4R9vr6UJsFCyCzCi+75jxTnPjoIaeczn72sl9mtP1mW42ZcgwNQ/iQ==", "task"=>{"name"=>"test 2", "category"=>"", "time_estimate"=>"Enter estimate in minutes", "time_actual"=>"", "deadline"=>"", "description"=>""}, "commit"=>"Create Task", "list_id"=>"33"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mList Load (0.2ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1  [["id", 33]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tasks" ("name", "category", "description", "time_estimate", "list_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "test 2"], ["category", ""], ["description", ""], ["time_estimate", 0], ["list_id", 33], ["created_at", "2016-04-10 21:22:13.169733"], ["updated_at", "2016-04-10 21:22:13.169733"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/lists/33
+Completed 302 Found in 6ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/lists/33" for ::1 at 2016-04-10 17:22:13 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[35mList Load (0.2ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1  [["id", 33]]
+  [1m[36mTask Load (0.3ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)[0m  [["list_id", 33]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)  [["list_id", 33]]
+  Rendered lists/show.html.erb within layouts/application (2.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 19ms (Views: 16.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/lists/33/tasks/new" for ::1 at 2016-04-10 17:22:14 -0400
+Processing by TasksController#new as HTML
+  Parameters: {"list_id"=>"33"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mList Load (0.2ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1[0m  [["id", 33]]
+  Rendered tasks/_form.html.erb (2.8ms)
+  Rendered tasks/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 19ms (Views: 16.5ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/lists/33/tasks" for ::1 at 2016-04-10 17:22:18 -0400
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VowXTZ0AEiHwKi3C3+2hZROMzWQjp+wXG+FVrCp7yQ7UjO3o2wdd0Bfc3ksjQvb1cfJxZ+gXdiVCJ60jT6ZG1w==", "task"=>{"name"=>"test 3", "category"=>"", "time_estimate"=>"Enter estimate in minutes", "time_actual"=>"", "deadline"=>"", "description"=>""}, "commit"=>"Create Task", "list_id"=>"33"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mList Load (0.2ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1[0m  [["id", 33]]
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tasks" ("name", "category", "description", "time_estimate", "list_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "test 3"], ["category", ""], ["description", ""], ["time_estimate", 0], ["list_id", 33], ["created_at", "2016-04-10 21:22:18.497157"], ["updated_at", "2016-04-10 21:22:18.497157"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/lists/33
+Completed 302 Found in 9ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/lists/33" for ::1 at 2016-04-10 17:22:18 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[36mList Load (0.3ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1[0m  [["id", 33]]
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)  [["list_id", 33]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)[0m  [["list_id", 33]]
+  Rendered lists/show.html.erb within layouts/application (2.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 19ms (Views: 15.5ms | ActiveRecord: 0.8ms)
+
+
+Started PUT "/lists/33/completed_task" for ::1 at 2016-04-10 17:22:22 -0400
+Processing by ListsController#completed_task as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rxeg2lgvQKNHpQicpZk7tfOblOiCP4qKXw6d4QG1UUMtF1p/HigPUqBT+xVZNmwlkeUo60mPELgGyGVuZGjemg==", "task_id"=>["127", "128"], "commit"=>"Clear Complete", "id"=>"33"}
+  [1m[36mList Load (0.2ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1[0m  [["id", 33]]
+  [1m[35mTask Load (0.6ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."id" IN (127, 128)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.9ms)
+
+NoMethodError (undefined method `update' for #<Array:0x007fb064291f50>):
+  app/controllers/lists_controller.rb:58:in `completed_task'
+
+
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.2ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (59.2ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (43.2ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (93.4ms)
+
+
+Started GET "/lists/33" for ::1 at 2016-04-10 17:27:19 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[36mList Load (0.2ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1[0m  [["id", 33]]
+  [1m[35mTask Load (0.3ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)  [["list_id", 33]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)[0m  [["list_id", 33]]
+  Rendered lists/show.html.erb within layouts/application (5.4ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 66ms (Views: 34.4ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/assets/application.self-1fd4e9aa9f5634133db2d0dea261c7941d022714ba62ebc238b35c44af873419.css?body=1" for ::1 at 2016-04-10 17:27:20 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-10 17:27:20 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-10 17:27:20 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-10 17:27:20 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-04-10 17:27:20 -0400
+
+
+Started PUT "/lists/33/completed_task" for ::1 at 2016-04-10 17:27:23 -0400
+Processing by ListsController#completed_task as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6Llmu86pKYqjKI4B20a8gu2lAHSjBD/bGR47cB4eU+BquZweiK5me0TefYgn6esSj9u8d2i0pelA2MP/e8PcOQ==", "task_ids"=>["127", "128"], "commit"=>"Clear Complete", "id"=>"33"}
+  [1m[36mList Load (0.2ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1[0m  [["id", 33]]
+  [1m[35mTask Load (0.4ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."id" IN (127, 128)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "tasks" SET "complete" = $1, "updated_at" = $2 WHERE "tasks"."id" = $3  [["complete", "t"], ["updated_at", "2016-04-10 21:27:23.825423"], ["id", 127]]
+  [1m[36m (1.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "tasks" SET "complete" = $1, "updated_at" = $2 WHERE "tasks"."id" = $3[0m  [["complete", "t"], ["updated_at", "2016-04-10 21:27:23.829702"], ["id", 128]]
+  [1m[35m (0.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/lists/33
+Completed 302 Found in 11ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/lists/33" for ::1 at 2016-04-10 17:27:23 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[36mList Load (0.2ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1[0m  [["id", 33]]
+  [1m[35mTask Load (0.3ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)  [["list_id", 33]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)[0m  [["list_id", 33]]
+  Rendered lists/show.html.erb within layouts/application (1.6ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 18ms (Views: 14.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/lists/33/tasks/new" for ::1 at 2016-04-10 17:27:33 -0400
+Processing by TasksController#new as HTML
+  Parameters: {"list_id"=>"33"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mList Load (0.2ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1  [["id", 33]]
+  Rendered tasks/_form.html.erb (3.6ms)
+  Rendered tasks/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 28ms (Views: 19.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/lists/33/tasks" for ::1 at 2016-04-10 17:27:36 -0400
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/n85ib/RoKSduktmMSKu2B39agcPNv7zV3SzsjA3Ey58f8Ms+dbvVXpMuO/NjflIf4PWBMSGZMEOsks9Veqc9w==", "task"=>{"name"=>"test 1", "category"=>"", "time_estimate"=>"Enter estimate in minutes", "time_actual"=>"", "deadline"=>"", "description"=>""}, "commit"=>"Create Task", "list_id"=>"33"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mList Load (0.2ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1  [["id", 33]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tasks" ("name", "category", "description", "time_estimate", "list_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "test 1"], ["category", ""], ["description", ""], ["time_estimate", 0], ["list_id", 33], ["created_at", "2016-04-10 21:27:36.037210"], ["updated_at", "2016-04-10 21:27:36.037210"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/lists/33
+Completed 302 Found in 8ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/lists/33" for ::1 at 2016-04-10 17:27:36 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[35mList Load (0.2ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1  [["id", 33]]
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)[0m  [["list_id", 33]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)  [["list_id", 33]]
+  Rendered lists/show.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 18ms (Views: 15.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/lists/33/tasks/new" for ::1 at 2016-04-10 17:27:37 -0400
+Processing by TasksController#new as HTML
+  Parameters: {"list_id"=>"33"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mList Load (0.2ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1[0m  [["id", 33]]
+  Rendered tasks/_form.html.erb (2.7ms)
+  Rendered tasks/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 20ms (Views: 17.3ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/lists/33/tasks" for ::1 at 2016-04-10 17:27:41 -0400
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OA5GshZtVjp1s11RHTg5B1190s1dxs6wXUqQsW5u2K+6DrwXUGoZy5JFrtjhl26XPwNuzpZ2VIIEjGg+C7NXdg==", "task"=>{"name"=>"test 3", "category"=>"", "time_estimate"=>"Enter estimate in minutes", "time_actual"=>"", "deadline"=>"", "description"=>""}, "commit"=>"Create Task", "list_id"=>"33"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mList Load (0.2ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1[0m  [["id", 33]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tasks" ("name", "category", "description", "time_estimate", "list_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "test 3"], ["category", ""], ["description", ""], ["time_estimate", 0], ["list_id", 33], ["created_at", "2016-04-10 21:27:41.739170"], ["updated_at", "2016-04-10 21:27:41.739170"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/lists/33
+Completed 302 Found in 6ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/lists/33" for ::1 at 2016-04-10 17:27:41 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[36mList Load (0.2ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1[0m  [["id", 33]]
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)  [["list_id", 33]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)[0m  [["list_id", 33]]
+  Rendered lists/show.html.erb within layouts/application (2.3ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 24ms (Views: 20.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/lists/33/tasks/new" for ::1 at 2016-04-10 17:27:42 -0400
+Processing by TasksController#new as HTML
+  Parameters: {"list_id"=>"33"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mList Load (0.2ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1  [["id", 33]]
+  Rendered tasks/_form.html.erb (3.8ms)
+  Rendered tasks/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 21ms (Views: 18.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/lists/33/tasks" for ::1 at 2016-04-10 17:27:44 -0400
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vmpWf9YTXUcSc7Xwp44gRnv3cM8yGKPw14njtcnage48aqzakBQStvWFRnlbIXfWGYnMzPmoOcKOTxs6rAcONw==", "task"=>{"name"=>"test 4", "category"=>"", "time_estimate"=>"Enter estimate in minutes", "time_actual"=>"", "deadline"=>"", "description"=>""}, "commit"=>"Create Task", "list_id"=>"33"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mList Load (0.3ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1  [["id", 33]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "tasks" ("name", "category", "description", "time_estimate", "list_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "test 4"], ["category", ""], ["description", ""], ["time_estimate", 0], ["list_id", 33], ["created_at", "2016-04-10 21:27:44.849008"], ["updated_at", "2016-04-10 21:27:44.849008"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/lists/33
+Completed 302 Found in 11ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/lists/33" for ::1 at 2016-04-10 17:27:44 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[35mList Load (0.2ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1  [["id", 33]]
+  [1m[36mTask Load (0.3ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)[0m  [["list_id", 33]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)  [["list_id", 33]]
+  Rendered lists/show.html.erb within layouts/application (2.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 23ms (Views: 17.9ms | ActiveRecord: 0.8ms)
+
+
+Started PUT "/lists/33/completed_task" for ::1 at 2016-04-10 17:27:49 -0400
+Processing by ListsController#completed_task as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vPetIsjroGlIGl5I/1PxJDJ+aybG8xhNmd2pqotCDpc+91eHjuzvmK/srcED/Ka0UADXJQ1Dgn/AG1El7p+BTg==", "task_ids"=>["130", "131", "132"], "commit"=>"Clear Complete", "id"=>"33"}
+  [1m[35mList Load (0.2ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1  [["id", 33]]
+  [1m[36mTask Load (0.6ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" IN (130, 131, 132)[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "tasks" SET "complete" = $1, "updated_at" = $2 WHERE "tasks"."id" = $3[0m  [["complete", "t"], ["updated_at", "2016-04-10 21:27:49.430809"], ["id", 130]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "tasks" SET "complete" = $1, "updated_at" = $2 WHERE "tasks"."id" = $3  [["complete", "t"], ["updated_at", "2016-04-10 21:27:49.433091"], ["id", 131]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "tasks" SET "complete" = $1, "updated_at" = $2 WHERE "tasks"."id" = $3[0m  [["complete", "t"], ["updated_at", "2016-04-10 21:27:49.436015"], ["id", 132]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/lists/33
+Completed 302 Found in 12ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/lists/33" for ::1 at 2016-04-10 17:27:49 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[36mList Load (0.2ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1[0m  [["id", 33]]
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)  [["list_id", 33]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)[0m  [["list_id", 33]]
+  Rendered lists/show.html.erb within layouts/application (2.0ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 46ms (Views: 43.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/lists/33/tasks/new" for ::1 at 2016-04-10 17:31:57 -0400
+Processing by TasksController#new as HTML
+  Parameters: {"list_id"=>"33"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mList Load (0.2ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1  [["id", 33]]
+  Rendered tasks/_form.html.erb (3.4ms)
+  Rendered tasks/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 21ms (Views: 18.6ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/lists/33/tasks" for ::1 at 2016-04-10 17:32:06 -0400
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hH7PkMHLO+2EJVpMun5t+zcuzWt1uVzRJKaO8zgvuYYGfjU1h8x0HGPTqcVG0TprVVBxaL4JxuN9YHZ8XfI2Xw==", "task"=>{"name"=>"Test 3", "category"=>"", "time_estimate"=>"Enter estimate in minutes", "time_actual"=>"", "deadline"=>"", "description"=>""}, "commit"=>"Create Task", "list_id"=>"33"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mList Load (0.2ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1  [["id", 33]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tasks" ("name", "category", "description", "time_estimate", "list_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "Test 3"], ["category", ""], ["description", ""], ["time_estimate", 0], ["list_id", 33], ["created_at", "2016-04-10 21:32:06.255638"], ["updated_at", "2016-04-10 21:32:06.255638"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/lists/33
+Completed 302 Found in 7ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/lists/33" for ::1 at 2016-04-10 17:32:06 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[35mList Load (0.2ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1  [["id", 33]]
+  [1m[36mTask Load (0.3ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)[0m  [["list_id", 33]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)  [["list_id", 33]]
+  Rendered lists/show.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 18ms (Views: 15.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/lists/33/tasks/new" for ::1 at 2016-04-10 17:32:08 -0400
+Processing by TasksController#new as HTML
+  Parameters: {"list_id"=>"33"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mList Load (0.2ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1[0m  [["id", 33]]
+  Rendered tasks/_form.html.erb (3.3ms)
+  Rendered tasks/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 20ms (Views: 17.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/lists/33/tasks" for ::1 at 2016-04-10 17:32:11 -0400
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VrmWItswhuWOVxN1uweOSotw4nKKmJ3uHnQpV4yMQVrUuWyHnTfJFGmh4PxHqNna6Q5ecUEoB9xHstHY6VHOgw==", "task"=>{"name"=>"test 6", "category"=>"", "time_estimate"=>"Enter estimate in minutes", "time_actual"=>"", "deadline"=>"", "description"=>""}, "commit"=>"Create Task", "list_id"=>"33"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mList Load (0.6ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1[0m  [["id", 33]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tasks" ("name", "category", "description", "time_estimate", "list_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "test 6"], ["category", ""], ["description", ""], ["time_estimate", 0], ["list_id", 33], ["created_at", "2016-04-10 21:32:11.126614"], ["updated_at", "2016-04-10 21:32:11.126614"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/lists/33
+Completed 302 Found in 7ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/lists/33" for ::1 at 2016-04-10 17:32:11 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[36mList Load (0.2ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1[0m  [["id", 33]]
+  [1m[35mTask Load (0.3ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)  [["list_id", 33]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)[0m  [["list_id", 33]]
+  Rendered lists/show.html.erb within layouts/application (2.0ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 18ms (Views: 15.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/lists" for ::1 at 2016-04-10 17:32:13 -0400
+Processing by ListsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.4ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)
+  [1m[36mList Load (0.3ms)[0m  [1mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = 1[0m
+  [1m[35m (0.3ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)  [["list_id", 17]]
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("tasks"."cost") FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 19]]
+  [1m[35m (1.4ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)  [["list_id", 27]]
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)[0m  [["list_id", 31]]
+  [1m[35m (0.3ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)  [["list_id", 26]]
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("tasks"."cost") FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 32]]
+  [1m[35m (0.2ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)  [["list_id", 33]]
+  Rendered lists/index.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 26ms (Views: 21.1ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/lists/33" for ::1 at 2016-04-10 17:32:15 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[36mList Load (0.2ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1[0m  [["id", 33]]
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)  [["list_id", 33]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)[0m  [["list_id", 33]]
+  Rendered lists/show.html.erb within layouts/application (1.8ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 17ms (Views: 14.0ms | ActiveRecord: 0.7ms)
+
+
+Started PUT "/lists/33/completed_task" for ::1 at 2016-04-10 17:32:23 -0400
+Processing by ListsController#completed_task as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PTBBK/3FP0ae/jPsKUcUPYz8Y+ig93mnUXILcfg9mCy/MLuOu8Jwt3kIwGXV6EOt7oLf62tH45UItPP+neAX9Q==", "task_ids"=>["133", "134"], "commit"=>"Clear Complete", "id"=>"33"}
+  [1m[36mList Load (0.2ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1[0m  [["id", 33]]
+  [1m[35mTask Load (0.4ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."id" IN (133, 134)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "tasks" SET "complete" = $1, "updated_at" = $2 WHERE "tasks"."id" = $3  [["complete", "t"], ["updated_at", "2016-04-10 21:32:23.572301"], ["id", 133]]
+  [1m[36m (1.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "tasks" SET "complete" = $1, "updated_at" = $2 WHERE "tasks"."id" = $3[0m  [["complete", "t"], ["updated_at", "2016-04-10 21:32:23.575246"], ["id", 134]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/lists/33
+Completed 302 Found in 9ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/lists/33" for ::1 at 2016-04-10 17:32:23 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[36mList Load (0.2ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1[0m  [["id", 33]]
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)  [["list_id", 33]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)[0m  [["list_id", 33]]
+  Rendered lists/show.html.erb within layouts/application (2.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 18ms (Views: 15.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/lists/33" for ::1 at 2016-04-10 17:32:48 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[36mList Load (0.2ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1[0m  [["id", 33]]
+  [1m[35mTask Load (0.3ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)  [["list_id", 33]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)[0m  [["list_id", 33]]
+  Rendered lists/show.html.erb within layouts/application (2.6ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 21ms (Views: 18.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.self-1fd4e9aa9f5634133db2d0dea261c7941d022714ba62ebc238b35c44af873419.css?body=1" for ::1 at 2016-04-10 17:32:48 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-04-10 17:32:48 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-10 17:32:48 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-10 17:32:48 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-10 17:32:48 -0400
+
+
+Started GET "/lists/33" for ::1 at 2016-04-10 17:32:52 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[36mList Load (0.2ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1[0m  [["id", 33]]
+  [1m[35mTask Load (0.6ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)  [["list_id", 33]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)[0m  [["list_id", 33]]
+  Rendered lists/show.html.erb within layouts/application (1.6ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 18ms (Views: 14.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.self-1fd4e9aa9f5634133db2d0dea261c7941d022714ba62ebc238b35c44af873419.css?body=1" for ::1 at 2016-04-10 17:32:52 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-10 17:32:52 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-10 17:32:52 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-10 17:32:52 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-04-10 17:32:52 -0400
+
+
+Started GET "/lists/33/tasks/new" for ::1 at 2016-04-10 17:32:56 -0400
+Processing by TasksController#new as HTML
+  Parameters: {"list_id"=>"33"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mList Load (0.2ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1  [["id", 33]]
+  Rendered tasks/_form.html.erb (3.0ms)
+  Rendered tasks/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 21ms (Views: 19.0ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/lists/33/tasks" for ::1 at 2016-04-10 17:32:58 -0400
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ca6Mb0+nEiFVuZuP7xbmFqgK1ZUQxpxfSOteDd3rShbzrnbKCaBd0LJPaAYTubGGynRpltt2Bm0RLaaCuDbFzw==", "task"=>{"name"=>"test", "category"=>"", "time_estimate"=>"Enter estimate in minutes", "time_actual"=>"", "deadline"=>"", "description"=>""}, "commit"=>"Create Task", "list_id"=>"33"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mList Load (0.2ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1  [["id", 33]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tasks" ("name", "category", "description", "time_estimate", "list_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "test"], ["category", ""], ["description", ""], ["time_estimate", 0], ["list_id", 33], ["created_at", "2016-04-10 21:32:58.781539"], ["updated_at", "2016-04-10 21:32:58.781539"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/lists/33
+Completed 302 Found in 6ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/lists/33" for ::1 at 2016-04-10 17:32:58 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[35mList Load (0.3ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1  [["id", 33]]
+  [1m[36mTask Load (0.3ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)[0m  [["list_id", 33]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)  [["list_id", 33]]
+  Rendered lists/show.html.erb within layouts/application (1.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 17ms (Views: 14.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/lists/33/tasks/new" for ::1 at 2016-04-10 17:33:00 -0400
+Processing by TasksController#new as HTML
+  Parameters: {"list_id"=>"33"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mList Load (0.2ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1[0m  [["id", 33]]
+  Rendered tasks/_form.html.erb (2.9ms)
+  Rendered tasks/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 19ms (Views: 16.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/lists/33/tasks" for ::1 at 2016-04-10 17:33:02 -0400
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Qob7M4j/zGxgn/vEwdIt411bf2Vkla1emSkD+jlUF1bAhgGWzviDnYdpCE09fXpzPyXDZq8lN2zA7/t1XImYjw==", "task"=>{"name"=>"test", "category"=>"", "time_estimate"=>"Enter estimate in minutes", "time_actual"=>"", "deadline"=>"", "description"=>""}, "commit"=>"Create Task", "list_id"=>"33"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mList Load (0.3ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1[0m  [["id", 33]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tasks" ("name", "category", "description", "time_estimate", "list_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "test"], ["category", ""], ["description", ""], ["time_estimate", 0], ["list_id", 33], ["created_at", "2016-04-10 21:33:02.430435"], ["updated_at", "2016-04-10 21:33:02.430435"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/lists/33
+Completed 302 Found in 7ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/lists/33" for ::1 at 2016-04-10 17:33:02 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[36mList Load (0.2ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1[0m  [["id", 33]]
+  [1m[35mTask Load (0.3ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)  [["list_id", 33]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)[0m  [["list_id", 33]]
+  Rendered lists/show.html.erb within layouts/application (1.8ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 16ms (Views: 13.3ms | ActiveRecord: 0.7ms)
+
+
+Started PUT "/lists/33/completed_task" for ::1 at 2016-04-10 17:33:05 -0400
+Processing by ListsController#completed_task as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3PbyyBe2th47PqGzQdMPM4U6n519jmt9JnwEToYvDoNe9ghtUbH579zIUjq9fFij50QjnrY+8U9/uvzB4/KBWg==", "task_ids"=>["135", "136"], "commit"=>"Clear Complete", "id"=>"33"}
+  [1m[36mList Load (0.2ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1[0m  [["id", 33]]
+  [1m[35mTask Load (0.4ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."id" IN (135, 136)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "tasks" SET "complete" = $1, "updated_at" = $2 WHERE "tasks"."id" = $3  [["complete", "t"], ["updated_at", "2016-04-10 21:33:05.703693"], ["id", 135]]
+  [1m[36m (1.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "tasks" SET "complete" = $1, "updated_at" = $2 WHERE "tasks"."id" = $3[0m  [["complete", "t"], ["updated_at", "2016-04-10 21:33:05.706701"], ["id", 136]]
+  [1m[35m (0.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/lists/33
+Completed 302 Found in 8ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/lists/33" for ::1 at 2016-04-10 17:33:05 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[36mList Load (0.2ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1[0m  [["id", 33]]
+  [1m[35mTask Load (0.3ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)  [["list_id", 33]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)[0m  [["list_id", 33]]
+  Rendered lists/show.html.erb within layouts/application (1.8ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 18ms (Views: 14.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/lists" for ::1 at 2016-04-10 17:34:32 -0400
+Processing by ListsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.4ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)
+  [1m[36mList Load (0.4ms)[0m  [1mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = 1[0m
+  [1m[35m (0.3ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)  [["list_id", 17]]
+  [1m[36m (0.3ms)[0m  [1mSELECT SUM("tasks"."cost") FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 19]]
+  [1m[35m (0.4ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)  [["list_id", 27]]
+  [1m[36m (0.3ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)[0m  [["list_id", 31]]
+  [1m[35m (0.2ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)  [["list_id", 26]]
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("tasks"."cost") FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 32]]
+  [1m[35m (0.2ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)  [["list_id", 33]]
+  Rendered lists/index.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 32ms (Views: 27.5ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/lists/32" for ::1 at 2016-04-10 17:34:35 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"32"}
+  [1m[36mList Load (0.2ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)  [["list_id", 32]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)[0m  [["list_id", 32]]
+  Rendered lists/show.html.erb within layouts/application (3.3ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 19ms (Views: 16.2ms | ActiveRecord: 0.7ms)
+
+
+Started PUT "/lists/32/completed_task" for ::1 at 2016-04-10 17:34:41 -0400
+Processing by ListsController#completed_task as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6Eassqyn2DgExvb6dWkl7prNtKAjAka5u9qfd46YispqRlYX6qCXyeMwBXOJxnJ++LMIo+iy3IviHGf460UFEw==", "task_ids"=>["124", "126"], "commit"=>"Clear Complete", "id"=>"32"}
+  [1m[36mList Load (0.2ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  [1m[35mTask Load (0.4ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."id" IN (124, 126)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "tasks" SET "complete" = $1, "updated_at" = $2 WHERE "tasks"."id" = $3  [["complete", "t"], ["updated_at", "2016-04-10 21:34:41.549363"], ["id", 124]]
+  [1m[36m (1.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "tasks" SET "complete" = $1, "updated_at" = $2 WHERE "tasks"."id" = $3[0m  [["complete", "t"], ["updated_at", "2016-04-10 21:34:41.552940"], ["id", 126]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/lists/32
+Completed 302 Found in 9ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/lists/32" for ::1 at 2016-04-10 17:34:41 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"32"}
+  [1m[36mList Load (0.2ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)  [["list_id", 32]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)[0m  [["list_id", 32]]
+  Rendered lists/show.html.erb within layouts/application (1.4ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 17ms (Views: 13.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/lists" for ::1 at 2016-04-10 17:34:43 -0400
+Processing by ListsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.4ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)
+  [1m[36mList Load (0.3ms)[0m  [1mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = 1[0m
+  [1m[35m (0.3ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)  [["list_id", 17]]
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("tasks"."cost") FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 19]]
+  [1m[35m (0.2ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)  [["list_id", 27]]
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)[0m  [["list_id", 31]]
+  [1m[35m (0.2ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)  [["list_id", 26]]
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("tasks"."cost") FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 32]]
+  [1m[35m (0.3ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)  [["list_id", 33]]
+  Rendered lists/index.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 24ms (Views: 20.2ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/lists" for ::1 at 2016-04-10 17:35:55 -0400
+Processing by ListsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.4ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)
+  [1m[36mList Load (0.3ms)[0m  [1mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = 1[0m
+  [1m[35m (0.3ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)  [["list_id", 17]]
+  [1m[36m (0.3ms)[0m  [1mSELECT SUM("tasks"."cost") FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 19]]
+  [1m[35m (0.2ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)  [["list_id", 27]]
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)[0m  [["list_id", 31]]
+  [1m[35m (0.3ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)  [["list_id", 26]]
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("tasks"."cost") FROM "tasks" WHERE "tasks"."list_id" = $1[0m  [["list_id", 32]]
+  [1m[35m (0.3ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)  [["list_id", 33]]
+  Rendered lists/index.html.erb within layouts/application (19.9ms)
+Completed 200 OK in 49ms (Views: 31.5ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-10 17:35:55 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-10 17:35:55 -0400
+
+
+Started GET "/assets/application.self-1fd4e9aa9f5634133db2d0dea261c7941d022714ba62ebc238b35c44af873419.css?body=1" for ::1 at 2016-04-10 17:35:55 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-04-10 17:35:55 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-10 17:35:55 -0400
+
+
+Started GET "/lists/33" for ::1 at 2016-04-10 17:35:58 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[36mList Load (0.2ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1[0m  [["id", 33]]
+  [1m[35mTask Load (0.3ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)  [["list_id", 33]]
+  Rendered lists/show.html.erb within layouts/application (2.5ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 1.2ms)
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    29: 
+    30:     <%= form_tag(completed_task_list_path(@list), :method => 'put') do %>
+    31:    <!-- <%= label_tag "task" %> -->
+    32:    <% @tasks.each do |task|%>
+    33:    <!-- "task_ids[]" stores all of the task.id's that are complete.  task.complete isn't currenlty doing anything but I think I need that for the checkboxes to persist -->
+    34:   <li><%= check_box_tag("task_ids[]", task.id, task.complete)%>
+    35:      <%= link_to task.name, edit_list_task_path(@list, task) %>
+  app/views/lists/show.html.erb:32:in `block in _app_views_lists_show_html_erb___1594204935125704842_70197809611940'
+  app/views/lists/show.html.erb:30:in `_app_views_lists_show_html_erb___1594204935125704842_70197809611940'
+  app/controllers/lists_controller.rb:16:in `show'
+
+
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.1ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (64.4ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (44.2ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (91.1ms)
+
+
+Started GET "/lists/33" for ::1 at 2016-04-10 17:35:58 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[36mList Load (0.2ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1[0m  [["id", 33]]
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)  [["list_id", 33]]
+  Rendered lists/show.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.4ms)
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    29: 
+    30:     <%= form_tag(completed_task_list_path(@list), :method => 'put') do %>
+    31:    <!-- <%= label_tag "task" %> -->
+    32:    <% @tasks.each do |task|%>
+    33:    <!-- "task_ids[]" stores all of the task.id's that are complete.  task.complete isn't currenlty doing anything but I think I need that for the checkboxes to persist -->
+    34:   <li><%= check_box_tag("task_ids[]", task.id, task.complete)%>
+    35:      <%= link_to task.name, edit_list_task_path(@list, task) %>
+  app/views/lists/show.html.erb:32:in `block in _app_views_lists_show_html_erb___1594204935125704842_70197809611940'
+  app/views/lists/show.html.erb:30:in `_app_views_lists_show_html_erb___1594204935125704842_70197809611940'
+  app/controllers/lists_controller.rb:16:in `show'
+
+
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.7ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (60.5ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (41.3ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (88.7ms)
+
+
+Started GET "/lists/33" for ::1 at 2016-04-10 17:36:31 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[36mList Load (0.2ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1[0m  [["id", 33]]
+  [1m[35mTask Load (0.3ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)  [["list_id", 33]]
+  Rendered lists/show.html.erb within layouts/application (3.4ms)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 4.0ms)
+
+ActionView::Template::Error (undefined method `each' for #<List:0x007fb06bd74ec0>):
+    29: 
+    30:     <%= form_tag(completed_task_list_path(@list), :method => 'put') do %>
+    31:    <!-- <%= label_tag "task" %> -->
+    32:    <% @tasks.each do |task|%>
+    33:    <!-- "task_ids[]" stores all of the task.id's that are complete.  task.complete isn't currenlty doing anything but I think I need that for the checkboxes to persist -->
+    34:   <li><%= check_box_tag("task_ids[]", task.id, task.complete)%>
+    35:      <%= link_to task.name, edit_list_task_path(@list, task) %>
+  app/views/lists/show.html.erb:32:in `block in _app_views_lists_show_html_erb___1594204935125704842_70197809611940'
+  app/views/lists/show.html.erb:30:in `_app_views_lists_show_html_erb___1594204935125704842_70197809611940'
+  app/controllers/lists_controller.rb:16:in `show'
+
+
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.8ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (61.0ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (40.4ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (89.1ms)
+
+
+Started GET "/lists/33" for ::1 at 2016-04-10 17:36:47 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[36mList Load (0.2ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1[0m  [["id", 33]]
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)  [["list_id", 33]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)[0m  [["list_id", 33]]
+  Rendered lists/show.html.erb within layouts/application (2.0ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 50ms (Views: 24.3ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/assets/application.self-1fd4e9aa9f5634133db2d0dea261c7941d022714ba62ebc238b35c44af873419.css?body=1" for ::1 at 2016-04-10 17:36:48 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-10 17:36:48 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-10 17:36:48 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-10 17:36:48 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-04-10 17:36:48 -0400
+
+
+Started GET "/lists/33" for ::1 at 2016-04-10 17:37:50 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[36mList Load (0.2ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1[0m  [["id", 33]]
+  [1m[35mTask Load (0.4ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)  [["list_id", 33]]
+  Rendered lists/show.html.erb within layouts/application (2.8ms)
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 3.9ms)
+
+ActionView::Template::Error (undefined method `each' for #<List:0x007fb0653b35b8>):
+    29: 
+    30:     <%= form_tag(completed_task_list_path(@list), :method => 'put') do %>
+    31:    <!-- <%= label_tag "task" %> -->
+    32:    <% @tasks.each do |task|%>
+    33:    <!-- "task_ids[]" stores all of the task.id's that are complete.  task.complete isn't currenlty doing anything but I think I need that for the checkboxes to persist -->
+    34:   <li><%= check_box_tag("task_ids[]", task.id, task.complete)%>
+    35:      <%= link_to task.name, edit_list_task_path(@list, task) %>
+  app/views/lists/show.html.erb:32:in `block in _app_views_lists_show_html_erb___1594204935125704842_70197809611940'
+  app/views/lists/show.html.erb:30:in `_app_views_lists_show_html_erb___1594204935125704842_70197809611940'
+  app/controllers/lists_controller.rb:16:in `show'
+
+
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.8ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (65.3ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (44.8ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (92.9ms)
+
+
+Started GET "/lists/33" for ::1 at 2016-04-10 17:40:18 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[36mList Load (0.2ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1[0m  [["id", 33]]
+  [1m[35mTask Load (0.3ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)  [["list_id", 33]]
+  Rendered lists/show.html.erb within layouts/application (4.1ms)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 4.4ms)
+
+ActionView::Template::Error (undefined method `each' for #<List:0x007fb06d232c40>):
+    29: 
+    30:     <%= form_tag(completed_task_list_path(@list), :method => 'put') do %>
+    31:    <!-- <%= label_tag "task" %> -->
+    32:    <% @list.each do |task|%>
+    33:    <!-- "task_ids[]" stores all of the task.id's that are complete.  task.complete isn't currenlty doing anything but I think I need that for the checkboxes to persist -->
+    34:   <li><%= check_box_tag("task_ids[]", task.id, task.complete)%>
+    35:      <%= link_to task.name, edit_list_task_path(@list, task) %>
+  app/views/lists/show.html.erb:32:in `block in _app_views_lists_show_html_erb___1594204935125704842_70197849960420'
+  app/views/lists/show.html.erb:30:in `_app_views_lists_show_html_erb___1594204935125704842_70197849960420'
+  app/controllers/lists_controller.rb:16:in `show'
+
+
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.8ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.2ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (62.4ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (42.7ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (97.1ms)
+
+
+Started GET "/lists/33" for ::1 at 2016-04-10 17:42:34 -0400
+
+SyntaxError (/Users/keithprifte/wdi/projects/thrive/app/controllers/lists_controller.rb:14: syntax error, unexpected tIDENTIFIER, expecting ')'
+    @tasks = List.find(:list_id param[:id])
+                                     ^
+/Users/keithprifte/wdi/projects/thrive/app/controllers/lists_controller.rb:14: syntax error, unexpected ')', expecting keyword_end):
+  app/controllers/lists_controller.rb:14: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/controllers/lists_controller.rb:14: syntax error, unexpected ')', expecting keyword_end
+
+
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.7ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (57.9ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (40.2ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (87.1ms)
+
+
+Started GET "/lists/33" for ::1 at 2016-04-10 17:43:39 -0400
+
+SyntaxError (/Users/keithprifte/wdi/projects/thrive/app/controllers/lists_controller.rb:14: syntax error, unexpected tIDENTIFIER, expecting ')'
+    @tasks = Task.find(:list_id param[:id]) 
+                                     ^
+/Users/keithprifte/wdi/projects/thrive/app/controllers/lists_controller.rb:14: syntax error, unexpected ')', expecting keyword_end
+    @tasks = Task.find(:list_id param[:id]) 
+                                           ^):
+  app/controllers/lists_controller.rb:14: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/controllers/lists_controller.rb:14: syntax error, unexpected ')', expecting keyword_end
+
+
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.8ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (59.9ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (39.7ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (88.4ms)
+
+
+Started GET "/lists/33" for ::1 at 2016-04-10 17:43:50 -0400
+
+SyntaxError (/Users/keithprifte/wdi/projects/thrive/app/controllers/lists_controller.rb:14: syntax error, unexpected tIDENTIFIER, expecting ')'
+    @tasks = Task.find(:list_id param[:id])
+                                     ^
+/Users/keithprifte/wdi/projects/thrive/app/controllers/lists_controller.rb:14: syntax error, unexpected ')', expecting keyword_end):
+  app/controllers/lists_controller.rb:14: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/controllers/lists_controller.rb:14: syntax error, unexpected ')', expecting keyword_end
+
+
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.4ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (54.5ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (41.8ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (87.9ms)
+
+
+Started GET "/lists/33" for ::1 at 2016-04-10 17:44:21 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[36mList Load (0.2ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1[0m  [["id", 33]]
+  [1m[35mTask Load (0.5ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)  [["list_id", 33]]
+  Rendered lists/show.html.erb within layouts/application (3.2ms)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 4.4ms)
+
+ActionView::Template::Error (undefined method `each' for #<List:0x007fb063f98678>):
+    29: 
+    30:     <%= form_tag(completed_task_list_path(@list), :method => 'put') do %>
+    31:    <!-- <%= label_tag "task" %> -->
+    32:    <% @list.each do |task|%>
+    33:    <!-- "task_ids[]" stores all of the task.id's that are complete.  task.complete isn't currenlty doing anything but I think I need that for the checkboxes to persist -->
+    34:   <li><%= check_box_tag("task_ids[]", task.id, task.complete)%>
+    35:      <%= link_to task.name, edit_list_task_path(@list, task) %>
+  app/views/lists/show.html.erb:32:in `block in _app_views_lists_show_html_erb___1594204935125704842_70197849960420'
+  app/views/lists/show.html.erb:30:in `_app_views_lists_show_html_erb___1594204935125704842_70197849960420'
+  app/controllers/lists_controller.rb:17:in `show'
+
+
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.4ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (59.3ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (44.8ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/keithprifte/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (94.6ms)
+
+
+Started GET "/lists/33" for ::1 at 2016-04-10 17:44:28 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[36mList Load (0.2ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1[0m  [["id", 33]]
+  [1m[35mTask Load (0.3ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)  [["list_id", 33]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)[0m  [["list_id", 33]]
+  Rendered lists/show.html.erb within layouts/application (2.6ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 27ms (Views: 21.3ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/assets/application.self-1fd4e9aa9f5634133db2d0dea261c7941d022714ba62ebc238b35c44af873419.css?body=1" for ::1 at 2016-04-10 17:44:28 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-10 17:44:28 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-04-10 17:44:28 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-10 17:44:28 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-10 17:44:28 -0400
+
+
+Started GET "/lists/33/tasks/new" for ::1 at 2016-04-10 17:46:12 -0400
+Processing by TasksController#new as HTML
+  Parameters: {"list_id"=>"33"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mList Load (0.3ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1  [["id", 33]]
+  Rendered tasks/_form.html.erb (3.3ms)
+  Rendered tasks/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 28ms (Views: 19.7ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/lists/33/tasks" for ::1 at 2016-04-10 17:46:14 -0400
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZVy/z6+cBvGCzArJG4EwphrdV10jhmGy3dAPG0VMbOnnXEVq6ZtJAGU6+UDnLmc2eKPrXug2+4CEFveUIJHjMA==", "task"=>{"name"=>"test", "category"=>"", "time_estimate"=>"Enter estimate in minutes", "time_actual"=>"", "deadline"=>"", "description"=>""}, "commit"=>"Create Task", "list_id"=>"33"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mList Load (0.3ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1  [["id", 33]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tasks" ("name", "category", "description", "time_estimate", "list_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "test"], ["category", ""], ["description", ""], ["time_estimate", 0], ["list_id", 33], ["created_at", "2016-04-10 21:46:14.796058"], ["updated_at", "2016-04-10 21:46:14.796058"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/lists/33
+Completed 302 Found in 8ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/lists/33" for ::1 at 2016-04-10 17:46:14 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[35mList Load (0.2ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1  [["id", 33]]
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)[0m  [["list_id", 33]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)  [["list_id", 33]]
+  Rendered lists/show.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 17ms (Views: 14.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/lists/33/tasks/new" for ::1 at 2016-04-10 17:46:16 -0400
+Processing by TasksController#new as HTML
+  Parameters: {"list_id"=>"33"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mList Load (0.2ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1[0m  [["id", 33]]
+  Rendered tasks/_form.html.erb (3.3ms)
+  Rendered tasks/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 19ms (Views: 16.6ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/lists/33/tasks" for ::1 at 2016-04-10 17:46:19 -0400
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mlKxTNVd3EK74HJu/MYc/JCz4H296GrYOq2y5pBeu2wYUkvpk1qTs1wWgecAaUts8s1cfnZY8Opja0pp9YM0tQ==", "task"=>{"name"=>"test", "category"=>"", "time_estimate"=>"Enter estimate in minutes", "time_actual"=>"", "deadline"=>"", "description"=>""}, "commit"=>"Create Task", "list_id"=>"33"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mList Load (0.2ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1[0m  [["id", 33]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tasks" ("name", "category", "description", "time_estimate", "list_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "test"], ["category", ""], ["description", ""], ["time_estimate", 0], ["list_id", 33], ["created_at", "2016-04-10 21:46:19.098853"], ["updated_at", "2016-04-10 21:46:19.098853"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/lists/33
+Completed 302 Found in 6ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/lists/33" for ::1 at 2016-04-10 17:46:19 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[36mList Load (0.3ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1[0m  [["id", 33]]
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)  [["list_id", 33]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)[0m  [["list_id", 33]]
+  Rendered lists/show.html.erb within layouts/application (1.8ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 18ms (Views: 14.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/lists/33/tasks/new" for ::1 at 2016-04-10 17:46:20 -0400
+Processing by TasksController#new as HTML
+  Parameters: {"list_id"=>"33"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mList Load (0.2ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1  [["id", 33]]
+  Rendered tasks/_form.html.erb (2.6ms)
+  Rendered tasks/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 19ms (Views: 16.8ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/lists/33/tasks" for ::1 at 2016-04-10 17:46:22 -0400
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"n/YsVo1kWCv5BTr1Xbp2WUTBdunrL2pckO1bp0NH7O4d9tbzy2MX2h7zyXyhFSHJJr/K6iCf8G7JK6MoJppjNw==", "task"=>{"name"=>"test", "category"=>"", "time_estimate"=>"Enter estimate in minutes", "time_actual"=>"", "deadline"=>"", "description"=>""}, "commit"=>"Create Task", "list_id"=>"33"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mList Load (0.2ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1  [["id", 33]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tasks" ("name", "category", "description", "time_estimate", "list_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "test"], ["category", ""], ["description", ""], ["time_estimate", 0], ["list_id", 33], ["created_at", "2016-04-10 21:46:22.560606"], ["updated_at", "2016-04-10 21:46:22.560606"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/lists/33
+Completed 302 Found in 6ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/lists/33" for ::1 at 2016-04-10 17:46:22 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[35mList Load (0.2ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1  [["id", 33]]
+  [1m[36mTask Load (0.3ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)[0m  [["list_id", 33]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)  [["list_id", 33]]
+  Rendered lists/show.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 18ms (Views: 13.9ms | ActiveRecord: 0.7ms)
+
+
+Started PUT "/lists/33/completed_task" for ::1 at 2016-04-10 17:46:23 -0400
+Processing by ListsController#completed_task as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eTW+LWCAkWrl5Af+ABt0ZK85hIcva+6jgb1QyUQkEBL7NUSIJofemwIS9Hf8tCP0zUc4hOTbdJHYe6hGIfmfyw==", "commit"=>"Clear Complete", "id"=>"33"}
+  [1m[35mList Load (0.2ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1  [["id", 33]]
+Redirected to http://localhost:3000/lists/33
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/lists/33" for ::1 at 2016-04-10 17:46:23 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[36mList Load (0.3ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1[0m  [["id", 33]]
+  [1m[35mTask Load (0.4ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)  [["list_id", 33]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)[0m  [["list_id", 33]]
+  Rendered lists/show.html.erb within layouts/application (2.0ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 18ms (Views: 14.1ms | ActiveRecord: 0.9ms)
+
+
+Started PUT "/lists/33/completed_task" for ::1 at 2016-04-10 17:46:25 -0400
+Processing by ListsController#completed_task as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gOG2cgIqA8AdO5macbLe1E25cNRvuRebbi6k3aie2KsC4UzXRC1MMfrNahONHYlEL8fM16QJjak36FxSzUNXcg==", "commit"=>"Clear Complete", "id"=>"33"}
+  [1m[36mList Load (0.2ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1[0m  [["id", 33]]
+Redirected to http://localhost:3000/lists/33
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/lists/33" for ::1 at 2016-04-10 17:46:25 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[35mList Load (0.2ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1  [["id", 33]]
+  [1m[36mTask Load (0.6ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)[0m  [["list_id", 33]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)  [["list_id", 33]]
+  Rendered lists/show.html.erb within layouts/application (2.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 38ms (Views: 33.5ms | ActiveRecord: 1.1ms)
+
+
+Started PUT "/lists/33/completed_task" for ::1 at 2016-04-10 17:46:27 -0400
+Processing by ListsController#completed_task as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4xSR15sinRk6x1oWtmoxsEO8f/e2oHdQ29PQmtMPp+1hFGty3SXS6N0xqZ9KxWYgIcLD9H0Q7WKCFSgVttIoNA==", "task_ids"=>["139"], "commit"=>"Clear Complete", "id"=>"33"}
+  [1m[35mList Load (0.3ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1  [["id", 33]]
+  [1m[36mTask Load (0.3ms)[0m  [1mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT 1[0m  [["id", 139]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "tasks" SET "complete" = $1, "updated_at" = $2 WHERE "tasks"."id" = $3[0m  [["complete", "t"], ["updated_at", "2016-04-10 21:46:27.718611"], ["id", 139]]
+  [1m[35m (1.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/lists/33
+Completed 302 Found in 6ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/lists/33" for ::1 at 2016-04-10 17:46:27 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[36mList Load (0.2ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1[0m  [["id", 33]]
+  [1m[35mTask Load (0.3ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)  [["list_id", 33]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)[0m  [["list_id", 33]]
+  Rendered lists/show.html.erb within layouts/application (1.6ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 17ms (Views: 13.8ms | ActiveRecord: 0.8ms)
+
+
+Started PUT "/lists/33/completed_task" for ::1 at 2016-04-10 17:46:30 -0400
+Processing by ListsController#completed_task as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FwN8GKi71DNDjPUNnXj4GeS5eLMrvYJbclNpupk0eIyVA4a97rybwqR6BoRh16+JhsfEsOANGGkrlZE1/On3VQ==", "task_ids"=>["129", "137", "138"], "commit"=>"Clear Complete", "id"=>"33"}
+  [1m[36mList Load (0.2ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1[0m  [["id", 33]]
+  [1m[35mTask Load (0.4ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."id" IN (129, 137, 138)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "tasks" SET "complete" = $1, "updated_at" = $2 WHERE "tasks"."id" = $3  [["complete", "t"], ["updated_at", "2016-04-10 21:46:30.908581"], ["id", 129]]
+  [1m[36m (1.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "tasks" SET "complete" = $1, "updated_at" = $2 WHERE "tasks"."id" = $3[0m  [["complete", "t"], ["updated_at", "2016-04-10 21:46:30.911768"], ["id", 137]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "tasks" SET "complete" = $1, "updated_at" = $2 WHERE "tasks"."id" = $3  [["complete", "t"], ["updated_at", "2016-04-10 21:46:30.913959"], ["id", 138]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/lists/33
+Completed 302 Found in 11ms (ActiveRecord: 3.7ms)
+
+
+Started GET "/lists/33" for ::1 at 2016-04-10 17:46:30 -0400
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[35mList Load (0.2ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT 1  [["id", 33]]
+  [1m[36mTask Load (0.3ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)[0m  [["list_id", 33]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)  [["list_id", 33]]
+  Rendered lists/show.html.erb within layouts/application (1.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 17ms (Views: 14.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/lists" for ::1 at 2016-04-10 17:46:32 -0400
+Processing by ListsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.4ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)[0m
+  [1m[35mList Load (0.4ms)[0m  SELECT "lists".* FROM "lists" WHERE "lists"."user_id" = 1
+  [1m[36m (0.3ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)[0m  [["list_id", 17]]
+  [1m[35m (0.3ms)[0m  SELECT SUM("tasks"."cost") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 19]]
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)[0m  [["list_id", 27]]
+  [1m[35m (0.3ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)  [["list_id", 31]]
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)[0m  [["list_id", 26]]
+  [1m[35m (0.3ms)[0m  SELECT SUM("tasks"."cost") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 32]]
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)[0m  [["list_id", 33]]
+  Rendered lists/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 23ms (Views: 19.0ms | ActiveRecord: 2.6ms)

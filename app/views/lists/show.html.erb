@@ -30,7 +30,8 @@
     <%= form_tag(completed_task_list_path(@list), :method => 'put') do %>
    <!-- <%= label_tag "task" %> -->
    <% @tasks.each do |task|%>
-  <li><%= check_box_tag(:task_id, task.id, task.complete)%>
+   <!-- "task_ids[]" stores all of the task.id's that are complete.  task.complete isn't currenlty doing anything but I think I need that for the checkboxes to persist -->
+  <li><%= check_box_tag("task_ids[]", task.id, task.complete)%>
      <%= link_to task.name, edit_list_task_path(@list, task) %>
 
      <% if @list.list_type == "Check List" %>
