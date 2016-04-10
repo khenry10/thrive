@@ -1,5 +1,5 @@
 class ListsController < ApplicationController
-  before_action :authenticate_user!, only:[:new, :create]
+  before_action :authenticate_user!, only:[:show, :new, :create]
 
   def index
     @lists = List.where(user_id: current_user)
@@ -9,7 +9,7 @@ class ListsController < ApplicationController
   def show
     @list = List.find(params[:id])
     @tasks = @list.check_for_complete
-    @total_list_time = @list.add_tasks_time
+    @total_list_time = @list.aggregrate_tasks
   end
 
   def new

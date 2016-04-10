@@ -7,17 +7,7 @@ class List < ActiveRecord::Base
   end
 
 
-# Need to re-visit bottom two methods since this logic is being done with Active Record methods in the htnl.
-
-  # def self.add_lists_time
-  #   self.map { |list|
-  #     incomplete_tasks = list.tasks.where(complete: [false, nil])
-  #     total_time =  incomplete_tasks.map{|task| task.time_estimate}.sum
-  #   }.sum
-  #
-  # end
-
-  def add_tasks_time
+  def aggregrate_tasks
     incomplete_tasks = self.tasks.where(complete: [false, nil])
       if self.list_type == "Check List"
         total_time =  incomplete_tasks.map{|task| task.time_estimate}.sum
