@@ -6,7 +6,10 @@ class List < ActiveRecord::Base
     self.tasks.where(complete: [false, nil])
   end
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> master
   def aggregrate_tasks
     incomplete_tasks = self.tasks.where(complete: [false, nil])
       if self.list_type == "Check List"
@@ -15,11 +18,17 @@ class List < ActiveRecord::Base
         minutes = total_time%60
       return "#{hours} hours #{minutes} minutes "
       end
-      if self.list_type == "Shopping List"
-        total_cost = incomplete_tasks.map{|task| task.cost}.sum
+    else self.list_type == "Shopping List"
+        total_cost = incomplete_tasks.map{|task| task.cost * task.quantity.to_i}.sum
       return total_cost
-      end
   end
+
+  def add id
+    tasks = Task.find(list_id: id)
+    tasks_total = tasks.map{|task| task.cost * task.quantity.to_i}.sum
+    return tasks_total
+  end
+
 
 
 end

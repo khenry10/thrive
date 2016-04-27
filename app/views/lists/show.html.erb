@@ -2,13 +2,13 @@
     <h2><%= @list.name %></h2>
     <!-- Logic to show time for Check lists and Money for Shopping list  -->
     <% if @list.list_type == "Check List" %>
-      <h3><%= @total_list_time  %></h3>
+      <h3><%= @task_aggregates  %></h3>
 
     <% end %>
 
     <% if @list.list_type == "Shopping List" %><h2>
 
-    <h3><%= number_to_currency(@total_list_time) %></h3>
+    <h3><%= number_to_currency(@task_aggregates) %></h3>
     <% end %>
 
     <% if @list.list_type == "Check List" %>
@@ -30,7 +30,8 @@
     <%= form_tag(completed_task_list_path(@list), :method => 'put') do %>
    <!-- <%= label_tag "task" %> -->
    <% @tasks.each do |task|%>
-  <li><%= check_box_tag(:task_id, task.id, task.complete)%>
+   <!-- "task_ids[]" stores all of the task.id's that are complete.  task.complete isn't currenlty doing anything but I think I need that for the checkboxes to persist -->
+  <li><%= check_box_tag("task_ids[]", task.id, task.complete)%>
      <%= link_to task.name, edit_list_task_path(@list, task) %>
 
      <% if @list.list_type == "Check List" %>
@@ -38,7 +39,7 @@
      <% end %>
 
    <% if @list.list_type == "Shopping List" %>
-     <%= number_to_currency(task.cost)  %></li>
+     <%= number_to_currency(task.cost * task.quantity.to_i)  %></li>
      <% end %>
 
    </li>
