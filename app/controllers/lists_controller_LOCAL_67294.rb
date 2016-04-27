@@ -1,5 +1,5 @@
 class ListsController < ApplicationController
-  before_action :authenticate_user!, only:[:show, :new, :create]
+  before_action :authenticate_user!, only:[:new, :create]
 
   def index
     @lists = List.where(user_id: current_user)
@@ -13,15 +13,11 @@ class ListsController < ApplicationController
     @list = List.find(params[:id])
     # check_for_complete is a model method that filters for tasks that are complete: false or nil
     @tasks = @list.check_for_complete
-<<<<<<< HEAD
     @task_aggregates = @list.aggregrate_tasks
     respond_to do |format|
     format.html
     format.json{ render json: @tasks, status: :ok}
     end
-=======
-    @total_list_time = @list.aggregrate_tasks
->>>>>>> master
   end
 
   def new
