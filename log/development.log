@@ -50533,6 +50533,7 @@ Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bd
 Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-24 15:43:33 -0400
 
 
+<<<<<<< HEAD
 Started GET "/" for ::1 at 2016-04-10 14:39:44 -0400
   [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
 Processing by ListsController#index as HTML
@@ -58372,6 +58373,53 @@ ActionController::RoutingError (No route matches [GET] "/json"):
 
 
 Started GET "/" for ::1 at 2016-04-15 14:09:30 -0400
+=======
+Started GET "/" for ::1 at 2016-04-10 14:38:01 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ListsController#index as HTML
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.7ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)[0m
+  [1m[35mList Load (0.6ms)[0m  SELECT "lists".* FROM "lists" WHERE "lists"."user_id" = 1
+  [1m[36m (0.6ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)[0m  [["list_id", 17]]
+  [1m[35m (0.6ms)[0m  SELECT SUM("tasks"."cost") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 19]]
+  [1m[36m (0.4ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)[0m  [["list_id", 27]]
+  [1m[35m (0.3ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)  [["list_id", 31]]
+  [1m[36m (0.3ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)[0m  [["list_id", 26]]
+  Rendered lists/index.html.erb within layouts/application (39.5ms)
+Completed 200 OK in 335ms (Views: 293.1ms | ActiveRecord: 11.9ms)
+
+
+Started GET "/" for ::1 at 2016-04-10 14:38:02 -0400
+Processing by ListsController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.4ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)[0m
+  [1m[35mList Load (0.3ms)[0m  SELECT "lists".* FROM "lists" WHERE "lists"."user_id" = 1
+  [1m[36m (0.3ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)[0m  [["list_id", 17]]
+  [1m[35m (0.3ms)[0m  SELECT SUM("tasks"."cost") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 19]]
+  [1m[36m (0.3ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)[0m  [["list_id", 27]]
+  [1m[35m (0.2ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)  [["list_id", 31]]
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)[0m  [["list_id", 26]]
+  Rendered lists/index.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 20ms (Views: 16.3ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-10 14:38:02 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-10 14:38:02 -0400
+
+
+Started GET "/assets/application.self-d9511d2f0d6732ecd4f895e42e5ce21a22beaceeb5b839fe7d39771a212c6807.css?body=1" for ::1 at 2016-04-10 14:38:02 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-10 14:38:02 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-04-10 14:38:02 -0400
+
+
+Started GET "/" for ::1 at 2016-04-10 14:38:06 -0400
+>>>>>>> master
 Processing by ListsController#index as HTML
   [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
   [1m[36m (0.5ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)[0m
@@ -58379,6 +58427,7 @@ Processing by ListsController#index as HTML
   [1m[36m (0.3ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)[0m  [["list_id", 17]]
   [1m[35m (0.3ms)[0m  SELECT SUM("tasks"."cost") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 19]]
   [1m[36m (0.2ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)[0m  [["list_id", 27]]
+<<<<<<< HEAD
   [1m[35m (0.5ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)  [["list_id", 31]]
   [1m[36m (0.3ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)[0m  [["list_id", 26]]
   [1m[35m (0.2ms)[0m  SELECT SUM("tasks"."cost") FROM "tasks" WHERE "tasks"."list_id" = $1  [["list_id", 32]]
@@ -58534,3 +58583,24 @@ Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db6
 
 
 Started GET "/assets/favicon-9173fba12dc627de4cd1a32d8cf790ada6524f1033292f1f8afafb85359e4e8c.jpg" for ::1 at 2016-04-26 21:53:58 -0400
+=======
+  [1m[35m (0.3ms)[0m  SELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)  [["list_id", 31]]
+  [1m[36m (0.2ms)[0m  [1mSELECT SUM("tasks"."time_estimate") FROM "tasks" WHERE "tasks"."list_id" = $1 AND ("tasks"."complete" = 'f' OR "tasks"."complete" IS NULL)[0m  [["list_id", 26]]
+  Rendered lists/index.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 36ms (Views: 31.6ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/assets/application.self-d9511d2f0d6732ecd4f895e42e5ce21a22beaceeb5b839fe7d39771a212c6807.css?body=1" for ::1 at 2016-04-10 14:38:06 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-04-10 14:38:06 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-10 14:38:06 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-10 14:38:06 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-10 14:38:06 -0400
+>>>>>>> master

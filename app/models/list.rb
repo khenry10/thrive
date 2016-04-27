@@ -6,6 +6,10 @@ class List < ActiveRecord::Base
     self.tasks.where(complete: [false, nil])
   end
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
   def aggregrate_tasks
     incomplete_tasks = self.tasks.where(complete: [false, nil])
       if self.list_type == "Check List"
