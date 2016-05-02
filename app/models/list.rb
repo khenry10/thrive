@@ -6,10 +6,6 @@ class List < ActiveRecord::Base
     self.tasks.where(complete: [false, nil])
   end
 
-<<<<<<< HEAD
-=======
-
->>>>>>> master
   def aggregrate_tasks
     incomplete_tasks = self.tasks.where(complete: [false, nil])
       if self.list_type == "Check List"
@@ -28,7 +24,6 @@ class List < ActiveRecord::Base
     tasks_total = tasks.map{|task| task.cost * task.quantity.to_i}.sum
     return tasks_total
   end
-
 
 
 end

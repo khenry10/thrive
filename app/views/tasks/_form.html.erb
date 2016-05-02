@@ -2,12 +2,14 @@
   <%= form_for [@list, @task] do |f| %>
   <li><%= f.label :name %>
   <%= f.text_field :name %></li>
+
   <li><%= f.label :category %>
   <%= f.text_field :category %></li>
 
   <% if @list.list_type == "Check List" %>
 
     <% if @task.id != nil %>
+
   <li><%= f.label :complete %>
     <%= f.check_box :complete %></li>
     <% end %>
@@ -33,11 +35,11 @@
     <!-- <li><%= f.label :image %>
       <%= f.text_field :image %></li> -->
   <li><%= f.label :quantity %>
-<<<<<<< HEAD
+
   <%= f.number_field :quantity, :min => 1 %></li>
-=======
+
   <%= f.text_field :quantity %></li>
->>>>>>> master
+
   <% end %>
 
   <%= f.submit %>
