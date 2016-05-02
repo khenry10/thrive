@@ -31,12 +31,13 @@
 
   <% if @list.list_type == "Shopping List" %>
     <li><%= f.label :cost %>
-      <%= f.text_field :cost %></li>
+      <%= f.text_field :cost, :required => true %></li>
     <!-- <li><%= f.label :image %>
       <%= f.text_field :image %></li> -->
   <li><%= f.label :quantity %>
 
-  <%= f.number_field :quantity, :min => 1 %></li>
+  <%= f.number_field :quantity, :value => 1 %></li>
+
 
   <% end %>
 

@@ -39,7 +39,7 @@
      <% end %>
 
    <% if @list.list_type == "Shopping List" %>
-   <%= task.quantity %>
+   
      <%= number_to_currency(task.cost * task.quantity.to_i)  %></li>
      <% end %>
 
