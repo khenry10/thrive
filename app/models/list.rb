@@ -15,12 +15,7 @@ class List < ActiveRecord::Base
       return "#{hours} hours #{minutes} minutes "
       end
     else self.list_type == "Shopping List"
-      if incomplete_tasks.map{|task| task.cost == 0}
-        total_cost = incomplete_tasks.map{|task| 1 * 1}.sum
-      else
-        total_cost = incomplete_tasks.map{|task| task.cost * task.quantity.to_i}.sum
-      return total_cost
-    end
+      total_cost = incomplete_tasks.map{|task| task.cost * task.quantity.to_i}.sum
   end
 
   def add id
