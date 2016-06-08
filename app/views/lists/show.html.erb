@@ -3,14 +3,10 @@
     <!-- Logic to show time for Check lists and Money for Shopping list  -->
     <% if @list.list_type == "Check List" %>
       <h3><%= @task_aggregates  %></h3>
-
     <% end %>
-
     <% if @list.list_type == "Shopping List" %><h2>
-
     <h3><%= number_to_currency(@task_aggregates) %></h3>
     <% end %>
-
     <% if @list.list_type == "Check List" %>
       <%= link_to "Add New Task", new_list_task_path(@list), class: "nav-button button-one" %>
     <% end %>
@@ -19,35 +15,30 @@
     <% end %>
     <%= link_to "Edit", edit_list_path, class: "nav-button button-two" %>
     <%= link_to "Delete", list_path(@list), method: :delete, class: "nav-button button-three"  %>
-
   </div>
   <div class="content">
 
-
     <!-- list -->
   <ul>
-
+    <!-- completed_task_list_path is a member route -->
     <%= form_tag(completed_task_list_path(@list), :method => 'put') do %>
-   <!-- <%= label_tag "task" %> -->
-   <% @tasks.each do |task|%>
-   <!-- "task_ids[]" stores all of the task.id's that are complete.  task.complete isn't currenlty doing anything but I think I need that for the checkboxes to persist -->
-  <li><%= check_box_tag("task_ids[]", task.id, task.complete)%>
+    <% @tasks.each do |task|%>
+    <!-- "task_ids[]" stores all of the task.id's that are complete.  task.complete isn't currenlty doing anything but   I think I need that for the checkboxes to persist -->
+    <li><%= check_box_tag("task_ids[]", task.id, task.complete)%>
+      <!-- turns the to do list item into a link where you can edit the task -->
      <%= link_to task.name, edit_list_task_path(@list, task) %>
-
-     <% if @list.list_type == "Check List" %>
-       <%= task.time_estimate %><%= " minutes" %></li>
+      <!-- conditional to display specific data whether it's a checklist or shopping list -->
+       <% if @list.list_type == "Check List" %>
+         <%= task.time_estimate %><%= " minutes" %></li>
+       <% end %>
+       <% if @list.list_type == "Shopping List" %>
+       <%= number_to_currency(task.cost * task.quantity.to_i)  %></li>
+       <% end %>
+       <!-- End of conditional display -->
+     </li>
      <% end %>
-
-   <% if @list.list_type == "Shopping List" %>
-   
-     <%= number_to_currency(task.cost * task.quantity.to_i)  %></li>
-     <% end %>
-
-   </li>
-     <% end %>
+    <!-- submit tag 'puts' changes the boolean value of the tasks that have been marked as complete and sends to the completed_task_list_path which is a member route.  Since we have a check_for_complete list model method and accompanying controller action, when the Clear Complete button is selected, only tasks that have a nil or false 'complete' value will remain visible  -->
    <%= submit_tag "Clear Complete" %>
  <% end %>
-
   </ul>
-
 </div>

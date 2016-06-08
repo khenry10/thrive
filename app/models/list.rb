@@ -24,5 +24,4 @@ class List < ActiveRecord::Base
     return tasks_total
   end
 
-
 end
